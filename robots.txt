@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://p7h.github.io/sitemap.xml 
