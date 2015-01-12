@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Prashanth's Blog]]></title>
-  <link href="http://p7h.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Misc | Prashanth's Blog]]></title>
+  <link href="http://p7h.github.io/blog/categories/misc/atom.xml" rel="self"/>
   <link href="http://p7h.github.io/"/>
   <updated>2015-01-12T00:18:53+00:00</updated>
   <id>http://p7h.github.io/</id>
