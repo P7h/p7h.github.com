@@ -4,7 +4,7 @@
   <title><![CDATA[Prashanth Babu]]></title>
   <link href="http://p7h.github.io/atom.xml" rel="self"/>
   <link href="http://p7h.github.io/"/>
-  <updated>2015-01-12T03:45:03+00:00</updated>
+  <updated>2015-01-13T23:06:31+00:00</updated>
   <id>http://p7h.github.io/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -20,7 +20,7 @@
     <id>http://p7h.github.io/blog/2015/01/12/first-blogpost-with-octopress</id>
     <content type="html"><![CDATA[<p>This is my first blogpost using Octopress and GitHub.</p>
 
-<p>Previously, I wrote some blogposts on <a href="http://P7h.blogspot.com">Blogger</a>.
+<p>Previously, I had my blogs hosted on <a href="http://P7h.blogspot.com">Blogger</a>.
 Though Blogger engine is good, I could never spend time to create a template on my own to make my blogpage look good and on top of that the default templates and layouting always made go crazy since its too tedious to spend time on fine-tuning and make the page look zazzy.</p>
 
 <!--more-->
