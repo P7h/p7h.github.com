@@ -4,7 +4,7 @@
   <title><![CDATA[Category: misc | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/misc/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-14T17:23:38+00:00</updated>
+  <updated>2015-01-14T18:20:10+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -21,18 +21,15 @@
     <content type="html"><![CDATA[<p>This is my first blogpost using Octopress and GitHub.</p>
 
 <p>Previously, I had my blogs hosted on <a href="http://P7h.blogspot.com">Blogger</a>.
-Though Blogger engine is good, I could never spend time to create a template on my own to make my blogpage look good and on top of that the default templates and layouting always made go crazy since its too tedious to spend time on fine-tuning and make the page look zazzy.</p>
-
+Though Blogger engine is good, I could never spend time to create a template on my own to make my blogpage look good and on top of that the default templates and layouting always made go crazy since its too tedious to spend time on fine-tuning and make the page look zazzy. 
 <!--more-->
-
-
-<p>Being a minimalist, I would like to go with minimum cruft and more emphasis on the code and content rather than the styling of the blogpage with an attractive UI.</p>
+Being a minimalist, I would like to go with minimum cruft and more emphasis on the code and content rather than the styling of the blogpage with an attractive UI.</p>
 
 <p>So here I am, trying to use Octopress and trying to generate static pages using GitHub. I went with default Octopress template. Setting it up on Windows with Ruby was a bit painful initially and I went helter-skelter looking for help mostly with Google and SO. But after 2 trials, I was able to get my default website up and running. I hope this will be a nice experience with just markdown and code-highlighting to the rescue.</p>
 
 <p>Over a period of time or whenever I get time, I will be moving all my blogposts from Blogger to GitHub hosted static pages. Though its a considerable effort, I would like to give it a shot and move away from Blogger and maintain this as my primary blogpage.</p>
 
-<p>For now, just &ldquo;Hello World&rdquo;. :-)</p>
+<p>For now, just “Hello World”. :-)</p>
 ]]></content>
   </entry>
   
@@ -41,9 +38,8 @@ Though Blogger engine is good, I could never spend time to create a template on 
     <link href="http://p7h.org/blog/2013/01/20/aaron-swartz-memorial/"/>
     <updated>2013-01-20T00:00:00+00:00</updated>
     <id>http://p7h.org/blog/2013/01/20/aaron-swartz-memorial</id>
-    <content type="html"><![CDATA[<div class='post'>
+    <content type="html"><![CDATA[<div class="post">
 <div style="font-family: Roboto; font-size: 15px; white-space: normal;">Aaron Swartz, a very accomplished and a highly talented nerd committed suicide last Friday, i.e. 11th January, 2013 at an young age of 26 years. So many people have written so much about him. Check the complete <a href="http://en.wikipedia.org/wiki/Aaron_Swartz">Wikipedia</a> page and check the <a href="http://en.wikipedia.org/wiki/Aaron_Swartz#References" target="_blank">References</a> section of his Wikipedia page for more info and other articles written by his friends. He has left wonderful impressions on Reddit, Creative Commons, SOPA, Markdown, RSS, web.py to name a few of his outstanding contributions.<br /><div style="text-align: center;"><a href="http://www.flickr.com/photos/quinn/870253651/" target="_blank" title="Aaron by quinnums, on Flickr"><img alt="Aaron Swartz" height="500" src="http://farm2.staticflickr.com/1150/870253651_9b076ba1b3.jpg" width="500" /></a></div>Aaron&#8217;s <a href="http://www.rememberaaronsw.com/">memorial</a> was held on Saturday, 19th January, 2013 at Cooper Union, New York. Here is the complete set of recorded videos from his memorial which are hosted on <a href="http://www.livestream.com/democracynow/folder?dirId=0545b862-1026-4b88-86ff-409745806958">livestream</a>. There are totally 6 videos which you must checkout to understand what are his contributions and how talented a person he was and what impressions he has left people with, even such an young age.<br />If you are hard-pressed for time, then ensure you at least check the message from Taren Stinebrickner-Kauffman, partner of Aaron, embedded below. It is really inspiring.<br /><div style="text-align: center;"><iframe frameborder="0" height="385" scrolling="no" src="http://cdn.livestream.com/embed/democracynow?layout=4&amp;clip=pla_f83c80fe-0fc0-474c-9936-efe8659466f6&amp;color=0xe7e7e7&amp;autoPlay=false&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777&amp;allowchat=true&amp;height=385&amp;width=640" style="border: 0; outline: 0;" width="640"></iframe><br /></div>Rest in peace Aaron!!</div></div>
-
 ]]></content>
   </entry>
   
@@ -52,9 +48,8 @@ Though Blogger engine is good, I could never spend time to create a template on 
     <link href="http://p7h.org/blog/2012/12/27/the-dark-knight-rises-ultimate-trilogy/"/>
     <updated>2012-12-27T00:00:00+00:00</updated>
     <id>http://p7h.org/blog/2012/12/27/the-dark-knight-rises-ultimate-trilogy</id>
-    <content type="html"><![CDATA[<div class='post'>
+    <content type="html"><![CDATA[<div class="post">
 <div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">Wonderfully put together&nbsp;ultimate trilogy trailer of&nbsp;&#8221;<a href="http://en.wikipedia.org/wiki/The_Dark_Knight_Rises" target="_blank">The Dark Knight Rises</a>&#8221;,&nbsp;<a href="http://en.wikipedia.org/wiki/Christopher_Nolan" target="_blank">Christopher Nolan</a>&#8217;s Batman series.</div><div style="text-align: justify;">Christopher Nolan&#8217;s taking is brilliant as always. Apart from him, Hans Zimmer&#8217;s background score is excellent.&nbsp;I concur with the comment in the below Youtube page which says: &#8220;Without Hans Zimmer this trilogy wouldn&#8217;t be nearly as epic as it is&#8221;. If you have any doubts, you should check out the Original Motion Picture Soundtrack of <i>The Dark Knight Rises</i> on <a href="http://www.amazon.com/The-Dark-Knight-Rises-Soundtrack/dp/B008645YEE" target="_blank">Amazon</a> or&nbsp;<a href="http://www.flipkart.com/dark-knight-rises/p/itmdbvq7g22yjmks?pid=DGADBVQ7WC4RGX8C" target="_blank">Flipkart</a>.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">The only thing I missed in this trailer is the voice of Bane i.e.&nbsp;<a href="http://en.wikipedia.org/wiki/Tom_Hardy" target="_blank">Tom Hardy</a>.</div><div style="text-align: justify;"><iframe allowfullscreen="allowfullscreen" frameborder="0" height="480" src="https://www.youtube.com/embed/1T__uN5xmC0" width="800"></iframe><br /></div></div></div>
-
 ]]></content>
   </entry>
   
@@ -63,9 +58,8 @@ Though Blogger engine is good, I could never spend time to create a template on 
     <link href="http://p7h.org/blog/2012/12/15/wikipedia-entries-for-k-r-and-steve-jobs/"/>
     <updated>2012-12-15T00:00:00+00:00</updated>
     <id>http://p7h.org/blog/2012/12/15/wikipedia-entries-for-k-r-and-steve-jobs</id>
-    <content type="html"><![CDATA[<div class='post'>
+    <content type="html"><![CDATA[<div class="post">
 <div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">Wikipedia entries for <a href="http://en.wikipedia.org/wiki/Dennis_Ritchie" target="_blank">Dennis Ritchie</a> [<i>C</i> and <i>Unix</i> creator], <a href="http://en.wikipedia.org/wiki/Ken_Thompson" target="_blank">Ken Thompson</a>&nbsp;[<i>Unix</i> creator], <a href="http://en.wikipedia.org/wiki/Brian_Kernighan" target="_blank">Brian Kernighan</a> [worked with K &amp; R during <i>Unix</i> creation] and <a href="http://en.wikipedia.org/wiki/Stuart_Feldman" target="_blank">Stuart Feldman</a> [<i>make</i> creator] put together is just 1/5 or probably 1/10 of the Wikipedia entry for <a href="http://en.wikipedia.org/wiki/Steve_Jobs" target="_blank">Steve Jobs</a>.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">This is definitely nothing against Steve. He is a great visionary.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">But, he is a product guy who visualized the product, the actual hard work was done by so many unknown Engineers.</div><div style="text-align: justify;">We have come to accept and approve narcissists more than great creators and excellent human beings whose work changed the fate and direction of the world. This is not a good sign for the new generations and needs a change.</div></div></div>
-
 ]]></content>
   </entry>
   

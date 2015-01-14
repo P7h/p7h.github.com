@@ -4,7 +4,7 @@
   <title><![CDATA[Category: eclipse | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/eclipse/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-14T17:23:38+00:00</updated>
+  <updated>2015-01-14T18:20:10+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -18,9 +18,8 @@
     <link href="http://p7h.org/blog/2012/12/29/eclipse-startup-options-or-jvm-settings/"/>
     <updated>2012-12-29T00:00:00+00:00</updated>
     <id>http://p7h.org/blog/2012/12/29/eclipse-startup-options-or-jvm-settings</id>
-    <content type="html"><![CDATA[<div class='post'>
+    <content type="html"><![CDATA[<div class="post">
 <div style="font-size: 15px; white-space: normal;"><div style="text-align: justify;"><span style="font-family: Roboto;">In continuation to my </span><a href="http://p7h.blogspot.com/2012/12/intellij-idea-tuning-parameters.html" style="font-family: Roboto;" target="_blank">other post</a><span style="font-family: Roboto;"> on </span><a href="http://www.eclipse.org/" style="font-family: Roboto;" target="_blank">Eclipse</a><span style="font-family: Roboto;">, in this post I am detailing the startup options [which are also called JVM Settings] on Eclipse IDE. Eclipse startup is controlled by the options in </span><span style="font-family: Courier New, Courier, monospace;">eclipse.ini</span><span style="font-family: Roboto;"> file present under Eclipse installation folder [i.e. $ECLIPSE_HOME]. By default, Eclipse comes with a set of values in this file. But those values are not optimized and might cause issues and / or hangs in large projects which might have huge codebase. These can be tuned further for better performance.</span></div><br /><div style="font-family: Roboto;"><div style="text-align: justify;">My startup options in my current version of Eclipse Juno i.e. v4.2.1 are below:</div><span style="font-family: Roboto;"><script src="https://gist.github.com/4392224.js"></script><br />Please use these options as a reference and update </span><span style="font-family: Courier New, Courier, monospace;">eclipse.ini</span><span style="font-family: Roboto;"> file [please do take a backup of this file prior to updating it]. Also, one more important point to note is, use the latest <a href="http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html" target="_blank">Sun / Oracle JDK</a> for starting Eclipse. This also has a profound effect on the Eclipse startup time as well as the IDE functionality with a decent sized codebase.</span></div><br /><div style="text-align: justify;"><span style="font-family: Roboto;">Finally, in case you were looking for tuning the startup options of IntelliJ IDEA, please refer my <a href="http://p7h.blogspot.com/2012/12/intellij-idea-tuning-parameters.html" target="_blank">earlier post</a> which details the parameters for IDEA.</span></div></div></div>
-
 ]]></content>
   </entry>
   
@@ -29,9 +28,8 @@
     <link href="http://p7h.org/blog/2012/12/27/eclipse-plugins/"/>
     <updated>2012-12-27T00:00:00+00:00</updated>
     <id>http://p7h.org/blog/2012/12/27/eclipse-plugins</id>
-    <content type="html"><![CDATA[<div class='post'>
+    <content type="html"><![CDATA[<div class="post">
 <div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;"><a href="http://eclipse.org/" target="_blank">Eclipse</a> was my main IDE for all my JavaEE and Web development all the time in my career. For all plain Java development and Android app development, I used to revert to <a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> Community Edition, which allows only plain Java development and not Enterprise Java development i.e. JavaEE or Web Development [Spring, Hibernate, Grails, etc]. For more info on what is allowed and what is not allowed in Community Edition, please refer&nbsp;<a href="http://www.jetbrains.com/idea/features/editions_comparison_matrix.html" target="_blank">this matrix</a>&nbsp;on JetBrains website. Post the <a href="http://p7h.blogspot.com/2012/12/jetbrains-mayan-doomsday-special-offers.html" target="_blank">Mayan Doomsday Offer</a> by JetBrains, thanks to the 75% steep discount on 20th December, I now have IntelliJ IDEA Ultimate Edition as well.</div><div style="text-align: justify;"><br />Eclipse is open source and is free to use. It is a thriving community for individuals and organizations which collaborate on commercially-friendly open source software. So, over a period of time Eclipse grew on all developers and almost everyone uses it as their main driver for development. And what&#8217;s more with Scala, Groovy and Android teams giving support for Eclipse as the first IDE has given it a good momentum in the past few years.&nbsp;The plugin ecosystem is huge in Eclipse and in fact, these plugins have helped Eclipse grow as a platform what it is today.&nbsp;Such is the popularity of plugins in Eclipse ecosystem that they have also launched <a href="http://marketplace.eclipse.org/" target="_blank">Marketplace</a> for Eclipse plugins. If something is missing in Eclipse, don&#8217;t worry, just check the Marketplace for the plugin or else you can develop a plugin in no time actually. That has been the mindset of a lot of Java developers in Eclipse ecosystem. There are thousands of plugins available for Eclipse right from customizing the IDE to Maven integration to Python IDE to Spring IDE, for Checkstyle, PMD, FindBugs, etc.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">With all my prior experience in using Eclipse, I have some goto plugins which I install the moment I get a brand new Eclipse version.&nbsp;Here is the list of all Eclipse plugins which I have used till now with a short description and the Eclipse Update Sites of the plugin.</div><div style="text-align: justify;"><script src="https://gist.github.com/4389668.js"></script>Hope this was of some help to you.</div><br />Also, if you are interested in IntelliJ IDEA plugins, please check my <a href="http://p7h.blogspot.com/2012/12/intellij-ide-plugins.html" target="_blank">earlier post</a>&nbsp;which lists down all the IDEA plugins which I use.</div></div>
-
 ]]></content>
   </entry>
   
@@ -40,9 +38,8 @@
     <link href="http://p7h.org/blog/2012/12/10/intellij-idea-tuning-parameters/"/>
     <updated>2012-12-10T00:00:00+00:00</updated>
     <id>http://p7h.org/blog/2012/12/10/intellij-idea-tuning-parameters</id>
-    <content type="html"><![CDATA[<div class='post'>
+    <content type="html"><![CDATA[<div class="post">
 <div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;"><a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> is my favorite IDE for my day-to-day work.</div><div style="text-align: justify;">I do moonlight with Eclipse as well from time-to-time, but the sheer speed and power of IntelliJ pulls me back to IDEA every time.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">I have found the following tuning parameters to be very useful for fast loading, caching, etc for IDE to function smoothly:</div></div><div style="text-align: justify;"><script src="https://gist.github.com/4388881.js"></script><br /></div><div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">If you are using Windows 64-bit, please add the above config in <i>idea64.exe.vmoptions</i> file and if its 32-bit, please add these tuning parms to <i>idea.exe.vmoptions</i> present in &lt;&lt;IDEA_INSTALLED_LOCATION&gt;&gt;/bin folder.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Also, just in case if you are not aware, on a 64 bit machine, if you want to launch IntelliJ IDEA in 64 bit mode, you need to launch <i>idea64.exe</i> and not <i>idea.exe</i>. For this, ensure you have <i>IDEA_JDK</i> and <i>IDEA_JDK_64</i> environment variables pointing to your 64 bit Java Installation folder.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Finally, the above IDEA Tuning parameters can also be used for an IntelliJ IDEA installed on a Linux machine as well.</div></div></div>
-
 ]]></content>
   </entry>
   
