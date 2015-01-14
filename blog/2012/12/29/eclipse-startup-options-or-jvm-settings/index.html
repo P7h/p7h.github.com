@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Eclipse Startup Options or JVM Settings - Prashanth Babu</title>
+  <meta name="author" content="Prashanth Babu">
+
+  
+  <meta name="description" content="In continuation to my other post on Eclipse, in this post I am detailing the startup options [which are also called JVM Settings] on Eclipse IDE. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://p7h.org/blog/2012/12/29/eclipse-startup-options-or-jvm-settings">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Prashanth Babu" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Prashanth Babu</a></h1>
+  
+    <h2>Random tech ramblings, musings, productivity tips on Big Data, Hadoop Ecosystem, Java, Android, etc.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="p7h.org">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about">About</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="http://P7h.blogspot.com" target="new">Blogger Posts</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Eclipse Startup Options or JVM Settings</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-12-29'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>12:00 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div class='post'>
+<div style="font-size: 15px; white-space: normal;"><div style="text-align: justify;"><span style="font-family: Roboto;">In continuation to my </span><a href="http://p7h.blogspot.com/2012/12/intellij-idea-tuning-parameters.html" style="font-family: Roboto;" target="_blank">other post</a><span style="font-family: Roboto;"> on </span><a href="http://www.eclipse.org/" style="font-family: Roboto;" target="_blank">Eclipse</a><span style="font-family: Roboto;">, in this post I am detailing the startup options [which are also called JVM Settings] on Eclipse IDE. Eclipse startup is controlled by the options in </span><span style="font-family: Courier New, Courier, monospace;">eclipse.ini</span><span style="font-family: Roboto;"> file present under Eclipse installation folder [i.e. $ECLIPSE_HOME]. By default, Eclipse comes with a set of values in this file. But those values are not optimized and might cause issues and / or hangs in large projects which might have huge codebase. These can be tuned further for better performance.</span></div><br /><div style="font-family: Roboto;"><div style="text-align: justify;">My startup options in my current version of Eclipse Juno i.e. v4.2.1 are below:</div><span style="font-family: Roboto;"><script src="https://gist.github.com/4392224.js"></script><br />Please use these options as a reference and update </span><span style="font-family: Courier New, Courier, monospace;">eclipse.ini</span><span style="font-family: Roboto;"> file [please do take a backup of this file prior to updating it]. Also, one more important point to note is, use the latest <a href="http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html" target="_blank">Sun / Oracle JDK</a> for starting Eclipse. This also has a profound effect on the Eclipse startup time as well as the IDE functionality with a decent sized codebase.</span></div><br /><div style="text-align: justify;"><span style="font-family: Roboto;">Finally, in case you were looking for tuning the startup options of IntelliJ IDEA, please refer my <a href="http://p7h.blogspot.com/2012/12/intellij-idea-tuning-parameters.html" target="_blank">earlier post</a> which details the parameters for IDEA.</span></div></div></div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Prashanth Babu</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2012-12-29'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>12:00 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/eclipse/'>eclipse</a>, <a class='category' href='/blog/categories/ide/'>ide</a>, <a class='category' href='/blog/categories/tuning/'>tuning</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://p7h.org/blog/2012/12/29/eclipse-startup-options-or-jvm-settings/" data-via="P7h" data-counturl="http://p7h.org/blog/2012/12/29/eclipse-startup-options-or-jvm-settings/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/12/27/the-dark-knight-rises-ultimate-trilogy/" title="Previous Post: The Dark Knight Rises ultimate trilogy trailer">&laquo; The Dark Knight Rises ultimate trilogy trailer</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/01/20/aaron-swartz-memorial/" title="Next Post: Aaron Swartz Memorial at New York">Aaron Swartz Memorial at New York &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p>Hi, I am Prashanth Babu (aka P7h or PB), a Big Data developer. Sometimes I post about coding, best practices, productivity tips and devops here; predominantly about Hadoop Ecosystem, Java and Android. More about me <a href="/about">here</a>.<br>
+
+I can be reached at the Google&#8217;s mail, as prashanth (dot) babu (plus) blog.</p>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Prashanth Babu -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Learning Guava &#8211; Google Guava Blog Series - Prashanth Babu</title>
+  <meta name="author" content="Prashanth Babu">
+
+  
+  <meta name="description" content="​I have been a huge fan of Google Guava from the time I came across it 3 years back.For starters, Guava is a project which contains many Google's &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://p7h.org/blog/2013/11/27/google-guava-posts">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Prashanth Babu" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Prashanth Babu</a></h1>
+  
+    <h2>Random tech ramblings, musings, productivity tips on Big Data, Hadoop Ecosystem, Java, Android, etc.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="p7h.org">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about">About</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="http://P7h.blogspot.com" target="new">Blogger Posts</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Learning Guava &#8211; Google Guava Blog Series</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-11-27'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:00 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div class='post'>
+<span style="font-family: Roboto; font-size: 15px;">​I have been a huge fan of </span><a href="https://code.google.com/p/guava-libraries/" style="font-family: Roboto; font-size: 15px;" target="_blank">Google Guava</a><span style="font-family: Roboto; font-size: 15px;"> from the time I came across it 3 years back.</span><br /><div style="font-size: 15px; white-space: normal;"><span style="font-family: Roboto;">For starters, </span><span style="font-family: Courier New, Courier, monospace;">Guava</span><span style="font-family: Roboto;"> is a project which contains many Google&#8217;s core libraries like collections, caching, math, primitives, concurrency, networking, common annotations, string processing, I/O, refelction and many others.</span><br /><div style="font-family: Roboto;">It is very well designed API. Guava is designed, implemented and maintained by Google Engineers like <a href="https://plus.google.com/113026104107031516488/about" target="_blank">Kevin Bourrillion</a>&nbsp;and&nbsp;<a href="https://plus.google.com/+KurtAlfredKluever/about" target="_blank">Kurt Alfred Kluever</a>, etc.</div><div style="font-family: Roboto;"><br /></div><span style="font-family: Roboto;">Guava follows almost all the excellent patterns and practices mentioned in <a href="http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683" target="_blank">Effective Java book</a>&nbsp;written by <a href="https://plus.google.com/113200173329286634669/about" target="_blank">Joshua Bloch</a>, who has designed the impeccable Java Collections API while he was at Sun. Later he joined Google. Under his mentor-ship, Google Guava got wings and became a very well designed and effective API, useful for many situations and scenarios with an ever-growing feature list. I ensure I add Guava dependency as the first thing to my Gradle or Maven build script. Guava makes </span><span style="font-family: Courier New, Courier, monospace;">Java</span><span style="font-family: Roboto;"> code a lot more readable, clean, simple and elegant. It utilises the Java generics very well.</span><br /><div style="font-family: Roboto;"><br /></div><div style="font-family: Roboto;">Consider the following example which I tweeted few months back.</div><div class="separator" style="clear: both; font-family: Roboto; text-align: center;"><a href="https://twitter.com/P7h/status/195895898146996224" imageanchor="1" style="margin-left: 1em; margin-right: 1em;" target="_blank"><img alt="Google Guava sample code" border="0" src="http://3.bp.blogspot.com/-aCDnApHuz44/UpZBg-vLbII/AAAAAAAACag/wxy58EaJXMw/s1600/Guava_Sample.png" height="185" title="Google Guava sample code" width="640" /></a></div><div style="font-family: Roboto;"><br /></div><div style="font-family: Roboto;">Which of the above versions looks fine? Obviously the second option, aint it?</div><div style="font-family: Roboto;">There are many such examples where Guava wins by a margin compared to normal Java code and or other libraries like commons, etc.</div><div style="font-family: Roboto;"><br /></div><div style="font-family: Roboto;">Guava also helps for [in&nbsp;a way] functional programming too. There are few options which are really helpful there as well. Having said that, Guava creators <a href="https://code.google.com/p/guava-libraries/wiki/FunctionalExplained" target="_blank">implore the developers</a> not to litter code with too much functional programming which might lead to unreadable code.</div><div style="font-family: Roboto;"><br /></div><div style="font-family: Roboto;">I will start with writing few posts on Google Guava with the tag, &#8220;LearningGuava&#8221;. I have been using Guava extensively in almost every project of mine since few years. This will not only help some one else looking for info or starting on Google Guava, but as well as for me also so that I will remember in future if I need any quick snippet on something specific with Guava usage. That being the motivation, I hope it will be of good experience for you and me as well.</div><div style="font-family: Roboto;"><br /></div><div style="font-family: Roboto;">This post will have list of all the posts written for Google Guava. This post kinda serves as an Index and quick reference of my Google Guava posts.</div><div style="font-family: Roboto;"><br /></div><div style="font-family: Roboto;"><a href="blog/search/label/LearningGuava" target="_blank">Learning Guava Series</a>:</div><ol style="font-family: Roboto;"><li><a href="/2014/01/load-properties-file-using-guava.html" target="_blank">Load properties file using Guava</a></li><li><a href="/2014/01/guava-stopwatch.html" target="_blank">Calibrating time using Stopwatch</a>&nbsp;</li></ol></div></div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Prashanth Babu</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2013-11-27'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:00 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/guava/'>guava</a>, <a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/learningguava/'>learningguava</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://p7h.org/blog/2013/11/27/google-guava-posts/" data-via="P7h" data-counturl="http://p7h.org/blog/2013/11/27/google-guava-posts/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/07/15/presented-storm-at-fifth-elephant-2013/" title="Previous Post: Presented Storm at The Fifth Elephant, 2013 ">&laquo; Presented Storm at The Fifth Elephant, 2013 </a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/01/26/load-properties-file-using-guava/" title="Next Post: Learning Guava -- Load properties file using Guava">Learning Guava &#8211; Load properties file using Guava &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p>Hi, I am Prashanth Babu (aka P7h or PB), a Big Data developer. Sometimes I post about coding, best practices, productivity tips and devops here; predominantly about Hadoop Ecosystem, Java and Android. More about me <a href="/about">here</a>.<br>
+
+I can be reached at the Google&#8217;s mail, as prashanth (dot) babu (plus) blog.</p>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Prashanth Babu -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

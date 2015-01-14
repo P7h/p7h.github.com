@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tuning | Prashanth Babu]]></title>
+  <link href="http://p7h.org/blog/categories/tuning/atom.xml" rel="self"/>
+  <link href="http://p7h.org/"/>
+  <updated>2015-01-14T17:18:54+00:00</updated>
+  <id>http://p7h.org/</id>
+  <author>
+    <name><![CDATA[Prashanth Babu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Eclipse Startup Options or JVM Settings]]></title>
+    <link href="http://p7h.org/blog/2012/12/29/eclipse-startup-options-or-jvm-settings/"/>
+    <updated>2012-12-29T00:00:00+00:00</updated>
+    <id>http://p7h.org/blog/2012/12/29/eclipse-startup-options-or-jvm-settings</id>
+    <content type="html"><![CDATA[<div class='post'>
+<div style="font-size: 15px; white-space: normal;"><div style="text-align: justify;"><span style="font-family: Roboto;">In continuation to my </span><a href="http://p7h.blogspot.com/2012/12/intellij-idea-tuning-parameters.html" style="font-family: Roboto;" target="_blank">other post</a><span style="font-family: Roboto;"> on </span><a href="http://www.eclipse.org/" style="font-family: Roboto;" target="_blank">Eclipse</a><span style="font-family: Roboto;">, in this post I am detailing the startup options [which are also called JVM Settings] on Eclipse IDE. Eclipse startup is controlled by the options in </span><span style="font-family: Courier New, Courier, monospace;">eclipse.ini</span><span style="font-family: Roboto;"> file present under Eclipse installation folder [i.e. $ECLIPSE_HOME]. By default, Eclipse comes with a set of values in this file. But those values are not optimized and might cause issues and / or hangs in large projects which might have huge codebase. These can be tuned further for better performance.</span></div><br /><div style="font-family: Roboto;"><div style="text-align: justify;">My startup options in my current version of Eclipse Juno i.e. v4.2.1 are below:</div><span style="font-family: Roboto;"><script src="https://gist.github.com/4392224.js"></script><br />Please use these options as a reference and update </span><span style="font-family: Courier New, Courier, monospace;">eclipse.ini</span><span style="font-family: Roboto;"> file [please do take a backup of this file prior to updating it]. Also, one more important point to note is, use the latest <a href="http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html" target="_blank">Sun / Oracle JDK</a> for starting Eclipse. This also has a profound effect on the Eclipse startup time as well as the IDE functionality with a decent sized codebase.</span></div><br /><div style="text-align: justify;"><span style="font-family: Roboto;">Finally, in case you were looking for tuning the startup options of IntelliJ IDEA, please refer my <a href="http://p7h.blogspot.com/2012/12/intellij-idea-tuning-parameters.html" target="_blank">earlier post</a> which details the parameters for IDEA.</span></div></div></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Performance Tuning of IntelliJ IDEA Startup Options]]></title>
+    <link href="http://p7h.org/blog/2012/12/10/intellij-idea-tuning-parameters/"/>
+    <updated>2012-12-10T00:00:00+00:00</updated>
+    <id>http://p7h.org/blog/2012/12/10/intellij-idea-tuning-parameters</id>
+    <content type="html"><![CDATA[<div class='post'>
+<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;"><a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> is my favorite IDE for my day-to-day work.</div><div style="text-align: justify;">I do moonlight with Eclipse as well from time-to-time, but the sheer speed and power of IntelliJ pulls me back to IDEA every time.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">I have found the following tuning parameters to be very useful for fast loading, caching, etc for IDE to function smoothly:</div></div><div style="text-align: justify;"><script src="https://gist.github.com/4388881.js"></script><br /></div><div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">If you are using Windows 64-bit, please add the above config in <i>idea64.exe.vmoptions</i> file and if its 32-bit, please add these tuning parms to <i>idea.exe.vmoptions</i> present in &lt;&lt;IDEA_INSTALLED_LOCATION&gt;&gt;/bin folder.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Also, just in case if you are not aware, on a 64 bit machine, if you want to launch IntelliJ IDEA in 64 bit mode, you need to launch <i>idea64.exe</i> and not <i>idea.exe</i>. For this, ensure you have <i>IDEA_JDK</i> and <i>IDEA_JDK_64</i> environment variables pointing to your 64 bit Java Installation folder.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Finally, the above IDEA Tuning parameters can also be used for an IntelliJ IDEA installed on a Linux machine as well.</div></div></div>
+
+]]></content>
+  </entry>
+  
+</feed>

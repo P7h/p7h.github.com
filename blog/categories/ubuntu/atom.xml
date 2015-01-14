@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ubuntu | Prashanth Babu]]></title>
+  <link href="http://p7h.org/blog/categories/ubuntu/atom.xml" rel="self"/>
+  <link href="http://p7h.org/"/>
+  <updated>2015-01-14T17:18:54+00:00</updated>
+  <id>http://p7h.org/</id>
+  <author>
+    <name><![CDATA[Prashanth Babu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Jdk_installation_ubuntu_ppa]]></title>
+    <link href="http://p7h.org/blog/2015/01/14/jdk-installation-ubuntu-ppa/"/>
+    <updated>2015-01-14T17:04:15+00:00</updated>
+    <id>http://p7h.org/blog/2015/01/14/jdk-installation-ubuntu-ppa</id>
+    <content type="html"><![CDATA[<p>3 simple steps for installation of Oracle JDK on a Ubuntu machine.</p>
+
+<h4>Initial setup command</h4>
+
+<pre><code>sudo apt-get install python-software-properties
+</code></pre>
+
+<h4>Add ppa to software sources</h4>
+
+<pre><code>sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+</code></pre>
+
+<h4>For Oracle JDK 6.x</h4>
+
+<pre><code>sudo apt-get install oracle-java6-installer
+</code></pre>
+
+<h4>For Oracle JDK 7.x</h4>
+
+<pre><code>sudo apt-get install oracle-java7-installer
+</code></pre>
+
+<h4>For Oracle JDK 8.x</h4>
+
+<pre><code>sudo apt-get install oracle-java8-installer
+</code></pre>
+
+<h4>Configure the env</h4>
+
+<ul>
+<li>Add JAVA_HOME env variable.</li>
+<li>Also add JAVA_HOME/bin to PATH env variable.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

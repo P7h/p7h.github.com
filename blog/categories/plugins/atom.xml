@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Plugins | Prashanth Babu]]></title>
+  <link href="http://p7h.org/blog/categories/plugins/atom.xml" rel="self"/>
+  <link href="http://p7h.org/"/>
+  <updated>2015-01-14T17:18:54+00:00</updated>
+  <id>http://p7h.org/</id>
+  <author>
+    <name><![CDATA[Prashanth Babu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Eclipse Plugins]]></title>
+    <link href="http://p7h.org/blog/2012/12/27/eclipse-plugins/"/>
+    <updated>2012-12-27T00:00:00+00:00</updated>
+    <id>http://p7h.org/blog/2012/12/27/eclipse-plugins</id>
+    <content type="html"><![CDATA[<div class='post'>
+<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;"><a href="http://eclipse.org/" target="_blank">Eclipse</a> was my main IDE for all my JavaEE and Web development all the time in my career. For all plain Java development and Android app development, I used to revert to <a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> Community Edition, which allows only plain Java development and not Enterprise Java development i.e. JavaEE or Web Development [Spring, Hibernate, Grails, etc]. For more info on what is allowed and what is not allowed in Community Edition, please refer&nbsp;<a href="http://www.jetbrains.com/idea/features/editions_comparison_matrix.html" target="_blank">this matrix</a>&nbsp;on JetBrains website. Post the <a href="http://p7h.blogspot.com/2012/12/jetbrains-mayan-doomsday-special-offers.html" target="_blank">Mayan Doomsday Offer</a> by JetBrains, thanks to the 75% steep discount on 20th December, I now have IntelliJ IDEA Ultimate Edition as well.</div><div style="text-align: justify;"><br />Eclipse is open source and is free to use. It is a thriving community for individuals and organizations which collaborate on commercially-friendly open source software. So, over a period of time Eclipse grew on all developers and almost everyone uses it as their main driver for development. And what&#8217;s more with Scala, Groovy and Android teams giving support for Eclipse as the first IDE has given it a good momentum in the past few years.&nbsp;The plugin ecosystem is huge in Eclipse and in fact, these plugins have helped Eclipse grow as a platform what it is today.&nbsp;Such is the popularity of plugins in Eclipse ecosystem that they have also launched <a href="http://marketplace.eclipse.org/" target="_blank">Marketplace</a> for Eclipse plugins. If something is missing in Eclipse, don&#8217;t worry, just check the Marketplace for the plugin or else you can develop a plugin in no time actually. That has been the mindset of a lot of Java developers in Eclipse ecosystem. There are thousands of plugins available for Eclipse right from customizing the IDE to Maven integration to Python IDE to Spring IDE, for Checkstyle, PMD, FindBugs, etc.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">With all my prior experience in using Eclipse, I have some goto plugins which I install the moment I get a brand new Eclipse version.&nbsp;Here is the list of all Eclipse plugins which I have used till now with a short description and the Eclipse Update Sites of the plugin.</div><div style="text-align: justify;"><script src="https://gist.github.com/4389668.js"></script>Hope this was of some help to you.</div><br />Also, if you are interested in IntelliJ IDEA plugins, please check my <a href="http://p7h.blogspot.com/2012/12/intellij-ide-plugins.html" target="_blank">earlier post</a>&nbsp;which lists down all the IDEA plugins which I use.</div></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Packages in Sublime Text]]></title>
+    <link href="http://p7h.org/blog/2012/12/11/packages-in-sublime-text/"/>
+    <updated>2012-12-11T00:00:00+00:00</updated>
+    <id>http://p7h.org/blog/2012/12/11/packages-in-sublime-text</id>
+    <content type="html"><![CDATA[<div class='post'>
+<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">If I am not working on Eclipse or IntelliJ IDEA, I will be grokking on <a href="http://www.sublimetext.com/" target="_blank">Sublime Text 2</a>. Its a wonderful text editor and in fact it&#8217;s more than a text editor. Unlimited trial period, multiple cursors, easy customization, etc are its main USPs.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">There are a number of blogposts which explain why / how Sublime Text is good. Two of them are from NetTuts. Follow them and see how simple and easy it is to configure and personalize Sublime as per your requirements:</div><ul><li style="text-align: justify;"><a href="http://net.tutsplus.com/tutorials/tools-and-tips/sublime-text-2-tips-and-tricks/" target="_blank">Sublime Text 2 Tips and Tricks</a></li><li style="text-align: justify;"><a href="https://tutsplus.com/course/improve-workflow-in-sublime-text-2/" target="_blank">Perfect Workflow in Sublime Text 2</a></li></ul><div style="text-align: justify;">If you have followed the above articles, you would know that the first thing you do after installing Sublime Text is, install <a href="http://wbond.net/sublime_packages/package_control" target="_blank">Package Control</a>&nbsp;and its all simple from there to install other packages.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Following is the list of packages I have right now which are very useful for my work.</div><div style="text-align: justify;">First install Package Control and then search for the required packages in Package Control for installation, that&#8217;s all you have to do.</div><div style="text-align: justify;"><script src="https://gist.github.com/4388830.js"></script>In a future post, I will add <a href="http://p7h.blogspot.com/2012/12/my-user-settings-of-sublime-text.html" target="_blank">my User Settings of Sublime Text</a>.</div></div></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[IntelliJ IDEA Plugins]]></title>
+    <link href="http://p7h.org/blog/2012/12/10/intellij-ide-plugins/"/>
+    <updated>2012-12-10T00:00:00+00:00</updated>
+    <id>http://p7h.org/blog/2012/12/10/intellij-ide-plugins</id>
+    <content type="html"><![CDATA[<div class='post'>
+<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">In continuation to my <a href="http://p7h.blogspot.com/2012/12/intellij-idea-tuning-parameters.html" target="_blank">other post</a> on <a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a>, here are the plugins I am using currently.</div><div style="text-align: justify;"><script src="https://gist.github.com/4388852.js"></script>Please check back after sometime, I will keep this list up-to-date with all the interesting plugins I come across.</div><br /><div style="text-align: justify;">For a complete list of plugins available in IntelliJ IDEA, please check this <a href="http://plugins.intellij.net/" target="_blank">link</a>. As of today, there are 865 plugins available for IntelliJ IDEA Ultimate Edition and 819 for&nbsp;IntelliJ IDEA Community Edition.</div></div></div>
+
+]]></content>
+  </entry>
+  
+</feed>

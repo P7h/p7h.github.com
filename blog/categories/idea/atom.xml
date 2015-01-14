@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Idea | Prashanth Babu]]></title>
+  <link href="http://p7h.org/blog/categories/idea/atom.xml" rel="self"/>
+  <link href="http://p7h.org/"/>
+  <updated>2015-01-14T17:18:54+00:00</updated>
+  <id>http://p7h.org/</id>
+  <author>
+    <name><![CDATA[Prashanth Babu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Guava toString() Method Generator for IntelliJ IDEA]]></title>
+    <link href="http://p7h.org/blog/2012/12/22/guava-tostring-method-gen-for-intellij-idea/"/>
+    <updated>2012-12-22T00:00:00+00:00</updated>
+    <id>http://p7h.org/blog/2012/12/22/guava-tostring-method-gen-for-intellij-idea</id>
+    <content type="html"><![CDATA[<div class='post'>
+<div><div style="font-size: 15px; white-space: normal;"><div style="text-align: justify;"><span style="font-family: Roboto;"><a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> comes bundled with </span><span style="font-family: Courier New, Courier, monospace;">toString()</span><span style="font-family: Roboto;"> plugin. If you check the plugins in Settings, you should find </span><span style="font-family: Courier New, Courier, monospace;">GenerateToString</span><span style="font-family: Roboto;"> plugin, which generates </span><span style="font-family: Courier New, Courier, monospace;">toString()</span><span style="font-family: Roboto;"> method with options for String concat, StringBuffer, StringBuilder and ToStringBuilder (of Apache Commons) for generating this method.</span></div></div><div style="text-align: justify;"><br /></div><div style="font-size: 15px; white-space: normal;"><div style="text-align: justify;"><span style="font-family: Roboto;"><a href="http://code.google.com/p/guava-libraries/" target="_blank">Google Guava</a> has even better helper method for generating </span><span style="font-family: Courier New, Courier, monospace;">toString()</span><span style="font-family: Roboto;"> method&nbsp;for a JavaBean or POJO,&nbsp;which is both clutter free and has a very consistent format; in the form of </span><span style="font-family: Courier New, Courier, monospace;"><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html#toStringHelper(java.lang.Class)" target="_blank">Objects.toStringHelper(this)</a></span><span style="font-family: Roboto;">. It looks more elegant than any of the above solutions, actually. Also, as I make it a point to use Google Guava in all my projects, I have defined the following template in my </span><span style="font-family: Courier New, Courier, monospace;">toString()</span><span style="font-family: Roboto;"> method generator settings in IntelliJ IDEA.</span></div></div><script src="https://gist.github.com/4388630.js"></script><br /><div style="font-size: 15px; white-space: normal;"><div style="text-align: justify;"><span style="font-family: Roboto; font-size: 15px;">Follow the steps mentioned below for adding this template to your IntelliJ IDEA [picked up from <a href="http://stackoverflow.com/a/9445402" target="_blank">SO</a>]:<br /></span></div><ul><li style="text-align: justify;"><span style="font-family: Roboto; font-size: 15px;">Go inside a Java Class in an editor in IntelliJ IDEA</span></li><span style="font-family: Roboto; font-size: 15px;"><li style="text-align: justify;">Hit Alt + Insert to popup the &#8220;Generate&#8221; menu</li><li style="text-align: justify;">Choose toString()</li><li style="text-align: justify;">Click the &#8220;Settings&#8221; button</li><li style="text-align: justify;">Go to the &#8220;Templates&#8221; tab</li><li style="text-align: justify;">Create a new template named &#8220;Guava toString gen&#8221; (or any name you prefer)</li><li style="text-align: justify;">Add the above code to the template</li></span></ul></div><div style="text-align: justify;"><span style="font-family: Roboto; font-size: 15px;">Yes, its that simple!!&nbsp; After configuring the above template, whenever you want to generate a </span><span style="font-family: Courier New, Courier, monospace; font-size: 15px;">toString()</span><span style="font-family: Roboto; font-size: 15px;"> method for a Class, IntelliJ IDEA generates </span><span style="font-family: Courier New, Courier, monospace; font-size: 15px;">toString()</span><span style="font-family: Roboto; font-size: 15px;"> using Guava template you have added just now.</span></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><span style="font-family: Roboto; font-size: 15px;">Now, go ahead and give this a try and also check the other method </span><span style="font-family: Courier New, Courier, monospace;"><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.ToStringHelper.html#omitNullValues()" target="_blank">omitNullValues()</a></span><span style="font-family: Roboto; font-size: 15px;"> which might be useful in some scenarios.</span></div><div style="text-align: justify;"><span style="font-family: Roboto; font-size: 15px;"><br /></span></div><span style="font-family: Roboto; font-size: 15px;"><div style="text-align: justify;"><span style="font-family: Roboto;">Also, as a bonus tip, Guava&#8217;s <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html" target="_blank">Objects</a> class also has 2 awesome helper methods which aide in writing readable&nbsp;</span><span style="font-family: Courier New, Courier, monospace;"><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html#equal(java.lang.Object, java.lang.Object)" target="_blank">equals()</a></span><span style="font-family: Roboto;"> and </span><span style="font-family: Courier New, Courier, monospace;"><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html#hashCode(java.lang.Object...)" target="_blank">hashcode()</a></span><span style="font-family: Roboto;"> methods. You should try them too.</span></div></span></div></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JetBrains Mayan Doomsday Special Offers]]></title>
+    <link href="http://p7h.org/blog/2012/12/20/jetbrains-mayan-doomsday-special-offers/"/>
+    <updated>2012-12-20T00:00:00+00:00</updated>
+    <id>http://p7h.org/blog/2012/12/20/jetbrains-mayan-doomsday-special-offers</id>
+    <content type="html"><![CDATA[<div class='post'>
+<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">JetBrains is offering steep discount of 75% on all their products which include <a href="http://www.jetbrains.com/idea" target="_blank">IntelliJ IDEA</a>, <a href="http://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a> and a host of <a href="http://www.jetbrains.com/products.html" target="_blank">other awesome IDEs</a>.</div><div style="text-align: justify;"><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://www.jetbrains.com/specials/index.jsp" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="JetBrains Special Offer" border="0" height="347" src="http://1.bp.blogspot.com/-Do0tGdl5YdI/UNMt-CX6hbI/AAAAAAAACLk/lKcsuWmwFk8/s1600/Untitled.png" title="JetBrains Special Offer" width="400" /></a></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">It is a limited period offer and to be precise its an offer only for 24 hours on 20<sup>th</sup> December, 2012. So, what are you waiting for? Head over to their website and NOW!!</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><a href="http://www.jetbrains.com/specials/index.jsp" target="_blank">JetBrains Special Offer</a></div></div></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Performance Tuning of IntelliJ IDEA Startup Options]]></title>
+    <link href="http://p7h.org/blog/2012/12/10/intellij-idea-tuning-parameters/"/>
+    <updated>2012-12-10T00:00:00+00:00</updated>
+    <id>http://p7h.org/blog/2012/12/10/intellij-idea-tuning-parameters</id>
+    <content type="html"><![CDATA[<div class='post'>
+<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;"><a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> is my favorite IDE for my day-to-day work.</div><div style="text-align: justify;">I do moonlight with Eclipse as well from time-to-time, but the sheer speed and power of IntelliJ pulls me back to IDEA every time.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">I have found the following tuning parameters to be very useful for fast loading, caching, etc for IDE to function smoothly:</div></div><div style="text-align: justify;"><script src="https://gist.github.com/4388881.js"></script><br /></div><div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">If you are using Windows 64-bit, please add the above config in <i>idea64.exe.vmoptions</i> file and if its 32-bit, please add these tuning parms to <i>idea.exe.vmoptions</i> present in &lt;&lt;IDEA_INSTALLED_LOCATION&gt;&gt;/bin folder.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Also, just in case if you are not aware, on a 64 bit machine, if you want to launch IntelliJ IDEA in 64 bit mode, you need to launch <i>idea64.exe</i> and not <i>idea.exe</i>. For this, ensure you have <i>IDEA_JDK</i> and <i>IDEA_JDK_64</i> environment variables pointing to your 64 bit Java Installation folder.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Finally, the above IDEA Tuning parameters can also be used for an IntelliJ IDEA installed on a Linux machine as well.</div></div></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[IntelliJ IDEA Plugins]]></title>
+    <link href="http://p7h.org/blog/2012/12/10/intellij-ide-plugins/"/>
+    <updated>2012-12-10T00:00:00+00:00</updated>
+    <id>http://p7h.org/blog/2012/12/10/intellij-ide-plugins</id>
+    <content type="html"><![CDATA[<div class='post'>
+<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">In continuation to my <a href="http://p7h.blogspot.com/2012/12/intellij-idea-tuning-parameters.html" target="_blank">other post</a> on <a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a>, here are the plugins I am using currently.</div><div style="text-align: justify;"><script src="https://gist.github.com/4388852.js"></script>Please check back after sometime, I will keep this list up-to-date with all the interesting plugins I come across.</div><br /><div style="text-align: justify;">For a complete list of plugins available in IntelliJ IDEA, please check this <a href="http://plugins.intellij.net/" target="_blank">link</a>. As of today, there are 865 plugins available for IntelliJ IDEA Ultimate Edition and 819 for&nbsp;IntelliJ IDEA Community Edition.</div></div></div>
+
+]]></content>
+  </entry>
+  
+</feed>
