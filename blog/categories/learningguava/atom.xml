@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Learningguava | Prashanth Babu]]></title>
+  <title><![CDATA[Category: learningguava | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/learningguava/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-14T17:18:54+00:00</updated>
+  <updated>2015-01-14T17:23:38+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Learning Guava -- Calibrating Time Using Stopwatch]]></title>
+    <title type="html"><![CDATA[Learning Guava -- Calibrating time using Stopwatch]]></title>
     <link href="http://p7h.org/blog/2014/01/29/guava-stopwatch/"/>
     <updated>2014-01-29T00:00:00+00:00</updated>
     <id>http://p7h.org/blog/2014/01/29/guava-stopwatch</id>
@@ -25,7 +25,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Learning Guava -- Load Properties File Using Guava]]></title>
+    <title type="html"><![CDATA[Learning Guava -- Load properties file using Guava]]></title>
     <link href="http://p7h.org/blog/2014/01/26/load-properties-file-using-guava/"/>
     <updated>2014-01-26T00:00:00+00:00</updated>
     <id>http://p7h.org/blog/2014/01/26/load-properties-file-using-guava</id>
@@ -36,7 +36,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Learning Guava -- Google Guava Blog Series]]></title>
+    <title type="html"><![CDATA[Learning Guava -- Google Guava blog series]]></title>
     <link href="http://p7h.org/blog/2013/11/27/google-guava-posts/"/>
     <updated>2013-11-27T00:00:00+00:00</updated>
     <id>http://p7h.org/blog/2013/11/27/google-guava-posts</id>

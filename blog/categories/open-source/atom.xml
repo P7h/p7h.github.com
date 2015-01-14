@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Open Source | Prashanth Babu]]></title>
+  <title><![CDATA[Category: open source | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/open-source/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-14T17:18:54+00:00</updated>
+  <updated>2015-01-14T17:23:38+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Presented Storm at the Fifth Elephant, 2013]]></title>
+    <title type="html"><![CDATA[Presented Storm at The Fifth Elephant, 2013 ]]></title>
     <link href="http://p7h.org/blog/2013/07/15/presented-storm-at-fifth-elephant-2013/"/>
     <updated>2013-07-15T00:00:00+01:00</updated>
     <id>http://p7h.org/blog/2013/07/15/presented-storm-at-fifth-elephant-2013</id>
@@ -25,7 +25,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[My Upcoming Workshop on Storm at the Fifth Elephant, 2013]]></title>
+    <title type="html"><![CDATA[My upcoming workshop on Storm at The Fifth Elephant, 2013]]></title>
     <link href="http://p7h.org/blog/2013/05/25/workshop-on-storm-at-fifth-elephant/"/>
     <updated>2013-05-25T00:00:00+01:00</updated>
     <id>http://p7h.org/blog/2013/05/25/workshop-on-storm-at-fifth-elephant</id>
@@ -36,7 +36,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Open Source Licenses]]></title>
+    <title type="html"><![CDATA[Open Source licenses]]></title>
     <link href="http://p7h.org/blog/2013/05/20/open-source-licenses/"/>
     <updated>2013-05-20T00:00:00+01:00</updated>
     <id>http://p7h.org/blog/2013/05/20/open-source-licenses</id>

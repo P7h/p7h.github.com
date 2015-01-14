@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Hive | Prashanth Babu]]></title>
+  <title><![CDATA[Category: hive | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/hive/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-14T17:18:54+00:00</updated>
+  <updated>2015-01-14T17:23:38+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[My Presentation on 'Introduction to Pig']]></title>
+    <title type="html"><![CDATA[My presentation on 'Introduction to Pig']]></title>
     <link href="http://p7h.org/blog/2013/01/26/intro-to-pig/"/>
     <updated>2013-01-26T00:00:00+00:00</updated>
     <id>http://p7h.org/blog/2013/01/26/intro-to-pig</id>
