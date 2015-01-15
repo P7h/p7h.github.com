@@ -59,6 +59,7 @@
   <li><a href="/about">About</a></li>
   <li><a href="/contact">Contact</a></li>
   <li><a href="/projects">Projects</a></li>
+  <li><a href="/talks">Talks</a></li>
   <li><a href="/archives">Archives</a></li>
   <li><a href="http://P7h.blogspot.com" target="new">Blogger Posts</a></li>
 </ul>
@@ -118,8 +119,6 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://p7h.org/blog/2013/05/20/open-source-licenses/" data-via="P7h" data-counturl="http://p7h.org/blog/2013/05/20/open-source-licenses/" >Tweet</a>
-  
   
   
 </div>
@@ -140,12 +139,75 @@
 
 <aside class="sidebar">
   
-    <section>
-  <h1>About Me</h1>
-  <p>Hi, I am Prashanth Babu (aka P7h or PB), a Big Data developer. Sometimes I post about coding, best practices, productivity tips and devops here; predominantly about Hadoop Ecosystem, Java and Android. More about me <a href="/about">here</a>.<br>
-
-I can be reached at My first name (dot) my last name (plus) blog (at) gmail (dot) com.</p>
+    <div class="about sidebar">
+  <span class="about-image">
+    <img src="/images/P7h.jpg" alt="P7h">
+  </span>
+  <span class="about-desc">
+    <span>Hey, I am Prashanth Babu.<br/>I am a Big Data developer. More about me <a href="/about">here</a>.</span>
+    <br/>
+    <hr>
+    <a href="https://twitter.com/P7h" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @P7h</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <hr> 
+  </span>
+</div> <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/14/jdk-installation-ubuntu-ppa/">JDK installation from ppa on Ubuntu</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/first-blogpost-with-octopress/">First blogpost with Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/07/udacity-course-on-apache-storm/">Udacity course on Apache Storm</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/18/jdk-download-command-prompt/">Download Java / JDK / JRE from shell / terminal / command prompt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/29/guava-stopwatch/">Learning Guava &#8211; Calibrating time using Stopwatch</a>
+      </li>
+    
+  </ul>
 </section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/P7h">@P7h</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'P7h',
+            count: 5,
+            skip_forks: true,
+            skip_repos: [ "p7h.github.com", "tmux-cheatsheet", "P7h.github.io__Old" ],
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
 
   
 </aside>
@@ -166,16 +228,6 @@ I can be reached at My first name (dot) my last name (plus) blog (at) gmail (dot
 
 
 
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 

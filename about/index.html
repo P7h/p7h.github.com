@@ -9,7 +9,7 @@
   <meta name="author" content="Prashanth Babu">
 
   
-  <meta name="description" content="About Me Jan 12th, 2015 12:24 am I am Prashanth Babu (aka P7h or PB), a Big Data developer. Jan 12th, 2015 12:24 am Tweet Recent Posts JDK &hellip;">
+  <meta name="description" content="About Me Jan 12th, 2015 12:24 am Hey there, thanks for stopping by. I am Prashanth Babu (aka P7h or PB), a Big Data developer; currently in London, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -59,6 +59,7 @@
   <li><a href="/about">About</a></li>
   <li><a href="/contact">Contact</a></li>
   <li><a href="/projects">Projects</a></li>
+  <li><a href="/talks">Talks</a></li>
   <li><a href="/archives">Archives</a></li>
   <li><a href="http://P7h.blogspot.com" target="new">Blogger Posts</a></li>
 </ul>
@@ -79,7 +80,15 @@
 <time class='entry-date' datetime='2015-01-12T00:24:00+00:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:24 am</span></time></p>
   </header>
   
-  <p>I am Prashanth Babu (aka P7h or PB), a Big Data developer.</p>
+  <p>Hey there, thanks for stopping by. I am Prashanth Babu (aka P7h or PB), a Big Data developer; currently in London, UK.<br /></p>
+
+<p>I have been working in developing and breaking Software since 2002; yes more than 12 years of experience. And since August, 2011 I have been working in Big Data and Hadoop Ecosystem on various R &amp; D projects at NTT DATA. I am a Cloudera Certified Developer for Apache Hadoop [CCDH]. One of my projects was showcased at Gartner Summit, Barcelona in 2013 and another was highlighted in <a href="http://www.nttdata.com/global/en/news-center/pressrelease/2011/083001.html">NTT DATA website</a>.<br /></p>
+
+<p>I use this space to share my experiences, experiments and thoughts on coding, best practices, productivity tips and devops here; predominantly about Big Data, Hadoop Ecosystem, Java and Android.<br /></p>
+
+<p>For more info about me, please check my <a href="http://about.me/Prashanth">About Me</a> profile.<br /></p>
+
+<p>Please drop me a note or ping me with my details on <a href="http://p7h.org/contact">contact page</a>.</p>
 
   
     <footer>
@@ -96,8 +105,6 @@
       
         <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://p7h.org/about/index.html" data-via="P7h" data-counturl="http://p7h.org/about/index.html" >Tweet</a>
-  
   
   
 </div>
@@ -111,7 +118,19 @@
 
 <aside class="sidebar">
   
-    <section>
+    <div class="about sidebar">
+  <span class="about-image">
+    <img src="/images/P7h.jpg" alt="P7h">
+  </span>
+  <span class="about-desc">
+    <span>Hey, I am Prashanth Babu.<br/>I am a Big Data developer. More about me <a href="/about">here</a>.</span>
+    <br/>
+    <hr>
+    <a href="https://twitter.com/P7h" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @P7h</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <hr> 
+  </span>
+</div> <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
@@ -138,6 +157,37 @@
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/P7h">@P7h</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'P7h',
+            count: 5,
+            skip_forks: true,
+            skip_repos: [ "p7h.github.com", "tmux-cheatsheet", "P7h.github.io__Old" ],
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
   
 </aside>
 
@@ -157,16 +207,6 @@
 
 
 
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 
