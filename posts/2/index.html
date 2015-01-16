@@ -9,7 +9,7 @@
   <meta name="author" content="Prashanth Babu">
 
   
-  <meta name="description" content="Understanding Open Source licenses turns out to be rather too difficult. At least I always have had issues in understanding which Open Source &hellip;">
+  <meta name="description" content="Many of our day-to-day applications would need calibrating time taken between 2 points. In Java world we either depend on System.currentTimeMillis &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -38,7 +38,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">Prashanth Babu</a></h1>
   
-    <h2>Random tech ramblings, musings, productivity tips on Big Data, Hadoop Ecosystem, Java, Android, etc.</h2>
+    <h2>Random tech ramblings on Hadoop Ecosytem, Java.</h2>
   
 </hgroup>
 
@@ -58,10 +58,9 @@
 <ul class="main-navigation">
   <li><a href="/about">About</a></li>
   <li><a href="/contact">Contact</a></li>
-  <li><a href="/projects">Projects</a></li>
   <li><a href="/talks">Talks</a></li>
+  <li><a href="/projects">Projects</a></li>
   <li><a href="/archives">Archives</a></li>
-  <li><a href="http://P7h.blogspot.com" target="new">Blogger Posts</a></li>
 </ul>
 
 </nav>
@@ -75,7 +74,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/05/20/open-source-licenses/">Open Source licenses</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/01/29/guava-stopwatch/">Learning Guava &#8211; Calibrating time using Stopwatch</a></h1>
     
     
       <p class="meta">
@@ -84,7 +83,7 @@
 
 
 
-<time class='entry-date' datetime='2013-05-20'><span class='date'><span class='date-month'>May</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:00 am</span></time>
+<time class='entry-date' datetime='2014-01-29'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
         
       </p>
     
@@ -92,11 +91,11 @@
 
 
   <div class="entry-content"><div class='post'>
-<span style="font-size: 15px;">Understanding Open Source licenses turns out to be rather too difficult. At least I always have had issues in understanding which Open Source license is too restrictive and which is a bit liberal.</span><br /><br /><div style="font-family: Roboto; font-size: 15px; white-space: normal;">After looking around for some time, I found the following 3 alternatives for easily understanding the terms of few of the Open Source licenses.</div></div>
+<div style="font-size: 15px; white-space: normal;"><span style="font-family: Roboto;">Many of our day-to-day applications would need calibrating time taken between 2 points. In Java world we either depend on </span><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#currentTimeMillis()" target="_blank"><span style="font-family: Courier New, Courier, monospace;">System.currentTimeMillis()</span></a><span style="font-family: Roboto;"> or </span><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#nanoTime()" target="_blank"><span style="font-family: Courier New, Courier, monospace;">System.nanoTime()</span></a><span style="font-family: Roboto;">. But the pain here is, we have to do the required computations of getting to a proper granularity to understand the time taken.Would n&#8217;t it be great it to have such an utility class which will give the required information in the granularity we need with minimum amount of boilerplate code?  </span><br /><div style="font-family: Roboto;"><br /></div><span style="font-family: Courier New, Courier, monospace;"><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Stopwatch.html" target="_blank">Stopwatch</a> </span><span style="font-family: Roboto;">is one such small and wonderful utility class in </span><span style="font-family: Courier New, Courier, monospace;">Guava</span><span style="font-family: Roboto;"> which helps in calibrating elapsed time / duration between any 2 points in the logic. The advantage of using </span><span style="font-family: Courier New, Courier, monospace;">Guava</span><span style="font-family: Roboto;">&#8217;s </span><span style="font-family: Courier New, Courier, monospace;">Stopwatch</span><span style="font-family: Roboto;"> is you can get the elapsed time in any measure i.e. right from nanoseconds to days. This is possible because you can pass an enum argument type of </span><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html" target="_blank"><span style="font-family: Courier New, Courier, monospace;">TimeUnit</span></a><span style="font-family: Roboto;"> class to get the elapsed time in the desired granularity.  </span></div>
   
   
     <footer>
-      <a rel="full-article" href="/blog/2013/05/20/open-source-licenses/">Read on &rarr;</a>
+      <a rel="full-article" href="/blog/2014/01/29/guava-stopwatch/">Read on &rarr;</a>
     </footer>
   
 
@@ -108,7 +107,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/01/26/intro-to-pig/">My presentation on &#8216;Introduction to Pig&#8217;</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/01/26/load-properties-file-using-guava/">Learning Guava &#8211; Load properties file using Guava</a></h1>
     
     
       <p class="meta">
@@ -117,148 +116,19 @@
 
 
 
-<time class='entry-date' datetime='2013-01-26'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:00 am</span></time>
+<time class='entry-date' datetime='2014-01-26'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><div class='post'>
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;">Few months back, I conducted a 2-hour&nbsp;<a href="http://fifthelephant.in/2012/workshop-pig" target="_blank">workshop</a> on &#8220;Introduction to Pig&#8221; at <a href="http://fifthelephant.in/" target="_blank">Fifth Elephant</a>, Bangalore, India on 26th July, 2012. This is a community-powered conference on the Big Data ecosystem.<br /><br />As part of this workshop, I have touched a bit on Hadoop, MapReduce and Hive. But as the title says, the focus was on Apache Pig. I have also demoed few usecases of execution of Java MapReduce, Hive and Pig. And also a brief overview and demo of Twitter&#8217;s <a href="https://github.com/twitter/ambrose" target="_blank">Ambrose</a> UI for visualizing Pig MapReduce jobs.</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/01/26/intro-to-pig/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/20/aaron-swartz-memorial/">Aaron Swartz Memorial at New York</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2013-01-20'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;">Aaron Swartz, a very accomplished and a highly talented nerd committed suicide last Friday, i.e. 11th January, 2013 at an young age of 26 years. So many people have written so much about him. Check the complete <a href="http://en.wikipedia.org/wiki/Aaron_Swartz">Wikipedia</a> page and check the <a href="http://en.wikipedia.org/wiki/Aaron_Swartz#References" target="_blank">References</a> section of his Wikipedia page for more info and other articles written by his friends. He has left wonderful impressions on Reddit, Creative Commons, SOPA, Markdown, RSS, web.py to name a few of his outstanding contributions.<br /><div style="text-align: center;"><a href="http://www.flickr.com/photos/quinn/870253651/" target="_blank" title="Aaron by quinnums, on Flickr"><img alt="Aaron Swartz" height="500" src="http://farm2.staticflickr.com/1150/870253651_9b076ba1b3.jpg" width="500" /></a></div></div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/01/20/aaron-swartz-memorial/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/29/eclipse-startup-options-or-jvm-settings/">Eclipse startup options or JVM Settings</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-12-29'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<div style="font-size: 15px; white-space: normal;"><div style="text-align: justify;"><span style="font-family: Roboto;">In continuation to my </span><a href="http://p7h.blogspot.com/2012/12/intellij-idea-tuning-parameters.html" style="font-family: Roboto;" target="_blank">other post</a><span style="font-family: Roboto;"> on </span><a href="http://www.eclipse.org/" style="font-family: Roboto;" target="_blank">Eclipse</a><span style="font-family: Roboto;">, in this post I am detailing the startup options [which are also called JVM Settings] on Eclipse IDE. Eclipse startup is controlled by the options in </span><span style="font-family: Courier New, Courier, monospace;">eclipse.ini</span><span style="font-family: Roboto;"> file present under Eclipse installation folder [i.e. $ECLIPSE_HOME]. By default, Eclipse comes with a set of values in this file. But those values are not optimized and might cause issues and / or hangs in large projects which might have huge codebase. These can be tuned further for better performance.</span></div><br /><div style="font-family: Roboto;"><div style="text-align: justify;">My startup options in my current version of Eclipse Juno i.e. v4.2.1 are below:</div></div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/12/29/eclipse-startup-options-or-jvm-settings/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/27/the-dark-knight-rises-ultimate-trilogy/">The Dark Knight Rises ultimate trilogy trailer</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-12-27'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">Wonderfully put together&nbsp;ultimate trilogy trailer of&nbsp;&#8221;<a href="http://en.wikipedia.org/wiki/The_Dark_Knight_Rises" target="_blank">The Dark Knight Rises</a>&#8221;,&nbsp;<a href="http://en.wikipedia.org/wiki/Christopher_Nolan" target="_blank">Christopher Nolan</a>&#8217;s Batman series.</div><div style="text-align: justify;">Christopher Nolan&#8217;s taking is brilliant as always. Apart from him, Hans Zimmer&#8217;s background score is excellent.&nbsp;I concur with the comment in the below Youtube page which says: &#8220;Without Hans Zimmer this trilogy wouldn&#8217;t be nearly as epic as it is&#8221;. If you have any doubts, you should check out the Original Motion Picture Soundtrack of <i>The Dark Knight Rises</i> on <a href="http://www.amazon.com/The-Dark-Knight-Rises-Soundtrack/dp/B008645YEE" target="_blank">Amazon</a> or&nbsp;<a href="http://www.flipkart.com/dark-knight-rises/p/itmdbvq7g22yjmks?pid=DGADBVQ7WC4RGX8C" target="_blank">Flipkart</a>.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">The only thing I missed in this trailer is the voice of Bane i.e.&nbsp;<a href="http://en.wikipedia.org/wiki/Tom_Hardy" target="_blank">Tom Hardy</a>.</div><div style="text-align: justify;"><iframe allowfullscreen="allowfullscreen" frameborder="0" height="480" src="https://www.youtube.com/embed/1T__uN5xmC0" width="800"></iframe><br /></div></div></div>
+  <div class="entry-content"><p>Guava code snippet for loading a properties file from classpath.<br />
 </div>
   
   
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/27/eclipse-plugins/">Eclipse Plugins</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-12-27'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;"><a href="http://eclipse.org/" target="_blank">Eclipse</a> was my main IDE for all my JavaEE and Web development all the time in my career. For all plain Java development and Android app development, I used to revert to <a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> Community Edition, which allows only plain Java development and not Enterprise Java development i.e. JavaEE or Web Development [Spring, Hibernate, Grails, etc]. For more info on what is allowed and what is not allowed in Community Edition, please refer&nbsp;<a href="http://www.jetbrains.com/idea/features/editions_comparison_matrix.html" target="_blank">this matrix</a>&nbsp;on JetBrains website. Post the <a href="http://p7h.blogspot.com/2012/12/jetbrains-mayan-doomsday-special-offers.html" target="_blank">Mayan Doomsday Offer</a> by JetBrains, thanks to the 75% steep discount on 20th December, I now have IntelliJ IDEA Ultimate Edition as well.</div></div>
-  
-  
     <footer>
-      <a rel="full-article" href="/blog/2012/12/27/eclipse-plugins/">Read on &rarr;</a>
+      <a rel="full-article" href="/blog/2014/01/26/load-properties-file-using-guava/">Read on &rarr;</a>
     </footer>
   
 
@@ -270,7 +140,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/12/22/guava-tostring-method-gen-for-intellij-idea/">Guava toString() method generator for IntelliJ IDEA</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/11/27/google-guava-posts/">Learning Guava &#8211; Google Guava blog series</a></h1>
     
     
       <p class="meta">
@@ -279,7 +149,7 @@
 
 
 
-<time class='entry-date' datetime='2012-12-22'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2012</span></span> <span class='time'>12:00 am</span></time>
+<time class='entry-date' datetime='2013-11-27'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:00 am</span></time>
         
       </p>
     
@@ -287,11 +157,11 @@
 
 
   <div class="entry-content"><div class='post'>
-<div><div style="font-size: 15px; white-space: normal;"><div style="text-align: justify;"><span style="font-family: Roboto;"><a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> comes bundled with </span><span style="font-family: Courier New, Courier, monospace;">toString()</span><span style="font-family: Roboto;"> plugin. If you check the plugins in Settings, you should find </span><span style="font-family: Courier New, Courier, monospace;">GenerateToString</span><span style="font-family: Roboto;"> plugin, which generates </span><span style="font-family: Courier New, Courier, monospace;">toString()</span><span style="font-family: Roboto;"> method with options for String concat, StringBuffer, StringBuilder and ToStringBuilder (of Apache Commons) for generating this method.</span></div></div><div style="text-align: justify;"><br /></div><div style="font-size: 15px; white-space: normal;"><div style="text-align: justify;"><span style="font-family: Roboto;"><a href="http://code.google.com/p/guava-libraries/" target="_blank">Google Guava</a> has even better helper method for generating </span><span style="font-family: Courier New, Courier, monospace;">toString()</span><span style="font-family: Roboto;"> method&nbsp;for a JavaBean or POJO,&nbsp;which is both clutter free and has a very consistent format; in the form of </span><span style="font-family: Courier New, Courier, monospace;"><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html#toStringHelper(java.lang.Class)" target="_blank">Objects.toStringHelper(this)</a></span><span style="font-family: Roboto;">. It looks more elegant than any of the above solutions, actually. Also, as I make it a point to use Google Guava in all my projects, I have defined the following template in my </span><span style="font-family: Courier New, Courier, monospace;">toString()</span><span style="font-family: Roboto;"> method generator settings in IntelliJ IDEA.</span></div></div></div>
+<span style="font-family: Roboto; font-size: 15px;">​I have been a huge fan of </span><a href="https://code.google.com/p/guava-libraries/" style="font-family: Roboto; font-size: 15px;" target="_blank">Google Guava</a><span style="font-family: Roboto; font-size: 15px;"> from the time I came across it 3 years back.</span><br /><div style="font-size: 15px; white-space: normal;"><span style="font-family: Roboto;">For starters, </span><span style="font-family: Courier New, Courier, monospace;">Guava</span><span style="font-family: Roboto;"> is a project which contains many Google&#8217;s core libraries like collections, caching, math, primitives, concurrency, networking, common annotations, string processing, I/O, refelction and many others.</span><br /><div style="font-family: Roboto;">It is very well designed API. Guava is designed, implemented and maintained by Google Engineers like <a href="https://plus.google.com/113026104107031516488/about" target="_blank">Kevin Bourrillion</a>&nbsp;and&nbsp;<a href="https://plus.google.com/+KurtAlfredKluever/about" target="_blank">Kurt Alfred Kluever</a>, etc.</div><div style="font-family: Roboto;"><br /></div><span style="font-family: Roboto;">Guava follows almost all the excellent patterns and practices mentioned in <a href="http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683" target="_blank">Effective Java book</a>&nbsp;written by <a href="https://plus.google.com/113200173329286634669/about" target="_blank">Joshua Bloch</a>, who has designed the impeccable Java Collections API while he was at Sun. Later he joined Google. Under his mentor-ship, Google Guava got wings and became a very well designed and effective API, useful for many situations and scenarios with an ever-growing feature list. I ensure I add Guava dependency as the first thing to my Gradle or Maven build script. Guava makes </span><span style="font-family: Courier New, Courier, monospace;">Java</span><span style="font-family: Roboto;"> code a lot more readable, clean, simple and elegant. It utilises the Java generics very well.</span></div>
   
   
     <footer>
-      <a rel="full-article" href="/blog/2012/12/22/guava-tostring-method-gen-for-intellij-idea/">Read on &rarr;</a>
+      <a rel="full-article" href="/blog/2013/11/27/google-guava-posts/">Read on &rarr;</a>
     </footer>
   
 
@@ -303,7 +173,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/12/21/my-user-settings-of-sublime-text/">My User Settings of Sublime Text</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/07/15/presented-storm-at-fifth-elephant-2013/">Presented Storm at The Fifth Elephant, 2013 </a></h1>
     
     
       <p class="meta">
@@ -312,7 +182,7 @@
 
 
 
-<time class='entry-date' datetime='2012-12-21'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2012</span></span> <span class='time'>12:00 am</span></time>
+<time class='entry-date' datetime='2013-07-15'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:00 am</span></time>
         
       </p>
     
@@ -320,11 +190,11 @@
 
 
   <div class="entry-content"><div class='post'>
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">In an earlier <a href="http://p7h.blogspot.com/2012/12/packages-in-sublime-text.html" target="_blank">post</a>, I have listed all the plugins I use in my Sublime Text Editor.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Whenever you edit your Settings in Sublime Text, ensure you update <i>Settings - User</i> under <i>Preferences</i> and not any other file since once you install an update to Sublime Text, the installer does not fiddle with <i>Settings - User</i> and hence you can retain all your settings even in the updated version. Donot update <i>Settings - Default</i>, since it will be erased with the latest version&#8217;s Settings file.</div><div style="text-align: justify;"><br /></div></div>
+<div style="font-family: Roboto; font-size: 15px; white-space: normal;">On 11th July, 2013 I hosted a workshop on &#8220;Big Data, Real-time Processing and Storm&#8221;at <a href="http://fifthelephant.in/2013/workshops" target="_blank"><strong>The Fifth Elephant, 2013</strong></a> in Bangalore.<br /></div>
   
   
     <footer>
-      <a rel="full-article" href="/blog/2012/12/21/my-user-settings-of-sublime-text/">Read on &rarr;</a>
+      <a rel="full-article" href="/blog/2013/07/15/presented-storm-at-fifth-elephant-2013/">Read on &rarr;</a>
     </footer>
   
 
@@ -336,7 +206,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/12/20/jetbrains-mayan-doomsday-special-offers/">JetBrains Mayan Doomsday Special Offers </a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/05/25/workshop-on-storm-at-fifth-elephant/">My upcoming workshop on Storm at The Fifth Elephant, 2013</a></h1>
     
     
       <p class="meta">
@@ -345,7 +215,7 @@
 
 
 
-<time class='entry-date' datetime='2012-12-20'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>12:00 am</span></time>
+<time class='entry-date' datetime='2013-05-25'><span class='date'><span class='date-month'>May</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:00 am</span></time>
         
       </p>
     
@@ -353,39 +223,12 @@
 
 
   <div class="entry-content"><div class='post'>
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">JetBrains is offering steep discount of 75% on all their products which include <a href="http://www.jetbrains.com/idea" target="_blank">IntelliJ IDEA</a>, <a href="http://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a> and a host of <a href="http://www.jetbrains.com/products.html" target="_blank">other awesome IDEs</a>.</div><div style="text-align: justify;"><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://www.jetbrains.com/specials/index.jsp" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="JetBrains Special Offer" border="0" height="347" src="http://1.bp.blogspot.com/-Do0tGdl5YdI/UNMt-CX6hbI/AAAAAAAACLk/lKcsuWmwFk8/s1600/Untitled.png" title="JetBrains Special Offer" width="400" /></a></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">It is a limited period offer and to be precise its an offer only for 24 hours on 20<sup>th</sup> December, 2012. So, what are you waiting for? Head over to their website and NOW!!</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><a href="http://www.jetbrains.com/specials/index.jsp" target="_blank">JetBrains Special Offer</a></div></div></div>
-</div>
+<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;"><a href="http://fifthelephant.in/2013/" target="_blank">The Fifth Elephant</a> is a conference in Bangalore, India which focuses on Big Data and Analytics. Its a community powered conference. This means, as highlighted in their website, it is &#8220;Of the Community, By the Community, For the Community&#8221;. So, any one can propose a session as such for the conference in the <a href="http://funnel.hasgeek.com/fifthel2013/" target="_blank">Funnel</a>. Participants who have purchased conference tickets can vote on session proposals.</div><div style="text-align: justify;"><br /></div><div><div style="text-align: justify;">In <a href="http://fifthelephant.in/2012/" target="_blank">2012 edition</a>, Fifth Elephant with more than 50 sessions, attracted 600+ participants from many MNCs, startups alike. This 2-day conference was preceded by a one-day workshop sessions as well due to the overwhelming demand. The biggest USP of any of the HasGeek organized conferences [other than being community powered conferences] is, they live stream most of the sessions and they also upload all the recorded videos to <a href="http://www.youtube.com/user/hasgeek/videos" target="_blank">Youtube</a> and / or&nbsp;<a href="http://hasgeek.tv/fifthelephant/" target="_blank">HasGeek TV</a>.</div></div><div style="text-align: justify;"><br /></div><div><div style="text-align: justify;">I gave a session on <i>Introduction to Pig</i>&nbsp;at The Fifth Elephant last year. I have written about it previously&nbsp;<a href="http://p7h.blogspot.in/2013/01/intro-to-pig.html" target="_blank">here</a>.</div><div style="font-family: Roboto; font-size: 15px; white-space: normal;"></div><div style="text-align: justify;"><br /></div></div>
   
   
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/15/wikipedia-entries-for-k-r-and-steve-jobs/">Wikipedia entries for K & R and Steve Jobs</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-12-15'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">Wikipedia entries for <a href="http://en.wikipedia.org/wiki/Dennis_Ritchie" target="_blank">Dennis Ritchie</a> [<i>C</i> and <i>Unix</i> creator], <a href="http://en.wikipedia.org/wiki/Ken_Thompson" target="_blank">Ken Thompson</a>&nbsp;[<i>Unix</i> creator], <a href="http://en.wikipedia.org/wiki/Brian_Kernighan" target="_blank">Brian Kernighan</a> [worked with K &amp; R during <i>Unix</i> creation] and <a href="http://en.wikipedia.org/wiki/Stuart_Feldman" target="_blank">Stuart Feldman</a> [<i>make</i> creator] put together is just 1/5 or probably 1/10 of the Wikipedia entry for <a href="http://en.wikipedia.org/wiki/Steve_Jobs" target="_blank">Steve Jobs</a>.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">This is definitely nothing against Steve. He is a great visionary.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">But, he is a product guy who visualized the product, the actual hard work was done by so many unknown Engineers.</div><div style="text-align: justify;">We have come to accept and approve narcissists more than great creators and excellent human beings whose work changed the fate and direction of the world. This is not a good sign for the new generations and needs a change.</div></div></div>
-</div>
-  
+    <footer>
+      <a rel="full-article" href="/blog/2013/05/25/workshop-on-storm-at-fifth-elephant/">Read on &rarr;</a>
+    </footer>
   
 
 

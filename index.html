@@ -38,7 +38,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">Prashanth Babu</a></h1>
   
-    <h2>Random tech ramblings, musings, productivity tips on Big Data, Hadoop Ecosystem, Java, Android, etc.</h2>
+    <h2>Random tech ramblings on Hadoop Ecosytem, Java.</h2>
   
 </hgroup>
 
@@ -58,10 +58,9 @@
 <ul class="main-navigation">
   <li><a href="/about">About</a></li>
   <li><a href="/contact">Contact</a></li>
-  <li><a href="/projects">Projects</a></li>
   <li><a href="/talks">Talks</a></li>
+  <li><a href="/projects">Projects</a></li>
   <li><a href="/archives">Archives</a></li>
-  <li><a href="http://P7h.blogspot.com" target="new">Blogger Posts</a></li>
 </ul>
 
 </nav>
@@ -240,171 +239,6 @@ Though Blogger engine is good, I could never spend time to create a template on 
   
     <footer>
       <a rel="full-article" href="/blog/2014/10/18/jdk-download-command-prompt/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/29/guava-stopwatch/">Learning Guava &#8211; Calibrating time using Stopwatch</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-01-29'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<div style="font-size: 15px; white-space: normal;"><span style="font-family: Roboto;">Many of our day-to-day applications would need calibrating time taken between 2 points. In Java world we either depend on </span><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#currentTimeMillis()" target="_blank"><span style="font-family: Courier New, Courier, monospace;">System.currentTimeMillis()</span></a><span style="font-family: Roboto;"> or </span><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#nanoTime()" target="_blank"><span style="font-family: Courier New, Courier, monospace;">System.nanoTime()</span></a><span style="font-family: Roboto;">. But the pain here is, we have to do the required computations of getting to a proper granularity to understand the time taken.Would n&#8217;t it be great it to have such an utility class which will give the required information in the granularity we need with minimum amount of boilerplate code?  </span><br /><div style="font-family: Roboto;"><br /></div><span style="font-family: Courier New, Courier, monospace;"><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Stopwatch.html" target="_blank">Stopwatch</a> </span><span style="font-family: Roboto;">is one such small and wonderful utility class in </span><span style="font-family: Courier New, Courier, monospace;">Guava</span><span style="font-family: Roboto;"> which helps in calibrating elapsed time / duration between any 2 points in the logic. The advantage of using </span><span style="font-family: Courier New, Courier, monospace;">Guava</span><span style="font-family: Roboto;">&#8217;s </span><span style="font-family: Courier New, Courier, monospace;">Stopwatch</span><span style="font-family: Roboto;"> is you can get the elapsed time in any measure i.e. right from nanoseconds to days. This is possible because you can pass an enum argument type of </span><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html" target="_blank"><span style="font-family: Courier New, Courier, monospace;">TimeUnit</span></a><span style="font-family: Roboto;"> class to get the elapsed time in the desired granularity.  </span></div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/01/29/guava-stopwatch/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/26/load-properties-file-using-guava/">Learning Guava &#8211; Load properties file using Guava</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-01-26'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Guava code snippet for loading a properties file from classpath.<br />
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/01/26/load-properties-file-using-guava/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/11/27/google-guava-posts/">Learning Guava &#8211; Google Guava blog series</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2013-11-27'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<span style="font-family: Roboto; font-size: 15px;">​I have been a huge fan of </span><a href="https://code.google.com/p/guava-libraries/" style="font-family: Roboto; font-size: 15px;" target="_blank">Google Guava</a><span style="font-family: Roboto; font-size: 15px;"> from the time I came across it 3 years back.</span><br /><div style="font-size: 15px; white-space: normal;"><span style="font-family: Roboto;">For starters, </span><span style="font-family: Courier New, Courier, monospace;">Guava</span><span style="font-family: Roboto;"> is a project which contains many Google&#8217;s core libraries like collections, caching, math, primitives, concurrency, networking, common annotations, string processing, I/O, refelction and many others.</span><br /><div style="font-family: Roboto;">It is very well designed API. Guava is designed, implemented and maintained by Google Engineers like <a href="https://plus.google.com/113026104107031516488/about" target="_blank">Kevin Bourrillion</a>&nbsp;and&nbsp;<a href="https://plus.google.com/+KurtAlfredKluever/about" target="_blank">Kurt Alfred Kluever</a>, etc.</div><div style="font-family: Roboto;"><br /></div><span style="font-family: Roboto;">Guava follows almost all the excellent patterns and practices mentioned in <a href="http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683" target="_blank">Effective Java book</a>&nbsp;written by <a href="https://plus.google.com/113200173329286634669/about" target="_blank">Joshua Bloch</a>, who has designed the impeccable Java Collections API while he was at Sun. Later he joined Google. Under his mentor-ship, Google Guava got wings and became a very well designed and effective API, useful for many situations and scenarios with an ever-growing feature list. I ensure I add Guava dependency as the first thing to my Gradle or Maven build script. Guava makes </span><span style="font-family: Courier New, Courier, monospace;">Java</span><span style="font-family: Roboto;"> code a lot more readable, clean, simple and elegant. It utilises the Java generics very well.</span></div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/11/27/google-guava-posts/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/15/presented-storm-at-fifth-elephant-2013/">Presented Storm at The Fifth Elephant, 2013 </a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2013-07-15'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;">On 11th July, 2013 I hosted a workshop on &#8220;Big Data, Real-time Processing and Storm&#8221;at <a href="http://fifthelephant.in/2013/workshops" target="_blank"><strong>The Fifth Elephant, 2013</strong></a> here in Bangalore.<br /><br /><iframe allowfullscreen="" frameborder="0" height="486" marginheight="0" marginwidth="0" mozallowfullscreen="" scrolling="no" src="http://www.slideshare.net/slideshow/embed_code/24202814?rel=0" style="border-width: 1px 1px 0; border: 1px solid #CCC; margin-bottom: 5px;" webkitallowfullscreen="" width="650px"> </iframe> <br /><div style="margin-bottom: 5px;"><div style="text-align: center;"><strong> <a href="http://www.slideshare.net/prashanthvvbabu/fifth-elephant-2013-storm" target="_blank" title="Storm @ Fifth Elephant 2013">Storm @ Fifth Elephant 2013</a> </strong> from <strong><a href="http://www.slideshare.net/prashanthvvbabu" target="_blank">Prashanth Babu</a></strong></div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/07/15/presented-storm-at-fifth-elephant-2013/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/05/25/workshop-on-storm-at-fifth-elephant/">My upcoming workshop on Storm at The Fifth Elephant, 2013</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2013-05-25'><span class='date'><span class='date-month'>May</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;"><a href="http://fifthelephant.in/2013/" target="_blank">The Fifth Elephant</a> is a conference in Bangalore, India which focuses on Big Data and Analytics. Its a community powered conference. This means, as highlighted in their website, it is &#8220;Of the Community, By the Community, For the Community&#8221;. So, any one can propose a session as such for the conference in the <a href="http://funnel.hasgeek.com/fifthel2013/" target="_blank">Funnel</a>. Participants who have purchased conference tickets can vote on session proposals.</div><div style="text-align: justify;"><br /></div><div><div style="text-align: justify;">In <a href="http://fifthelephant.in/2012/" target="_blank">2012 edition</a>, Fifth Elephant with more than 50 sessions, attracted 600+ participants from many MNCs, startups alike. This 2-day conference was preceded by a one-day workshop sessions as well due to the overwhelming demand. The biggest USP of any of the HasGeek organized conferences [other than being community powered conferences] is, they live stream most of the sessions and they also upload all the recorded videos to <a href="http://www.youtube.com/user/hasgeek/videos" target="_blank">Youtube</a> and / or&nbsp;<a href="http://hasgeek.tv/fifthelephant/" target="_blank">HasGeek TV</a>.</div></div><div style="text-align: justify;"><br /></div><div><div style="text-align: justify;">I gave a session on <i>Introduction to Pig</i>&nbsp;at The Fifth Elephant last year. I have written about it previously&nbsp;<a href="http://p7h.blogspot.in/2013/01/intro-to-pig.html" target="_blank">here</a>.</div><div style="font-family: Roboto; font-size: 15px; white-space: normal;"></div><div style="text-align: justify;"><br /></div></div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/05/25/workshop-on-storm-at-fifth-elephant/">Read on &rarr;</a>
     </footer>
   
 
