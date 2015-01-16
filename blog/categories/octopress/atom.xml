@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: octopress | Prashanth Babu]]></title>
+  <link href="http://p7h.org/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://p7h.org/"/>
+  <updated>2015-01-16T15:03:58+00:00</updated>
+  <id>http://p7h.org/</id>
+  <author>
+    <name><![CDATA[Prashanth Babu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress blogging setup on a new machine]]></title>
+    <link href="http://p7h.org/blog/2015/01/16/octopress-setup-windows/"/>
+    <updated>2015-01-16T14:48:00+00:00</updated>
+    <id>http://p7h.org/blog/2015/01/16/octopress-setup-windows</id>
+    <content type="html"><![CDATA[<p>This post gives a brief intro to setting up Octopress blog on a new Windows machine. This assumes you already have your blogs on your GitHub account and are changing the machine or setting up on a new machine.</p>
+
+<h3 id="step-1-install-ruby-v193">Step 1: Install Ruby v1.9.3</h3>
+
+<p>Download and install Ruby v1.9.3 from <a href="http://rubyinstaller.org/downloads/">here</a>. <code>ruby --version</code> should give something on the lines of <code>ruby 1.9.3p551 (2014-11-13) [i386-mingw32]</code>.
+<!--more-->
+### Step 2: Install RubyDevKit</p>
+
+<p>Download and install Ruby Dev Kit from <a href="https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe">here</a></p>
+
+<p>Change the directory to folder where you installed RubyDevKit and then run the following commands:</p>
+
+<pre><code>cd RubyDevKit
+ruby dk.rb init
+ruby dk.rb install
+</code></pre>
+
+<h3 id="step-3-clone-your-repo-and-install-dependencies">Step 3: Clone your repo and install dependencies</h3>
+
+<p>Clone your repository preferably using GitHub client for Windows. Please note you must point to <code>source</code> and not <code>master</code> of your GitHub repo.</p>
+
+<p>Change directory to that folder [in this case, I am referring to my folder as an example; you must change to your appropriate folder] and run the following commands:</p>
+
+<pre><code>cd p7h.github.com
+gem install bundler
+bundle install
+</code></pre>
+
+<h4 id="step-3a-if-you-get-ssl-errors-from-running-the-above-commands">Step 3a: If you get SSL errors from running the above commands</h4>
+
+<p>If the above commands fail, <a href="https://gist.github.com/P7h/fcb67d22aad7f9eee6e7">manually add trust certificate to Rubygems</a> and then retry to install the dependencies with the above commands.</p>
+
+<h3 id="step-4-setup-the-github-pages-and-generate-and-preview-the-blog">Step 4: Setup the GitHub pages and generate and preview the blog</h3>
+
+<p>Run the following commands to complete the blog setup. With preview you can view your blog on your machine on port <a href="http://localhost:4000">4000</a>:</p>
+
+<pre><code>cd p7h.github.com
+rake setup_github_pages
+rake generate
+rake preview
+</code></pre>
+
+<h3 id="step-5-github-personal-access-token">Step 5: GitHub Personal Access Token</h3>
+<p>If you have enabled 2 FA on GitHub, you must get GitHub access token from <a href="https://github.com/settings/applications">applications</a> page on GitHub. You need to give this access token for user name while performing <code>git commit</code> or <code>rake deploy</code> or <code>rake gen_deploy</code> in the next steps.</p>
+
+<h3 id="step-6-deploy-the-blog">Step 6: Deploy the blog</h3>
+<p>Once you are done with all your changes, deploy your changes to your blog by running these commands:</p>
+
+<pre><code>cd p7h.github.com
+rake generate
+rake deploy
+</code></pre>
+
+<p>Or generate and deploy both together:</p>
+
+<pre><code>cd p7h.github.com
+rake gen_deploy
+</code></pre>
+
+<h3 id="step-7-commit-your-changes">Step 7: Commit your changes</h3>
+
+<pre><code>cd p7h.github.com
+git add -A
+git commit -m 'commit message'
+git push origin source
+</code></pre>
+
+<h3 id="step-8-other-useful-commands">Step 8: Other useful commands</h3>
+<p>For creating a new page:</p>
+
+<pre><code>cd p7h.github.com
+rake new_page["new page"]
+</code></pre>
+
+<p>For creating a new post:</p>
+
+<pre><code>cd p7h.github.com
+rake new_post["new post"]
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

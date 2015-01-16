@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: misc | Prashanth Babu]]></title>
+  <link href="http://p7h.org/blog/categories/misc/atom.xml" rel="self"/>
+  <link href="http://p7h.org/"/>
+  <updated>2015-01-16T15:03:58+00:00</updated>
+  <id>http://p7h.org/</id>
+  <author>
+    <name><![CDATA[Prashanth Babu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress blogging setup on a new machine]]></title>
+    <link href="http://p7h.org/blog/2015/01/16/octopress-setup-windows/"/>
+    <updated>2015-01-16T14:48:00+00:00</updated>
+    <id>http://p7h.org/blog/2015/01/16/octopress-setup-windows</id>
+    <content type="html"><![CDATA[<p>This post gives a brief intro to setting up Octopress blog on a new Windows machine. This assumes you already have your blogs on your GitHub account and are changing the machine or setting up on a new machine.</p>
+
+<h3 id="step-1-install-ruby-v193">Step 1: Install Ruby v1.9.3</h3>
+
+<p>Download and install Ruby v1.9.3 from <a href="http://rubyinstaller.org/downloads/">here</a>. <code>ruby --version</code> should give something on the lines of <code>ruby 1.9.3p551 (2014-11-13) [i386-mingw32]</code>.
+<!--more-->
+### Step 2: Install RubyDevKit</p>
+
+<p>Download and install Ruby Dev Kit from <a href="https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe">here</a></p>
+
+<p>Change the directory to folder where you installed RubyDevKit and then run the following commands:</p>
+
+<pre><code>cd RubyDevKit
+ruby dk.rb init
+ruby dk.rb install
+</code></pre>
+
+<h3 id="step-3-clone-your-repo-and-install-dependencies">Step 3: Clone your repo and install dependencies</h3>
+
+<p>Clone your repository preferably using GitHub client for Windows. Please note you must point to <code>source</code> and not <code>master</code> of your GitHub repo.</p>
+
+<p>Change directory to that folder [in this case, I am referring to my folder as an example; you must change to your appropriate folder] and run the following commands:</p>
+
+<pre><code>cd p7h.github.com
+gem install bundler
+bundle install
+</code></pre>
+
+<h4 id="step-3a-if-you-get-ssl-errors-from-running-the-above-commands">Step 3a: If you get SSL errors from running the above commands</h4>
+
+<p>If the above commands fail, <a href="https://gist.github.com/P7h/fcb67d22aad7f9eee6e7">manually add trust certificate to Rubygems</a> and then retry to install the dependencies with the above commands.</p>
+
+<h3 id="step-4-setup-the-github-pages-and-generate-and-preview-the-blog">Step 4: Setup the GitHub pages and generate and preview the blog</h3>
+
+<p>Run the following commands to complete the blog setup. With preview you can view your blog on your machine on port <a href="http://localhost:4000">4000</a>:</p>
+
+<pre><code>cd p7h.github.com
+rake setup_github_pages
+rake generate
+rake preview
+</code></pre>
+
+<h3 id="step-5-github-personal-access-token">Step 5: GitHub Personal Access Token</h3>
+<p>If you have enabled 2 FA on GitHub, you must get GitHub access token from <a href="https://github.com/settings/applications">applications</a> page on GitHub. You need to give this access token for user name while performing <code>git commit</code> or <code>rake deploy</code> or <code>rake gen_deploy</code> in the next steps.</p>
+
+<h3 id="step-6-deploy-the-blog">Step 6: Deploy the blog</h3>
+<p>Once you are done with all your changes, deploy your changes to your blog by running these commands:</p>
+
+<pre><code>cd p7h.github.com
+rake generate
+rake deploy
+</code></pre>
+
+<p>Or generate and deploy both together:</p>
+
+<pre><code>cd p7h.github.com
+rake gen_deploy
+</code></pre>
+
+<h3 id="step-7-commit-your-changes">Step 7: Commit your changes</h3>
+
+<pre><code>cd p7h.github.com
+git add -A
+git commit -m 'commit message'
+git push origin source
+</code></pre>
+
+<h3 id="step-8-other-useful-commands">Step 8: Other useful commands</h3>
+<p>For creating a new page:</p>
+
+<pre><code>cd p7h.github.com
+rake new_page["new page"]
+</code></pre>
+
+<p>For creating a new post:</p>
+
+<pre><code>cd p7h.github.com
+rake new_post["new post"]
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[First blogpost with Octopress]]></title>
+    <link href="http://p7h.org/blog/2015/01/12/first-blogpost-with-octopress/"/>
+    <updated>2015-01-12T00:12:46+00:00</updated>
+    <id>http://p7h.org/blog/2015/01/12/first-blogpost-with-octopress</id>
+    <content type="html"><![CDATA[<p>This is my first blogpost using Octopress and GitHub.</p>
+
+<p>Previously, I had my blogs hosted on <a href="http://P7h.blogspot.com">Blogger</a>.
+Though Blogger engine is good, I could never spend time to create a template on my own to make my blogpage look good and on top of that the default templates and layouting always made go crazy since its too tedious to spend time on fine-tuning and make the page look zazzy. 
+<!--more-->
+Being a minimalist, I would like to go with minimum cruft and more emphasis on the code and content rather than the styling of the blogpage with an attractive UI.</p>
+
+<p>So here I am, trying to use Octopress and trying to generate static pages using GitHub. I went with default Octopress template. Setting it up on Windows with Ruby was a bit painful initially and I went helter-skelter looking for help mostly with Google and SO. But after 2 trials, I was able to get my default website up and running. I hope this will be a nice experience with just markdown and code-highlighting to the rescue.</p>
+
+<p>Over a period of time or whenever I get time, I will be moving all my blogposts from Blogger to GitHub hosted static pages. Though its a considerable effort, I would like to give it a shot and move away from Blogger and maintain this as my primary blogpage.</p>
+
+<p>For now, just “Hello World”. :-)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Aaron Swartz Memorial at New York]]></title>
+    <link href="http://p7h.org/blog/2013/01/20/aaron-swartz-memorial/"/>
+    <updated>2013-01-20T00:00:00+00:00</updated>
+    <id>http://p7h.org/blog/2013/01/20/aaron-swartz-memorial</id>
+    <content type="html"><![CDATA[<div class="post">
+<div style="font-family: Roboto; font-size: 15px; white-space: normal;">Aaron Swartz, a very accomplished and a highly talented nerd committed suicide last Friday, i.e. 11th January, 2013 at an young age of 26 years. So many people have written so much about him. Check the complete <a href="http://en.wikipedia.org/wiki/Aaron_Swartz">Wikipedia</a> page and check the <a href="http://en.wikipedia.org/wiki/Aaron_Swartz#References" target="_blank">References</a> section of his Wikipedia page for more info and other articles written by his friends. He has left wonderful impressions on Reddit, Creative Commons, SOPA, Markdown, RSS, web.py to name a few of his outstanding contributions.<br /><div style="text-align: center;"><a href="http://www.flickr.com/photos/quinn/870253651/" target="_blank" title="Aaron by quinnums, on Flickr"><img alt="Aaron Swartz" height="500" src="http://farm2.staticflickr.com/1150/870253651_9b076ba1b3.jpg" width="500" /></a></div><!--more-->Aaron&#8217;s <a href="http://www.rememberaaronsw.com/">memorial</a> was held on Saturday, 19th January, 2013 at Cooper Union, New York. Here is the complete set of recorded videos from his memorial which are hosted on <a href="http://www.livestream.com/democracynow/folder?dirId=0545b862-1026-4b88-86ff-409745806958">livestream</a>. There are totally 6 videos which you must checkout to understand what are his contributions and how talented a person he was and what impressions he has left people with, even such an young age.<br />If you are hard-pressed for time, then ensure you at least check the message from Taren Stinebrickner-Kauffman, partner of Aaron, embedded below. It is really inspiring.<br /><div style="text-align: center;"><iframe frameborder="0" height="385" scrolling="no" src="http://cdn.livestream.com/embed/democracynow?layout=4&amp;clip=pla_f83c80fe-0fc0-474c-9936-efe8659466f6&amp;color=0xe7e7e7&amp;autoPlay=false&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777&amp;allowchat=true&amp;height=385&amp;width=640" style="border: 0; outline: 0;" width="640"></iframe><br /></div>Rest in peace Aaron!!</div></div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Dark Knight Rises ultimate trilogy trailer]]></title>
+    <link href="http://p7h.org/blog/2012/12/27/the-dark-knight-rises-ultimate-trilogy/"/>
+    <updated>2012-12-27T00:00:00+00:00</updated>
+    <id>http://p7h.org/blog/2012/12/27/the-dark-knight-rises-ultimate-trilogy</id>
+    <content type="html"><![CDATA[<div class="post">
+<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">Wonderfully put together&nbsp;ultimate trilogy trailer of&nbsp;&#8221;<a href="http://en.wikipedia.org/wiki/The_Dark_Knight_Rises" target="_blank">The Dark Knight Rises</a>&#8221;,&nbsp;<a href="http://en.wikipedia.org/wiki/Christopher_Nolan" target="_blank">Christopher Nolan</a>&#8217;s Batman series.</div><div style="text-align: justify;">Christopher Nolan&#8217;s taking is brilliant as always. Apart from him, Hans Zimmer&#8217;s background score is excellent.&nbsp;I concur with the comment in the below Youtube page which says: &#8220;Without Hans Zimmer this trilogy wouldn&#8217;t be nearly as epic as it is&#8221;. If you have any doubts, you should check out the Original Motion Picture Soundtrack of <i>The Dark Knight Rises</i> on <a href="http://www.amazon.com/The-Dark-Knight-Rises-Soundtrack/dp/B008645YEE" target="_blank">Amazon</a> or&nbsp;<a href="http://www.flipkart.com/dark-knight-rises/p/itmdbvq7g22yjmks?pid=DGADBVQ7WC4RGX8C" target="_blank">Flipkart</a>.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">The only thing I missed in this trailer is the voice of Bane i.e.&nbsp;<a href="http://en.wikipedia.org/wiki/Tom_Hardy" target="_blank">Tom Hardy</a>.</div><div style="text-align: justify;"><iframe allowfullscreen="allowfullscreen" frameborder="0" height="480" src="https://www.youtube.com/embed/1T__uN5xmC0" width="800"></iframe><br /></div></div></div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wikipedia entries for K & R and Steve Jobs]]></title>
+    <link href="http://p7h.org/blog/2012/12/15/wikipedia-entries-for-k-r-and-steve-jobs/"/>
+    <updated>2012-12-15T00:00:00+00:00</updated>
+    <id>http://p7h.org/blog/2012/12/15/wikipedia-entries-for-k-r-and-steve-jobs</id>
+    <content type="html"><![CDATA[<div class="post">
+<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">Wikipedia entries for <a href="http://en.wikipedia.org/wiki/Dennis_Ritchie" target="_blank">Dennis Ritchie</a> [<i>C</i> and <i>Unix</i> creator], <a href="http://en.wikipedia.org/wiki/Ken_Thompson" target="_blank">Ken Thompson</a>&nbsp;[<i>Unix</i> creator], <a href="http://en.wikipedia.org/wiki/Brian_Kernighan" target="_blank">Brian Kernighan</a> [worked with K &amp; R during <i>Unix</i> creation] and <a href="http://en.wikipedia.org/wiki/Stuart_Feldman" target="_blank">Stuart Feldman</a> [<i>make</i> creator] put together is just 1/5 or probably 1/10 of the Wikipedia entry for <a href="http://en.wikipedia.org/wiki/Steve_Jobs" target="_blank">Steve Jobs</a>.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">This is definitely nothing against Steve. He is a great visionary.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">But, he is a product guy who visualized the product, the actual hard work was done by so many unknown Engineers.</div><div style="text-align: justify;">We have come to accept and approve narcissists more than great creators and excellent human beings whose work changed the fate and direction of the world. This is not a good sign for the new generations and needs a change.</div></div></div>
+]]></content>
+  </entry>
+  
+</feed>

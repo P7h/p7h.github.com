@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sublime text | Prashanth Babu]]></title>
+  <link href="http://p7h.org/blog/categories/sublime-text/atom.xml" rel="self"/>
+  <link href="http://p7h.org/"/>
+  <updated>2015-01-16T15:03:58+00:00</updated>
+  <id>http://p7h.org/</id>
+  <author>
+    <name><![CDATA[Prashanth Babu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My User Settings of Sublime Text]]></title>
+    <link href="http://p7h.org/blog/2012/12/21/my-user-settings-of-sublime-text/"/>
+    <updated>2012-12-21T00:00:00+00:00</updated>
+    <id>http://p7h.org/blog/2012/12/21/my-user-settings-of-sublime-text</id>
+    <content type="html"><![CDATA[<div class="post">
+<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">In an earlier <a href="http://p7h.blogspot.com/2012/12/packages-in-sublime-text.html" target="_blank">post</a>, I have listed all the plugins I use in my Sublime Text Editor.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Whenever you edit your Settings in Sublime Text, ensure you update <i>Settings - User</i> under <i>Preferences</i> and not any other file since once you install an update to Sublime Text, the installer does not fiddle with <i>Settings - User</i> and hence you can retain all your settings even in the updated version. Donot update <i>Settings - Default</i>, since it will be erased with the latest version&#8217;s Settings file.</div><div style="text-align: justify;"><br /></div><!--more--><div style="text-align: justify;">I played around my Settings and currently I have configured my Sublime Text as per my requirement. Here are my User Settings:</div><div style="text-align: justify;"><script src="https://gist.github.com/4388796.js"></script>Use these settings as the base and try to create your own flair for your work as per your taste. I am sure it will help you in increased efficiency and productivity in your work. All the best!</div></div></div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Packages in Sublime Text]]></title>
+    <link href="http://p7h.org/blog/2012/12/11/packages-in-sublime-text/"/>
+    <updated>2012-12-11T00:00:00+00:00</updated>
+    <id>http://p7h.org/blog/2012/12/11/packages-in-sublime-text</id>
+    <content type="html"><![CDATA[<div class="post">
+<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">If I am not working on Eclipse or IntelliJ IDEA, I will be grokking on <a href="http://www.sublimetext.com/" target="_blank">Sublime Text 2</a>. Its a wonderful text editor and in fact it&#8217;s more than a text editor. Unlimited trial period, multiple cursors, easy customization, etc are its main USPs.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">There are a number of blogposts which explain why / how Sublime Text is good. Two of them are from NetTuts. Follow them and see how simple and easy it is to configure and personalize Sublime as per your requirements:</div><ul><li style="text-align: justify;"><a href="http://net.tutsplus.com/tutorials/tools-and-tips/sublime-text-2-tips-and-tricks/" target="_blank">Sublime Text 2 Tips and Tricks</a></li><li style="text-align: justify;"><a href="https://tutsplus.com/course/improve-workflow-in-sublime-text-2/" target="_blank">Perfect Workflow in Sublime Text 2</a></li></ul><!--more--><div style="text-align: justify;">If you have followed the above articles, you would know that the first thing you do after installing Sublime Text is, install <a href="http://wbond.net/sublime_packages/package_control" target="_blank">Package Control</a>&nbsp;and its all simple from there to install other packages.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Following is the list of packages I have right now which are very useful for my work.</div><div style="text-align: justify;">First install Package Control and then search for the required packages in Package Control for installation, that&#8217;s all you have to do.</div><div style="text-align: justify;"><script src="https://gist.github.com/4388830.js"></script>In a future post, I will add <a href="http://p7h.blogspot.com/2012/12/my-user-settings-of-sublime-text.html" target="_blank">my User Settings of Sublime Text</a>.</div></div></div>
+]]></content>
+  </entry>
+  
+</feed>

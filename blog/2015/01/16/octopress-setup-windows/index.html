@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress blogging setup on a new machine - Prashanth Babu</title>
+  <meta name="author" content="Prashanth Babu">
+
+  
+  <meta name="description" content="This post gives a brief intro to setting up Octopress blog on a new Windows machine. This assumes you already have your blogs on your GitHub account &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://p7h.org/blog/2015/01/16/octopress-setup-windows">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Prashanth Babu" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Prashanth Babu</a></h1>
+  
+    <h2>Random tech ramblings, musings, productivity tips on Big Data, Hadoop Ecosystem, Java, Android, etc.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="p7h.org">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about">About</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/talks">Talks</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="http://P7h.blogspot.com" target="new">Blogger Posts</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Octopress blogging setup on a new machine</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-01-16T14:48:00+00:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>2:48 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>This post gives a brief intro to setting up Octopress blog on a new Windows machine. This assumes you already have your blogs on your GitHub account and are changing the machine or setting up on a new machine.</p>
+
+<h3 id="step-1-install-ruby-v193">Step 1: Install Ruby v1.9.3</h3>
+
+<p>Download and install Ruby v1.9.3 from <a href="http://rubyinstaller.org/downloads/">here</a>. <code>ruby --version</code> should give something on the lines of <code>ruby 1.9.3p551 (2014-11-13) [i386-mingw32]</code>.
+<!--more-->
+### Step 2: Install RubyDevKit</p>
+
+<p>Download and install Ruby Dev Kit from <a href="https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe">here</a></p>
+
+<p>Change the directory to folder where you installed RubyDevKit and then run the following commands:</p>
+
+<pre><code>cd RubyDevKit
+ruby dk.rb init
+ruby dk.rb install
+</code></pre>
+
+<h3 id="step-3-clone-your-repo-and-install-dependencies">Step 3: Clone your repo and install dependencies</h3>
+
+<p>Clone your repository preferably using GitHub client for Windows. Please note you must point to <code>source</code> and not <code>master</code> of your GitHub repo.</p>
+
+<p>Change directory to that folder [in this case, I am referring to my folder as an example; you must change to your appropriate folder] and run the following commands:</p>
+
+<pre><code>cd p7h.github.com
+gem install bundler
+bundle install
+</code></pre>
+
+<h4 id="step-3a-if-you-get-ssl-errors-from-running-the-above-commands">Step 3a: If you get SSL errors from running the above commands</h4>
+
+<p>If the above commands fail, <a href="https://gist.github.com/P7h/fcb67d22aad7f9eee6e7">manually add trust certificate to Rubygems</a> and then retry to install the dependencies with the above commands.</p>
+
+<h3 id="step-4-setup-the-github-pages-and-generate-and-preview-the-blog">Step 4: Setup the GitHub pages and generate and preview the blog</h3>
+
+<p>Run the following commands to complete the blog setup. With preview you can view your blog on your machine on port <a href="http://localhost:4000">4000</a>:</p>
+
+<pre><code>cd p7h.github.com
+rake setup_github_pages
+rake generate
+rake preview
+</code></pre>
+
+<h3 id="step-5-github-personal-access-token">Step 5: GitHub Personal Access Token</h3>
+<p>If you have enabled 2 FA on GitHub, you must get GitHub access token from <a href="https://github.com/settings/applications">applications</a> page on GitHub. You need to give this access token for user name while performing <code>git commit</code> or <code>rake deploy</code> or <code>rake gen_deploy</code> in the next steps.</p>
+
+<h3 id="step-6-deploy-the-blog">Step 6: Deploy the blog</h3>
+<p>Once you are done with all your changes, deploy your changes to your blog by running these commands:</p>
+
+<pre><code>cd p7h.github.com
+rake generate
+rake deploy
+</code></pre>
+
+<p>Or generate and deploy both together:</p>
+
+<pre><code>cd p7h.github.com
+rake gen_deploy
+</code></pre>
+
+<h3 id="step-7-commit-your-changes">Step 7: Commit your changes</h3>
+
+<pre><code>cd p7h.github.com
+git add -A
+git commit -m 'commit message'
+git push origin source
+</code></pre>
+
+<h3 id="step-8-other-useful-commands">Step 8: Other useful commands</h3>
+<p>For creating a new page:</p>
+
+<pre><code>cd p7h.github.com
+rake new_page["new page"]
+</code></pre>
+
+<p>For creating a new post:</p>
+
+<pre><code>cd p7h.github.com
+rake new_post["new post"]
+</code></pre>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Prashanth Babu</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-01-16T14:48:00+00:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>2:48 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/misc/'>misc</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/01/14/jdk-installation-ubuntu-ppa/" title="Previous Post: JDK installation from ppa on Ubuntu">&laquo; JDK installation from ppa on Ubuntu</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <div class="about sidebar">
+  <span class="about-image">
+    <img src="/images/P7h.jpg" alt="P7h">
+  </span>
+  <span class="about-desc">
+    <span>Hey, I am Prashanth Babu.<br/>I am a Big Data developer. More about me <a href="/about">here</a>.</span>
+    <br/>
+    <hr>
+    <a href="https://twitter.com/P7h" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @P7h</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <hr> 
+  </span>
+</div> <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/16/octopress-setup-windows/">Octopress blogging setup on a new machine</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/14/jdk-installation-ubuntu-ppa/">JDK installation from ppa on Ubuntu</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/first-blogpost-with-octopress/">First blogpost with Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/07/udacity-course-on-apache-storm/">Udacity course on Apache Storm</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/18/jdk-download-command-prompt/">Download Java / JDK / JRE from shell / terminal / command prompt</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/P7h">@P7h</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'P7h',
+            count: 5,
+            skip_forks: true,
+            skip_repos: [ "p7h.github.com", "tmux-cheatsheet", "P7h.github.io__Old" ],
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Prashanth Babu -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

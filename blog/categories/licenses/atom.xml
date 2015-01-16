@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: licenses | Prashanth Babu]]></title>
+  <link href="http://p7h.org/blog/categories/licenses/atom.xml" rel="self"/>
+  <link href="http://p7h.org/"/>
+  <updated>2015-01-16T15:03:58+00:00</updated>
+  <id>http://p7h.org/</id>
+  <author>
+    <name><![CDATA[Prashanth Babu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Open Source licenses]]></title>
+    <link href="http://p7h.org/blog/2013/05/20/open-source-licenses/"/>
+    <updated>2013-05-20T00:00:00+01:00</updated>
+    <id>http://p7h.org/blog/2013/05/20/open-source-licenses</id>
+    <content type="html"><![CDATA[<div class="post">
+<span style="font-size: 15px;">Understanding Open Source licenses turns out to be rather too difficult. At least I always have had issues in understanding which Open Source license is too restrictive and which is a bit liberal.</span><br /><br /><div style="font-family: Roboto; font-size: 15px; white-space: normal;">After looking around for some time, I found the following 3 alternatives for easily understanding the terms of few of the Open Source licenses.</div><!--more--><br /><h3 style="font-family: Roboto; font-size: 15px; white-space: normal;">Alternative#1</h3><div style="font-family: Roboto; font-size: 15px; white-space: normal;"><a class="g-profile" href="http://plus.google.com/101174951617223562800" target="_blank">+Brian Fitzpatrick</a>&nbsp;and&nbsp;<a class="g-profile" href="http://plus.google.com/106739423424023436001" target="_blank">+Dan Bentley</a>&nbsp;have made a brilliant flow chart for Open Source licenses. It is pretty simple and easy to understand.</div><div class="separator" style="clear: both; font-family: Roboto; font-size: 15px; text-align: center; white-space: normal;"><a href="http://cl.ly/5nAo" imageanchor="1" style="margin-left: 1em; margin-right: 1em;" target="_blank"><img border="0" height="640" src="http://4.bp.blogspot.com/-vmJs6gfqySw/UZmSLZMaRfI/AAAAAAAACXM/DqOATVfaZRw/s640/OSS+License.png" width="497" /></a></div><br /><h3 style="font-family: Roboto; font-size: 15px; white-space: normal;">Alternative#2</h3><div style="font-family: Roboto; font-size: 15px; white-space: normal;"><a class="g-profile" href="http://plus.google.com/113672091552048390436" target="_blank">+Marakana</a>&nbsp;have&nbsp;another interesting flowchart for understanding Open Source licenses.</div><div class="separator" style="clear: both; font-family: Roboto; font-size: 15px; text-align: center; white-space: normal;"><a href="http://marakana.com/s/post/1030/understanding_open_source_licenses" imageanchor="1" style="margin-left: 1em; margin-right: 1em;" target="_blank"><img border="0" height="438" src="http://3.bp.blogspot.com/-o2kmCBv-ig0/UZmTFEQPb9I/AAAAAAAACXY/Jp2M7PorCPE/s640/OSS-licenses.png" width="640" /></a></div><br /><h3 style="font-family: Roboto; font-size: 15px; white-space: normal;">Alternative#3</h3><div style="font-family: Roboto; font-size: 15px; white-space: normal;">And finally another option to understand Open Source licenses is <a href="http://www.tldrlegal.com/" target="_blank"><b>tl;drLegal</b></a> Website, which summarizes and explains Open Source licenses in simple terms and in plain English. Its a pretty decent website which is fast and also very intuitive and easy to use. Just key in the name of the License you want to read about. The website will do the rest with a quick summary and also the full text of this particular license.</div><br /><div style="font-family: Roboto; font-size: 15px; white-space: normal;">I always look up to one of these alternatives when I am in doubt about licensing terms of a particular Open Source License. And when I need to check the complete text of a license, I usually use&nbsp;<a href="http://www.tldrlegal.com/" style="font-size: medium;" target="_blank"><b>tl;drLegal</b></a> Website.<br /><br />Hope this is of some help to you too.</div></div>
+]]></content>
+  </entry>
+  
+</feed>

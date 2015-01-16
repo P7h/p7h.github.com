@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: linux | Prashanth Babu]]></title>
+  <link href="http://p7h.org/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://p7h.org/"/>
+  <updated>2015-01-16T15:03:58+00:00</updated>
+  <id>http://p7h.org/</id>
+  <author>
+    <name><![CDATA[Prashanth Babu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Download Java / JDK / JRE from shell / terminal / command prompt]]></title>
+    <link href="http://p7h.org/blog/2014/10/18/jdk-download-command-prompt/"/>
+    <updated>2014-10-18T00:00:00+01:00</updated>
+    <id>http://p7h.org/blog/2014/10/18/jdk-download-command-prompt</id>
+    <content type="html"><![CDATA[<div class="post">
+<div style="font-size: 15px; white-space: normal;"><span style="font-family: Roboto;">Its been really sometime since I blogged anything. Got into too much work both on personal and professional fronts. I will try to be regular henceforth though, hopefully [fingers crossed!!].<br /><br />Most of my work happens on EC2 and on Linux as our Hadoop env is on EC2. I absolutely adore Linux and shell. And first and foremost thing I have to do - being a Java developer - is download Oracle JDK onto the Linux machines on EC2. And downloading Oracle JDK from Oracle website is difficult due to Oracle&#8217;s mandatory license check, which you need to accept before downloading the JDK. With my Linux env being server-only-machines [i.e. without a desktop or GUI], there is no way I could download the JDK directly from Oracle website. So, I came up with this small shell script [extending an <a href="http://stackoverflow.com/a/10959815" target="_blank">answer</a> from Stackoverflow] to download JDK from Oracle website from command prompt.<!--more--><br /><br />Depending on the OS and platform of the JDK version you intend to download, just modify the array on line#20 in the following script and you can trigger the download on the shell directly.<br />Hope this script will be helpful for all those who live on and love command prompt. <script src="https://gist.github.com/P7h/9741922.js?file=jdk_download.sh"></script></span></div></div>
+]]></content>
+  </entry>
+  
+</feed>
