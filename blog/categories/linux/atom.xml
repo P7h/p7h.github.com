@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-16T16:46:32+00:00</updated>
+  <updated>2015-01-16T17:02:37+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -18,8 +18,54 @@
     <link href="http://p7h.org/blog/2014/10/18/jdk-download-command-prompt/"/>
     <updated>2014-10-18T00:00:00+01:00</updated>
     <id>http://p7h.org/blog/2014/10/18/jdk-download-command-prompt</id>
-    <content type="html"><![CDATA[<div class="post">
-<div style="font-size: 15px; white-space: normal;"><span style="font-family: Roboto;">Its been really sometime since I blogged anything. Got into too much work both on personal and professional fronts. I will try to be regular henceforth though, hopefully [fingers crossed!!].<br /><br />Most of my work happens on EC2 and on Linux as our Hadoop env is on EC2. I absolutely adore Linux and shell. And first and foremost thing I have to do - being a Java developer - is download Oracle JDK onto the Linux machines on EC2. And downloading Oracle JDK from Oracle website is difficult due to Oracle&#8217;s mandatory license check, which you need to accept before downloading the JDK. With my Linux env being server-only-machines [i.e. without a desktop or GUI], there is no way I could download the JDK directly from Oracle website. So, I came up with this small shell script [extending an <a href="http://stackoverflow.com/a/10959815" target="_blank">answer</a> from Stackoverflow] to download JDK from Oracle website from command prompt.<!--more--><br /><br />Depending on the OS and platform of the JDK version you intend to download, just modify the array on line#20 in the following script and you can trigger the download on the shell directly.<br />Hope this script will be helpful for all those who live on and love command prompt. <script src="https://gist.github.com/P7h/9741922.js?file=jdk_download.sh"></script></span></div></div>
+    <content type="html"><![CDATA[<p>Its been really sometime since I blogged anything. Got into too much work both on personal and professional fronts. I will try to be regular henceforth though, hopefully [fingers crossed!!].<br /></p>
+
+<p>Most of my work happens on EC2 and on Linux as our Hadoop env is on EC2. I absolutely adore Linux and shell. And first and foremost thing I have to do - being a Java developer - is download Oracle JDK onto the Linux machines on EC2. And downloading Oracle JDK from Oracle website is difficult due to Oracle’s mandatory license check, which you need to accept before downloading the JDK. With my Linux env being server-only-machines [i.e. without a desktop or GUI], there is no way I could download the JDK directly from Oracle website. So, I came up with this small shell script [extending an <a href="http://stackoverflow.com/a/10959815" target="_blank">answer</a> from Stackoverflow] to download JDK from Oracle website from command prompt.<!--more--><br /></p>
+
+<p>Depending on the OS and platform of the JDK version you intend to download, just modify the array on line#20 in the following script and you can trigger the download on the shell directly.<div><script src='https://gist.github.com/9741922.js?file=jdk_download.sh'></script>
+<noscript><pre><code>### Shell script to download Oracle JDK / JRE / Java binaries from Oracle website using terminal / command / shell prompt using wget.
+### You can download all the binaries one-shot by just giving the BASE_URL.
+### Script might be useful if you need Oracle JDK on Amazon EC2 env.
+
+## Features:-
+# 1. Resumes a broken / interrupted [previous] download, if any.
+# 2. Renames the file to a proper name with including platform info.
+# 3. Downloads the following from Oracle Website with one shell invocation.
+#    a. Windows 64 and 32 bit;
+#    b. Linux 64 and 32 bit;
+#    c. API Docs;
+#    d. You can add more to the list of downloads are per your requirement.
+
+##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+
+## JDK version: JDK8u25
+BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25
+JDK_VERSION=${BASE_URL: -8}
+
+declare -a PLATFORMS=(&quot;-windows-x64.exe&quot; &quot;-windows-i586.exe&quot; &quot;-linux-x64.tar.gz&quot; &quot;-linux-i586.tar.gz&quot; &quot;-docs-all.zip&quot;)
+
+for platform in &quot;${PLATFORMS[@]}&quot;
+do
+    wget -c -O &quot;$JDK_VERSION$platform&quot; --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; &quot;${BASE_URL}${platform}&quot;
+done
+
+##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+
+## JDK version: JDK7u71
+BASE_URL=http://download.oracle.com/otn-pub/java/jdk/7u71-b14/jdk-7u71
+JDK_VERSION=${BASE_URL: -8}
+
+declare -a PLATFORMS=(&quot;-windows-x64.exe&quot; &quot;-windows-i586.exe&quot; &quot;-linux-x64.tar.gz&quot; &quot;-linux-i586.tar.gz&quot; &quot;-docs-all.zip&quot;)
+
+for platform in &quot;${PLATFORMS[@]}&quot;
+do
+    wget -c -O &quot;$JDK_VERSION$platform&quot; --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; &quot;${BASE_URL}${platform}&quot;
+done
+
+##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####</code></pre></noscript></div>
+
+<br />
+Hope this script will be helpful for all those who live on and love command prompt.</p>
 ]]></content>
   </entry>
   
