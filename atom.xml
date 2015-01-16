@@ -4,7 +4,7 @@
   <title><![CDATA[Prashanth Babu]]></title>
   <link href="http://p7h.org/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-16T16:10:16+00:00</updated>
+  <updated>2015-01-16T16:46:32+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -171,21 +171,22 @@ Being a minimalist, I would like to go with minimum cruft and more emphasis on t
 
 <p><a href="https://www.udacity.com/" target="_blank">Udacity</a> is one of the 3 wonderful MOOCs we have right now, which also include Coursera and edX. Udacity already has a course on Apache Hadoop titled, “<a href="https://www.udacity.com/course/ud617" target="_blank">Intro to Hadoop and MapReduce</a>”. Udacity created this course collaborating with <a href="http://www.cloudera.com/" target="_blank">Cloudera</a>. I have done this course last year though I did not opt for the [paid] verified certificate for this course, since I am already a Cloudera Certified Developer for Apache Hadoop [CCDH]. You can find the solutions to all the assignments of this course also on my GitHub account.<br /></p>
 
-<p>Recently [i.e. in December, 2013] Udacity has started a new course on <a href="https://www.udacity.com/course/ud381" target="_blank">Storm</a>, as part of their <a href="https://www.udacity.com/courses#!/data-science" target="_blank">Data Science catalog</a>. This particular course is in partnership with Twitter. Just in case if you are not aware, Storm was open sourced at Twitter and they are one of the power users of Storm for their manyt use cases. Best use case of Twitter usage of Storm is that of real-time hashtags which you see on Twitter. Hence it makes great sense to have them teach and talk about Storm. And also the syllabus looks really interesting.<br /></p>
+<p>Udacity has started a new course on <a href="https://www.udacity.com/course/ud381" target="_blank">Storm</a>, as part of their <a href="https://www.udacity.com/courses#!/data-science" target="_blank">Data Science catalog</a> in the first week of December, 2013. This particular course is in partnership with Twitter. Just in case, if you are not aware, Storm was open sourced at Twitter and they are one of the power users of Storm for their manyt use cases. Best use case of Twitter usage of Storm is that of real-time hashtags which you see on Twitter. Hence it makes great sense to have them teach and talk about Storm. And also the syllabus looks really interesting.<br /></p>
 
 <p>Here is a brief rundown of the syllabus from Udacity website on Storm course:</p>
 
-<blockquote>
-  <p><strong>Lesson 1</strong><br />Join instructor Karthik Ramasamy and the first Udacity-Twitter Storm Hackathon to cover the motivation and practice of real-time, distributed, fault-tolerant data processing. Dive into basic Storm Topologies by linking to a real-time d3 Word Cloud Visualization using Redis, Flask, and d3.<br /></p>
+<blockquote class="tr_bq" style="background-color: white; box-sizing: border-box; color: #303030; font-size: 14px; line-height: 24px; margin-bottom: 15px;">
+<span style="font-weight: bold;">Lesson 1</span><br />
+Join instructor Karthik Ramasamy and the first Udacity-Twitter Storm Hackathon to cover the motivation and practice of real-time, distributed, fault-tolerant data processing. Dive into basic Storm Topologies by linking to a real-time d3 Word Cloud Visualization using Redis, Flask, and d3.<br />
 
-  <p><strong>Lesson 2</strong><br />
-Explore Storm basics by programming Bolts, linking Spouts, and finally connecting to the live Twitter API to process real-time tweets. Explore open source components by connecting a Rolling Count Bolt to your topology to visualize Rolling Top Tweeted Words.<br /></p>
+<span style="font-weight: bold;">Lesson 2</span><br />
+Explore Storm basics by programming Bolts, linking Spouts, and finally connecting to the live Twitter API to process real-time tweets. Explore open source components by connecting a Rolling Count Bolt to your topology to visualize Rolling Top Tweeted Words.<br />
 
-  <p><strong>Lesson 3</strong><br />
-Go beyond Storm basics by exploring multi-language capabilities to download and parse real-time Tweeted URLs in Python using Beautiful Soup. Integrate complex open source bolts to calculate Top-N words to visualize real-time Top-N Hashtags. Finally, use stream grouping concepts to easily create streaming join to connect and dynamically process multiple streams.<br /></p>
+<span style="font-weight: bold;">Lesson 3</span><br />
+Go beyond Storm basics by exploring multi-language capabilities to download and parse real-time Tweeted URLs in Python using Beautiful Soup. Integrate complex open source bolts to calculate Top-N words to visualize real-time Top-N Hashtags. Finally, use stream grouping concepts to easily create streaming join to connect and dynamically process multiple streams.<br />
 
-  <p><strong>Lesson 4</strong><br />
-Work on your final project and we cover additional questions and topics brought up by Hackathon participants. Explore Vagrant, VirtualBox, Redis, Flask, and d3 further if you are interested!</p>
+<span style="font-weight: bold;">Lesson 4</span><br />
+Work on your final project and we cover additional questions and topics brought up by Hackathon participants. Explore Vagrant, VirtualBox, Redis, Flask, and d3 further if you are interested!
 </blockquote>
 
 <p>I am really excited about this course and I am already half-way thru with the first lesson and its a pretty pleasant experience till now.<br /></p>
