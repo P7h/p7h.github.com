@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learningguava | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/learningguava/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-16T17:02:37+00:00</updated>
+  <updated>2015-01-17T21:34:32+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -18,8 +18,49 @@
     <link href="http://p7h.org/blog/2014/01/29/guava-stopwatch/"/>
     <updated>2014-01-29T00:00:00+00:00</updated>
     <id>http://p7h.org/blog/2014/01/29/guava-stopwatch</id>
-    <content type="html"><![CDATA[<div class="post">
-<div style="font-size: 15px; white-space: normal;"><span style="font-family: Roboto;">Many of our day-to-day applications would need calibrating time taken between 2 points. In Java world we either depend on </span><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#currentTimeMillis()" target="_blank"><span style="font-family: Courier New, Courier, monospace;">System.currentTimeMillis()</span></a><span style="font-family: Roboto;"> or </span><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#nanoTime()" target="_blank"><span style="font-family: Courier New, Courier, monospace;">System.nanoTime()</span></a><span style="font-family: Roboto;">. But the pain here is, we have to do the required computations of getting to a proper granularity to understand the time taken.Would n&#8217;t it be great it to have such an utility class which will give the required information in the granularity we need with minimum amount of boilerplate code?  </span><br /><div style="font-family: Roboto;"><br /></div><span style="font-family: Courier New, Courier, monospace;"><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Stopwatch.html" target="_blank">Stopwatch</a> </span><span style="font-family: Roboto;">is one such small and wonderful utility class in </span><span style="font-family: Courier New, Courier, monospace;">Guava</span><span style="font-family: Roboto;"> which helps in calibrating elapsed time / duration between any 2 points in the logic. The advantage of using </span><span style="font-family: Courier New, Courier, monospace;">Guava</span><span style="font-family: Roboto;">&#8217;s </span><span style="font-family: Courier New, Courier, monospace;">Stopwatch</span><span style="font-family: Roboto;"> is you can get the elapsed time in any measure i.e. right from nanoseconds to days. This is possible because you can pass an enum argument type of </span><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html" target="_blank"><span style="font-family: Courier New, Courier, monospace;">TimeUnit</span></a><span style="font-family: Roboto;"> class to get the elapsed time in the desired granularity.  </span><!--more--><br /><div style="font-family: Roboto;"><br /></div><span style="font-family: Roboto;">Code snippet for the usage of the </span><span style="font-family: Courier New, Courier, monospace;">Stopwatch</span><span style="font-family: Roboto;"> class: </span><script src="https://gist.github.com/P7h/8691100.js"></script>  <br /><div style="font-family: Roboto;"><br /></div><span style="font-family: Roboto;">Few caveats for using </span><span style="font-family: Courier New, Courier, monospace;">Stopwatch</span><span style="font-family: Roboto;"> are you should not start an already started </span><span style="font-family: Courier New, Courier, monospace;">Stopwatch</span><span style="font-family: Roboto;">. One has to check if the </span><span style="font-family: Courier New, Courier, monospace;">Stopwatch</span><span style="font-family: Roboto;"> is already running by invoking </span><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Stopwatch.html#isRunning()" target="_blank"><span style="font-family: Courier New, Courier, monospace;">isRunning()</span></a><span style="font-family: Roboto;"> method. </span><br /><span style="font-family: Courier New, Courier, monospace;">Stopwatch</span><span style="font-family: Roboto;"> documentation says the following on the same: </span><br /><blockquote class="tr_bq"><span style="font-family: Courier New, Courier, monospace;">Stopwatch</span><span style="font-family: Roboto;"> methods are not idempotent; it is an error to start or stop a stopwatch that is already in the desired state. </span></blockquote><div style="font-family: Roboto;"><br /></div><span style="font-family: Roboto;">Also, once I got burned down by </span><a href="http://commons.apache.org/proper/commons-lang/javadocs/api-3.2.1/org/apache/commons/lang3/time/StopWatch.html" target="_blank"><span style="font-family: Courier New, Courier, monospace;">StopWatch</span></a><span style="font-family: Roboto;"> class of Apache Commons Lang. As I was working in an IDE on a Maven project, I could not relate to the difference between </span><span style="font-family: Courier New, Courier, monospace;">Stopwatch</span><span style="font-family: Roboto;"> of </span><span style="font-family: Courier New, Courier, monospace;">Guava</span><span style="font-family: Roboto;"> and </span><span style="font-family: Courier New, Courier, monospace;">StopWatch</span><span style="font-family: Roboto;"> of Commons Lang as the class got auto imported into the code and then spent some 20 minutes trying to check my classpath, IDE setup, etc. Yes how stupid of me, right? So, please be careful in choosing the correct class. </span></div></div>
+    <content type="html"><![CDATA[<p>Many of our day-to-day applications would need calibrating time taken between 2 points. In Java world we either depend on <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#currentTimeMillis()" target="_blank"><code>System.currentTimeMillis()</code></a> or <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#nanoTime()" target="_blank"><code>System.nanoTime()</code></a>. But the pain here is, we have to do the required computations of getting to a proper granularity to understand the time taken. Would n’t it be great it to have such an utility class which will give the required information in the granularity we need with minimum amount of boilerplate code?<br /><br /><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Stopwatch.html" target="_blank"><code>Stopwatch</code></a> is one such small and wonderful utility class in Guava which helps in calibrating elapsed time / duration between any 2 points in the logic. The advantage of using Guava’s <code>Stopwatch</code> is you can get the elapsed time in any measure i.e. right from nanoseconds to days. This is possible because you can pass an enum argument type of <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html" target="_blank"><code>TimeUnit</code></a> class to get the elapsed time in the desired granularity.
+<!--more-->
+Code snippet for the usage of the <code>Stopwatch</code> class:
+<div><script src='https://gist.github.com/8691100.js'></script>
+<noscript><pre><code>import java.util.Random;
+import java.util.concurrent.TimeUnit;
+
+import com.google.common.base.Stopwatch;
+
+/**
+ * Sample example demonstrating usage of Stopwatch API of Google Guava.
+ *
+ * @see &lt;a href=&quot;http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Stopwatch.html&quot;&gt;Guava Stopwatch&lt;/a&gt;
+ */
+public final class StopwatchExample {
+
+	public final static void main(final String[] args) {
+		//Effective Guava v15.0, this is the one way of creating a Stopwatch instance.
+		final Stopwatch stopwatch = Stopwatch.createStarted();
+
+		//Sleep for few random milliseconds.
+		try {
+			Thread.sleep(new Random().nextInt(1000));
+		} catch (final InterruptedException interruptedException) {
+			interruptedException.printStackTrace();
+		}
+
+		stopwatch.stop(); //optional
+
+		System.out.println(&quot;Elapsed time ==&gt; &quot; + stopwatch);
+		System.out.println(&quot;Elapsed time in Nanoseconds ==&gt; &quot; + stopwatch.elapsed(TimeUnit.NANOSECONDS));
+		System.out.println(&quot;Elapsed time in Microseconds ==&gt; &quot; + stopwatch.elapsed(TimeUnit.MICROSECONDS));
+		System.out.println(&quot;Elapsed time in Milliseconds ==&gt; &quot; + stopwatch.elapsed(TimeUnit.MILLISECONDS));
+		//System.out.println(&quot;Elapsed time in Seconds ==&gt; &quot; + stopwatch.elapsed(TimeUnit.SECONDS));
+		//System.out.println(&quot;Elapsed time in Minutes ==&gt; &quot; + stopwatch.elapsed(TimeUnit.MINUTES));
+	}
+}</code></pre></noscript></div>
+</p>
+
+<p>Few caveats for using <code>Stopwatch</code> are you should not start an already started <code>Stopwatch</code>. One has to check if the <code>Stopwatch</code> is already running by invoking <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Stopwatch.html#isRunning()" target="_blank"><code>isRunning()</code></a> method. <code>Stopwatch</code> documentation says the following on the same:<br /></p>
+
+<blockquote class="tr_bq" style="background-color: white; box-sizing: border-box; color: #303030; font-size: 14px; line-height: 24px; margin-bottom: 15px;">Stopwatch methods are not idempotent; it is an error to start or stop a stopwatch that is already in the desired state.</blockquote>
+<p>Also, once I got burned down by <a href="http://commons.apache.org/proper/commons-lang/javadocs/api-3.2.1/org/apache/commons/lang3/time/StopWatch.html" target="_blank"><code>StopWatch</code></a> class of Apache Commons Lang. As I was working in an IDE on a Maven project, I could not quickly relate to the difference between <code>Stopwatch</code> of Guava and <code>StopWatch</code> of Apache Commons Lang, as the class got auto imported into the code and then spent some good 20 minutes trying to check my classpath, IDE setup, etc. Yes very silly mistake. So, please be careful in choosing the correct class.</p>
 ]]></content>
   </entry>
   

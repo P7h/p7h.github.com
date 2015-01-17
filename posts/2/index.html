@@ -9,7 +9,7 @@
   <meta name="author" content="Prashanth Babu">
 
   
-  <meta name="description" content="Many of our day-to-day applications would need calibrating time taken between 2 points. In Java world we either depend on System.currentTimeMillis &hellip;">
+  <meta name="description" content="Many of our day-to-day applications would need calibrating time taken between 2 points. In Java world we either depend on System.currentTimeMillis() &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -38,7 +38,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">Prashanth Babu</a></h1>
   
-    <h2>Random ramblings on Hadoop Ecosytem, Java.</h2>
+    <h2>Ramblings on Hadoop Ecosytem, Java, etc.</h2>
   
 </hgroup>
 
@@ -90,8 +90,8 @@
   </header>
 
 
-  <div class="entry-content"><div class='post'>
-<div style="font-size: 15px; white-space: normal;"><span style="font-family: Roboto;">Many of our day-to-day applications would need calibrating time taken between 2 points. In Java world we either depend on </span><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#currentTimeMillis()" target="_blank"><span style="font-family: Courier New, Courier, monospace;">System.currentTimeMillis()</span></a><span style="font-family: Roboto;"> or </span><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#nanoTime()" target="_blank"><span style="font-family: Courier New, Courier, monospace;">System.nanoTime()</span></a><span style="font-family: Roboto;">. But the pain here is, we have to do the required computations of getting to a proper granularity to understand the time taken.Would n&#8217;t it be great it to have such an utility class which will give the required information in the granularity we need with minimum amount of boilerplate code?  </span><br /><div style="font-family: Roboto;"><br /></div><span style="font-family: Courier New, Courier, monospace;"><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Stopwatch.html" target="_blank">Stopwatch</a> </span><span style="font-family: Roboto;">is one such small and wonderful utility class in </span><span style="font-family: Courier New, Courier, monospace;">Guava</span><span style="font-family: Roboto;"> which helps in calibrating elapsed time / duration between any 2 points in the logic. The advantage of using </span><span style="font-family: Courier New, Courier, monospace;">Guava</span><span style="font-family: Roboto;">&#8217;s </span><span style="font-family: Courier New, Courier, monospace;">Stopwatch</span><span style="font-family: Roboto;"> is you can get the elapsed time in any measure i.e. right from nanoseconds to days. This is possible because you can pass an enum argument type of </span><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html" target="_blank"><span style="font-family: Courier New, Courier, monospace;">TimeUnit</span></a><span style="font-family: Roboto;"> class to get the elapsed time in the desired granularity.  </span></div>
+  <div class="entry-content"><p>Many of our day-to-day applications would need calibrating time taken between 2 points. In Java world we either depend on <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#currentTimeMillis()" target="_blank"><code>System.currentTimeMillis()</code></a> or <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#nanoTime()" target="_blank"><code>System.nanoTime()</code></a>. But the pain here is, we have to do the required computations of getting to a proper granularity to understand the time taken. Would n’t it be great it to have such an utility class which will give the required information in the granularity we need with minimum amount of boilerplate code?<br /><br /><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Stopwatch.html" target="_blank"><code>Stopwatch</code></a> is one such small and wonderful utility class in Guava which helps in calibrating elapsed time / duration between any 2 points in the logic. The advantage of using Guava’s <code>Stopwatch</code> is you can get the elapsed time in any measure i.e. right from nanoseconds to days. This is possible because you can pass an enum argument type of <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/TimeUnit.html" target="_blank"><code>TimeUnit</code></a> class to get the elapsed time in the desired granularity.
+</div>
   
   
     <footer>
