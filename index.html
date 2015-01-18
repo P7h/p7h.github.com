@@ -89,12 +89,12 @@ And today I completed migrating all my <a href="http://P7h.blogspot.com">Blogger
 
 <p>Initially I was kinda apprehensive that I might have to put in significant effort to migrate my posts from Blogger to Octopress. But it turned out to be very simple actually. In fact, it was as simple as running just a single Ruby script.</p>
 
-<p>Just in case if someone needs the steps for migration:</p>
+<p>I have listed down below the required steps for migration, just in case if someone needs a ready reference.</p>
 
 <ul>
   <li>Export your content from Blogger:<br />
     <ul>
-      <li>Go to Blogger Settings =&gt; Other =&gt; Blog Tools =&gt; Click on “Export blog” link.<br /></li>
+      <li>Go to Blogger Settings -&gt; Other -&gt; Blog Tools -&gt; Click on “Export blog” link.<br /></li>
       <li>This screenshot might be helpful for reaching this section in Blogger maze.<br />
   <img src="/assets/Blogger_Settings.png" alt="" /></li>
       <li>This downloads an xml file [in the format blog-<em>month</em>-<em>date</em>-<em>year</em>.xml] with all the content from your blogs. In my case, it turned out to be “blog-01-18-2015.xml”.<br /></li>
@@ -108,12 +108,17 @@ And today I completed migrating all my <a href="http://P7h.blogspot.com">Blogger
   </li>
   <li>Execution of Ruby script:<br />
     <ul>
-      <li>Run this Ruby script on the xml file you downloaded above. <code>import.rb blog-01-18-2015.xml</code>.<br /></li>
+      <li>Run this Ruby script on the xml file you downloaded above. Command for execution is: <code>import.rb blog-01-18-2015.xml</code>.<br /></li>
       <li>This generates the content of your blog in html files.<br /></li>
       <li>During the migration, this script tries to retain the exact same path you would have used in the Blogger script and also tries to get the date [but not time] of the post and categories, etc you would have listed for each of your posts in Blogger. Very neat I would say.<br /></li>
-      <li>Copy the generated html files to <code>_source/posts</code> folder in your Octopress folder and you are done.</li>
-      <li>Do a <code>rake generate</code> and <code>rake preview</code> and check the blog posts have all come well and confirm if the migration went fine.</li>
-      <li>Dont forget to push these changes to GitHub.</li>
+    </ul>
+  </li>
+  <li>Post generation of posts:<br />
+    <ul>
+      <li>Copy the generated html files to <code>_source/posts</code> folder in your Octopress folder and you are done.<br /></li>
+      <li>Do a <code>rake generate</code> and <code>rake preview</code> and check the blog posts have all come well and confirm if the migration went fine.<br /></li>
+      <li>Once you are happy with the migration and content, perform <code>rake deploy</code>.</li>
+      <li>And don’t forget to push these changes to GitHub.<br /></li>
     </ul>
   </li>
   <li>Few caveats:<br />
