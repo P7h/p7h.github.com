@@ -4,7 +4,7 @@
   <title><![CDATA[Category: misc | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/misc/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-18T22:28:19+00:00</updated>
+  <updated>2015-01-18T23:28:37+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Migrating from Blogger to Octopress]]></title>
+    <link href="http://p7h.org/blog/2015/01/18/migration-blogger-to-octopress/"/>
+    <updated>2015-01-18T16:31:01+00:00</updated>
+    <id>http://p7h.org/blog/2015/01/18/migration-blogger-to-octopress</id>
+    <content type="html"><![CDATA[<p>So like many others in the blogging world, I too shifted from Blogger to statically generated Octopress hosted on GitHub last week.<br />
+And today I completed migrating all my <a href="http://P7h.blogspot.com">Blogger</a> posts to <a href="http://P7h.org">Octopress</a> and got them hosted here. Henceforth will leave Blogger as-is and will try to make this as my active blog.<br /></p>
+
+<p>Initially I was kinda apprehensive that I might have to put in significant effort to migrate my posts from Blogger to Octopress. But it turned out to be very simple actually. In fact, it was as simple as running just a single Ruby script.</p>
+
+<p>Just in case if someone needs the steps for migration:</p>
+
+<ul>
+  <li>Export your content from Blogger:<br />
+    <ul>
+      <li>Go to Blogger Settings =&gt; Other =&gt; Blog Tools =&gt; Click on “Export blog” link.<br /></li>
+      <li>This screenshot might be helpful for reaching this section in Blogger maze.<br />
+  <img src="/assets/Blogger_Settings.png" alt="" /></li>
+      <li>This downloads an xml file [in the format blog-<em>month</em>-<em>date</em>-<em>year</em>.xml] with all the content from your blogs. In my case, it turned out to be “blog-01-18-2015.xml”.<br /></li>
+    </ul>
+  </li>
+  <li>Ruby script for migration:<br />
+    <ul>
+      <li>Then get a copy of a Ruby script from this <a href="https://gist.github.com/P7h/6df39591aa5554f4335c" target="_blank">Gist</a> for converting posts from Blogger format to Octopress compatible format.<br /></li>
+      <li>Please remember you might need to have nokogiri gem - if not already installed - before moving further. Command to install this gem is: <code>gem install nokogiri</code>.</li>
+    </ul>
+  </li>
+  <li>Execution of Ruby script:<br />
+    <ul>
+      <li>Run this Ruby script on the xml file you downloaded above. <code>import.rb blog-01-18-2015.xml</code>.<br /></li>
+      <li>This generates the content of your blog in html files.<br /></li>
+      <li>During the migration, this script tries to retain the exact same path you would have used in the Blogger script and also tries to get the date [but not time] of the post and categories, etc you would have listed for each of your posts in Blogger. Very neat I would say.<br /></li>
+      <li>Copy the generated html files to <code>_source/posts</code> folder in your Octopress folder and you are done.</li>
+      <li>Do a <code>rake generate</code> and <code>rake preview</code> and check the blog posts have all come well and confirm if the migration went fine.</li>
+      <li>Dont forget to push these changes to GitHub.</li>
+    </ul>
+  </li>
+  <li>Few caveats:<br />
+    <ul>
+      <li>Please note that all the files usually crated by rake tasks are .md i.e. markdown files while the migrated scripts will be plain html files.<br /></li>
+      <li>Also please note that post the migration, all the migrated posts will retain the correct date, but time gets defaulted to 12:00 AM. I could not debug the issue there though.<br /></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Hope these steps were useful to you. Enjoy the new blog setup!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octopress blogging setup on a new machine]]></title>
@@ -137,16 +186,6 @@ Being a minimalist, I would like to go with minimum cruft and more emphasis on t
     <id>http://p7h.org/blog/2012/12/27/the-dark-knight-rises-ultimate-trilogy</id>
     <content type="html"><![CDATA[<div class="post">
 <div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">Wonderfully put together&nbsp;ultimate trilogy trailer of&nbsp;&#8221;<a href="http://en.wikipedia.org/wiki/The_Dark_Knight_Rises" target="_blank">The Dark Knight Rises</a>&#8221;,&nbsp;<a href="http://en.wikipedia.org/wiki/Christopher_Nolan" target="_blank">Christopher Nolan</a>&#8217;s Batman series.</div><div style="text-align: justify;">Christopher Nolan&#8217;s taking is brilliant as always. Apart from him, Hans Zimmer&#8217;s background score is excellent.&nbsp;I concur with the comment in the below Youtube page which says: &#8220;Without Hans Zimmer this trilogy wouldn&#8217;t be nearly as epic as it is&#8221;. If you have any doubts, you should check out the Original Motion Picture Soundtrack of <i>The Dark Knight Rises</i> on <a href="http://www.amazon.com/The-Dark-Knight-Rises-Soundtrack/dp/B008645YEE" target="_blank">Amazon</a> or&nbsp;<a href="http://www.flipkart.com/dark-knight-rises/p/itmdbvq7g22yjmks?pid=DGADBVQ7WC4RGX8C" target="_blank">Flipkart</a>.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">The only thing I missed in this trailer is the voice of Bane i.e.&nbsp;<a href="http://en.wikipedia.org/wiki/Tom_Hardy" target="_blank">Tom Hardy</a>.</div><div style="text-align: justify;"><iframe allowfullscreen="allowfullscreen" frameborder="0" height="480" src="https://www.youtube.com/embed/1T__uN5xmC0" width="800"></iframe><br /></div></div></div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Wikipedia entries for K & R and Steve Jobs]]></title>
-    <link href="http://p7h.org/blog/2012/12/15/wikipedia-entries-for-k-r-and-steve-jobs/"/>
-    <updated>2012-12-15T00:00:00+00:00</updated>
-    <id>http://p7h.org/blog/2012/12/15/wikipedia-entries-for-k-r-and-steve-jobs</id>
-    <content type="html"><![CDATA[<div class="post">
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">Wikipedia entries for <a href="http://en.wikipedia.org/wiki/Dennis_Ritchie" target="_blank">Dennis Ritchie</a> [<i>C</i> and <i>Unix</i> creator], <a href="http://en.wikipedia.org/wiki/Ken_Thompson" target="_blank">Ken Thompson</a>&nbsp;[<i>Unix</i> creator], <a href="http://en.wikipedia.org/wiki/Brian_Kernighan" target="_blank">Brian Kernighan</a> [worked with K &amp; R during <i>Unix</i> creation] and <a href="http://en.wikipedia.org/wiki/Stuart_Feldman" target="_blank">Stuart Feldman</a> [<i>make</i> creator] put together is just 1/5 or probably 1/10 of the Wikipedia entry for <a href="http://en.wikipedia.org/wiki/Steve_Jobs" target="_blank">Steve Jobs</a>.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">This is definitely nothing against Steve. He is a great visionary.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">But, he is a product guy who visualized the product, the actual hard work was done by so many unknown Engineers.</div><div style="text-align: justify;">We have come to accept and approve narcissists more than great creators and excellent human beings whose work changed the fate and direction of the world. This is not a good sign for the new generations and needs a change.</div></div></div>
 ]]></content>
   </entry>
   

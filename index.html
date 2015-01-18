@@ -9,7 +9,8 @@
   <meta name="author" content="Prashanth Babu">
 
   
-  <meta name="description" content="This post gives a brief intro to setting up Octopress blog on a new Windows machine. This assumes you already have your blogs on your GitHub account &hellip;">
+  <meta name="description" content="So like many others in the blogging world, I too shifted from Blogger to statically generated Octopress hosted on GitHub last week.
+And today I &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -61,6 +62,75 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/01/18/migration-blogger-to-octopress/">Migrating from Blogger to Octopress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-01-18T16:31:01+00:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:31 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So like many others in the blogging world, I too shifted from Blogger to statically generated Octopress hosted on GitHub last week.<br />
+And today I completed migrating all my <a href="http://P7h.blogspot.com">Blogger</a> posts to <a href="http://P7h.org">Octopress</a> and got them hosted here. Henceforth will leave Blogger as-is and will try to make this as my active blog.<br /></p>
+
+<p>Initially I was kinda apprehensive that I might have to put in significant effort to migrate my posts from Blogger to Octopress. But it turned out to be very simple actually. In fact, it was as simple as running just a single Ruby script.</p>
+
+<p>Just in case if someone needs the steps for migration:</p>
+
+<ul>
+  <li>Export your content from Blogger:<br />
+    <ul>
+      <li>Go to Blogger Settings =&gt; Other =&gt; Blog Tools =&gt; Click on “Export blog” link.<br /></li>
+      <li>This screenshot might be helpful for reaching this section in Blogger maze.<br />
+  <img src="/assets/Blogger_Settings.png" alt="" /></li>
+      <li>This downloads an xml file [in the format blog-<em>month</em>-<em>date</em>-<em>year</em>.xml] with all the content from your blogs. In my case, it turned out to be “blog-01-18-2015.xml”.<br /></li>
+    </ul>
+  </li>
+  <li>Ruby script for migration:<br />
+    <ul>
+      <li>Then get a copy of a Ruby script from this <a href="https://gist.github.com/P7h/6df39591aa5554f4335c" target="_blank">Gist</a> for converting posts from Blogger format to Octopress compatible format.<br /></li>
+      <li>Please remember you might need to have nokogiri gem - if not already installed - before moving further. Command to install this gem is: <code>gem install nokogiri</code>.</li>
+    </ul>
+  </li>
+  <li>Execution of Ruby script:<br />
+    <ul>
+      <li>Run this Ruby script on the xml file you downloaded above. <code>import.rb blog-01-18-2015.xml</code>.<br /></li>
+      <li>This generates the content of your blog in html files.<br /></li>
+      <li>During the migration, this script tries to retain the exact same path you would have used in the Blogger script and also tries to get the date [but not time] of the post and categories, etc you would have listed for each of your posts in Blogger. Very neat I would say.<br /></li>
+      <li>Copy the generated html files to <code>_source/posts</code> folder in your Octopress folder and you are done.</li>
+      <li>Do a <code>rake generate</code> and <code>rake preview</code> and check the blog posts have all come well and confirm if the migration went fine.</li>
+      <li>Dont forget to push these changes to GitHub.</li>
+    </ul>
+  </li>
+  <li>Few caveats:<br />
+    <ul>
+      <li>Please note that all the files usually crated by rake tasks are .md i.e. markdown files while the migrated scripts will be plain html files.<br /></li>
+      <li>Also please note that post the migration, all the migrated posts will retain the correct date, but time gets defaulted to 12:00 AM. I could not debug the issue there though.<br /></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Hope these steps were useful to you. Enjoy the new blog setup!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -207,40 +277,6 @@ Though Blogger engine is good, I could never spend time to create a template on 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/10/18/jdk-download-command-prompt/">Download Java / JDK / JRE from shell / terminal / command prompt</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-10-18'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Its been really sometime since I blogged anything. Got into too much work both on personal and professional fronts. I will try to be regular henceforth though, hopefully [fingers crossed!!].<br /></p>
-
-<p>Most of my work happens on EC2 and on Linux as our Hadoop env is on EC2. I absolutely adore Linux and shell. And first and foremost thing I have to do - being a Java developer - is download Oracle JDK onto the Linux machines on EC2. And downloading Oracle JDK from Oracle website is difficult due to Oracle’s mandatory license check, which you need to accept before downloading the JDK. With my Linux env being server-only-machines [i.e. without a desktop or GUI], there is no way I could download the JDK directly from Oracle website. So, I came up with this small shell script [extending an <a href="http://stackoverflow.com/a/10959815" target="_blank">answer</a> from Stackoverflow] to download JDK from Oracle website from command prompt.</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/10/18/jdk-download-command-prompt/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/2">&larr; Older</a>
@@ -268,6 +304,10 @@ Though Blogger engine is good, I could never spend time to create a template on 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/01/18/migration-blogger-to-octopress/">Migrating from Blogger to Octopress</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/01/16/octopress-setup-windows/">Octopress blogging setup on a new machine</a>
       </li>
     
@@ -281,10 +321,6 @@ Though Blogger engine is good, I could never spend time to create a template on 
     
       <li class="post">
         <a href="/blog/2014/12/07/udacity-course-on-apache-storm/">Udacity course on Apache Storm</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/10/18/jdk-download-command-prompt/">Download Java / JDK / JRE from shell / terminal / command prompt</a>
       </li>
     
   </ul>

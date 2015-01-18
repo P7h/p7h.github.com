@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://p7h.org/blog/2015/01/18/migration-blogger-to-octopress/</loc>
+    <lastmod>2015-01-18T16:31:01+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://p7h.org/blog/2015/01/16/octopress-setup-windows/</loc>
     <lastmod>2015-01-16T14:48:00+00:00</lastmod>
     <priority>0.8</priority>
@@ -117,37 +122,37 @@
   </url>
   <url>
     <loc>http://p7h.org/archives/</loc>
-    <lastmod>2015-01-18T22:28:19+00:00</lastmod>
+    <lastmod>2015-01-18T23:28:37+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://p7h.org/</loc>
-    <lastmod>2015-01-18T22:28:19+00:00</lastmod>
+    <lastmod>2015-01-18T23:28:37+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://p7h.org/about/</loc>
-    <lastmod>2015-01-18T22:28:19+00:00</lastmod>
+    <lastmod>2015-01-18T23:28:37+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://p7h.org/talks/</loc>
-    <lastmod>2015-01-18T22:28:19+00:00</lastmod>
+    <lastmod>2015-01-18T23:28:37+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://p7h.org/contact/</loc>
-    <lastmod>2015-01-18T22:28:19+00:00</lastmod>
+    <lastmod>2015-01-18T23:28:37+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://p7h.org/projects/</loc>
-    <lastmod>2015-01-18T22:28:19+00:00</lastmod>
+    <lastmod>2015-01-18T23:28:37+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

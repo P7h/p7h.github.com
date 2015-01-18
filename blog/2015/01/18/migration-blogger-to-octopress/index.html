@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>IntelliJ IDEA Plugins - Prashanth Babu</title>
+  <title>Migrating from Blogger to Octopress - Prashanth Babu</title>
   <meta name="author" content="Prashanth Babu">
 
   
-  <meta name="description" content="In continuation to my other post on IntelliJ IDEA, here are the plugins I am using currently.Please check back after sometime, I will keep this list &hellip;">
+  <meta name="description" content="So like many others in the blogging world, I too shifted from Blogger to statically generated Octopress hosted on GitHub last week.
+And today I &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://p7h.org/blog/2012/12/10/intellij-ide-plugins">
+  <link rel="canonical" href="http://p7h.org/blog/2015/01/18/migration-blogger-to-octopress">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Prashanth Babu" type="application/atom+xml">
@@ -64,7 +65,7 @@
   
   <header>
     
-      <h1 class="entry-title">IntelliJ IDEA Plugins</h1>
+      <h1 class="entry-title">Migrating from Blogger to Octopress</h1>
     
     
       <p class="meta">
@@ -73,15 +74,54 @@
 
 
 
-<time class='entry-date' datetime='2012-12-10'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>12:00 am</span></time>
+<time class='entry-date' datetime='2015-01-18T16:31:01+00:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:31 pm</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><div class='post'>
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">In continuation to my <a href="http://p7h.blogspot.com/2012/12/intellij-idea-tuning-parameters.html" target="_blank">other post</a> on <a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a>, here are the plugins I am using currently.</div><div style="text-align: justify;"><script src="https://gist.github.com/4388852.js"></script>Please check back after sometime, I will keep this list up-to-date with all the interesting plugins I come across.</div><br /><div style="text-align: justify;">For a complete list of plugins available in IntelliJ IDEA, please check this <a href="http://plugins.intellij.net/" target="_blank">link</a>. As of today, there are 865 plugins available for IntelliJ IDEA Ultimate Edition and 819 for&nbsp;IntelliJ IDEA Community Edition.</div></div></div>
+<div class="entry-content"><p>So like many others in the blogging world, I too shifted from Blogger to statically generated Octopress hosted on GitHub last week.<br />
+And today I completed migrating all my <a href="http://P7h.blogspot.com">Blogger</a> posts to <a href="http://P7h.org">Octopress</a> and got them hosted here. Henceforth will leave Blogger as-is and will try to make this as my active blog.<br /></p>
+
+<p>Initially I was kinda apprehensive that I might have to put in significant effort to migrate my posts from Blogger to Octopress. But it turned out to be very simple actually. In fact, it was as simple as running just a single Ruby script.</p>
+
+<p>Just in case if someone needs the steps for migration:</p>
+
+<ul>
+  <li>Export your content from Blogger:<br />
+    <ul>
+      <li>Go to Blogger Settings =&gt; Other =&gt; Blog Tools =&gt; Click on “Export blog” link.<br /></li>
+      <li>This screenshot might be helpful for reaching this section in Blogger maze.<br />
+  <img src="/assets/Blogger_Settings.png" alt="" /></li>
+      <li>This downloads an xml file [in the format blog-<em>month</em>-<em>date</em>-<em>year</em>.xml] with all the content from your blogs. In my case, it turned out to be “blog-01-18-2015.xml”.<br /></li>
+    </ul>
+  </li>
+  <li>Ruby script for migration:<br />
+    <ul>
+      <li>Then get a copy of a Ruby script from this <a href="https://gist.github.com/P7h/6df39591aa5554f4335c" target="_blank">Gist</a> for converting posts from Blogger format to Octopress compatible format.<br /></li>
+      <li>Please remember you might need to have nokogiri gem - if not already installed - before moving further. Command to install this gem is: <code>gem install nokogiri</code>.</li>
+    </ul>
+  </li>
+  <li>Execution of Ruby script:<br />
+    <ul>
+      <li>Run this Ruby script on the xml file you downloaded above. <code>import.rb blog-01-18-2015.xml</code>.<br /></li>
+      <li>This generates the content of your blog in html files.<br /></li>
+      <li>During the migration, this script tries to retain the exact same path you would have used in the Blogger script and also tries to get the date [but not time] of the post and categories, etc you would have listed for each of your posts in Blogger. Very neat I would say.<br /></li>
+      <li>Copy the generated html files to <code>_source/posts</code> folder in your Octopress folder and you are done.</li>
+      <li>Do a <code>rake generate</code> and <code>rake preview</code> and check the blog posts have all come well and confirm if the migration went fine.</li>
+      <li>Dont forget to push these changes to GitHub.</li>
+    </ul>
+  </li>
+  <li>Few caveats:<br />
+    <ul>
+      <li>Please note that all the files usually crated by rake tasks are .md i.e. markdown files while the migrated scripts will be plain html files.<br /></li>
+      <li>Also please note that post the migration, all the migrated posts will retain the correct date, but time gets defaulted to 12:00 AM. I could not debug the issue there though.<br /></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Hope these steps were useful to you. Enjoy the new blog setup!</p>
 </div>
 
 
@@ -97,12 +137,12 @@
 
 
 
-<time class='entry-date' datetime='2012-12-10'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>12:00 am</span></time>
+<time class='entry-date' datetime='2015-01-18T16:31:01+00:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:31 pm</span></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/ide/'>ide</a>, <a class='category' href='/blog/categories/idea/'>idea</a>, <a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/plugins/'>plugins</a>
+    <a class='category' href='/blog/categories/misc/'>misc</a>
   
 </span>
 
@@ -118,8 +158,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2015/01/16/octopress-setup-windows/" title="Previous Post: Octopress blogging setup on a new machine">&laquo; Octopress blogging setup on a new machine</a>
       
-        <a class="basic-alignment right" href="/blog/2012/12/10/intellij-idea-tuning-parameters/" title="Next Post: Performance Tuning of IntelliJ IDEA startup options">Performance Tuning of IntelliJ IDEA startup options &raquo;</a>
       
     </p>
   </footer>
