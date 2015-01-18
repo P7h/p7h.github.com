@@ -4,7 +4,7 @@
   <title><![CDATA[Category: data scientist | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/data-scientist/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-17T23:01:07+00:00</updated>
+  <updated>2015-01-18T22:28:19+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -52,16 +52,6 @@ Work on your final project and we cover additional questions and topics brought 
 <p>If you are interested in or your work includes solving real-time Big Data use cases, you might want to checkout this course: <a href="https://www.udacity.com/course/ud381" target="_blank">https://www.udacity.com/course/ud381</a>.<br /></p>
 
 <p>Happy learning! And all the very best too.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tips for aspiring Data Scientists]]></title>
-    <link href="http://p7h.org/blog/2012/07/15/for-aspiring-data-scientists_16/"/>
-    <updated>2012-07-15T00:00:00+01:00</updated>
-    <id>http://p7h.org/blog/2012/07/15/for-aspiring-data-scientists_16</id>
-    <content type="html"><![CDATA[<div class="post">
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;"><a href="https://twitter.com/peteskomoroch" target="_blank">Peter Skomoroch</a>, Principal Data Scientist at LinkedIn has a very good advice for the aspiring Data Scientists.</div><blockquote class="tr_bq"><div style="text-align: justify;">&#8221;<i>Learn Git, Python, Java, Hadoop, Pig. Really just immerse yourself in good software development practices and engineering rigor</i>&#8221;</div></blockquote><div style="text-align: justify;"><span style="background-color: white;">And also</span></div><blockquote class="tr_bq"><div style="text-align: justify;">&nbsp;&#8221;<i>&#8230; they need to learn a bit of statistics and machine learning as well</i>&#8221;</div></blockquote><div style="text-align: justify;"><span style="background-color: white;">Head over to </span><a href="http://metamarkets.com/pete-skomoroch-data-science/" style="background-color: white;">Metamarkets</a><span style="background-color: white;"> for the complete interview.</span></div></div></div>
 ]]></content>
   </entry>
   

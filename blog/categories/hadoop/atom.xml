@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hadoop | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/hadoop/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-17T23:01:07+00:00</updated>
+  <updated>2015-01-18T22:28:19+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -60,9 +60,17 @@ Work on your final project and we cover additional questions and topics brought 
     <link href="http://p7h.org/blog/2013/07/15/presented-storm-at-fifth-elephant-2013/"/>
     <updated>2013-07-15T00:00:00+01:00</updated>
     <id>http://p7h.org/blog/2013/07/15/presented-storm-at-fifth-elephant-2013</id>
-    <content type="html"><![CDATA[<div class="post">
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;">On 11th July, 2013 I hosted a workshop on &#8220;Big Data, Real-time Processing and Storm&#8221;at <a href="http://fifthelephant.in/2013/workshops" target="_blank"><strong>The Fifth Elephant, 2013</strong></a> in Bangalore.<br /><!--more--><br /><iframe allowfullscreen="" frameborder="0" height="486" marginheight="0" marginwidth="0" mozallowfullscreen="" scrolling="no" src="http://www.slideshare.net/slideshow/embed_code/24202814?rel=0" style="border-width: 1px 1px 0; border: 1px solid #CCC; margin-bottom: 5px;" webkitallowfullscreen="" width="650px"> </iframe> <br /><div style="margin-bottom: 5px;"><div style="text-align: center;"><strong> <a href="http://www.slideshare.net/prashanthvvbabu/fifth-elephant-2013-storm" target="_blank" title="Storm @ Fifth Elephant 2013">Storm @ Fifth Elephant 2013</a> </strong> from <strong><a href="http://www.slideshare.net/prashanthvvbabu" target="_blank">Prashanth Babu</a></strong><!--more--><br /><div style="text-align: justify;">I have also uploaded the slides of the presentation deck to <strong><a href="https://speakerdeck.com/p7h/big-data-real-time-processing-and-storm" target="_blank">SpeakerDeck</a></strong>.</div><br /><div>The source code I used in this workshop can be found on my <strong><a href="http://github.com/P7h" target="_blank">GitHub</a></strong> account.</div><br />I have also started curating a <a href="http://j.mp/YrDgcs" target="_blank"><strong>Bit.ly bundle</strong></a> for Storm and Big Data as such. <br /></div></div>
-</div></div>
+    <content type="html"><![CDATA[<p>On 11th July, 2013 I hosted a workshop on “Big Data, Real-time Processing and Storm” at <a href="http://fifthelephant.in/2013/workshops" target="_blank"><strong>The Fifth Elephant, 2013</strong></a> in Bangalore.<br />
+<!--more--></p>
+
+<iframe frameborder="0" width="650px" height="486" marginheight="0" marginwidth="0" scrolling="no" src="http://www.slideshare.net/slideshow/embed_code/24202814" style="border-width: 1px 1px 0; border: 1px solid #CCC; margin-bottom: 5px;" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>
+<p><strong><a href="http://www.slideshare.net/prashanthvvbabu/fifth-elephant-2013-storm" target="_blank" title="Storm @ Fifth Elephant 2013">Storm @ Fifth Elephant 2013</a></strong> from <strong><a href="http://www.slideshare.net/prashanthvvbabu" target="_blank">Prashanth Babu</a>
+<br /></strong></p>
+
+<p>If you prefer SpeakerDeck, please find the slides of the presentation deck at <strong><a href="https://speakerdeck.com/p7h/big-data-real-time-processing-and-storm" target="_blank">SpeakerDeck</a></strong>.
+<script async="" class="speakerdeck-embed" data-id="d65c1130cdfc01304c5c5a08bad3805a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+The source code I used in this workshop can be found on my <strong><a href="http://github.com/P7h" target="_blank">GitHub</a></strong> account.<br />
+I have also started curating a <a href="http://j.mp/YrDgcs" target="_blank"><strong>Bit.ly bundle</strong></a> for Storm and Big Data.<br /></p>
 ]]></content>
   </entry>
   
@@ -83,16 +91,6 @@ Work on your final project and we cover additional questions and topics brought 
     <id>http://p7h.org/blog/2013/01/26/intro-to-pig</id>
     <content type="html"><![CDATA[<div class="post">
 <div style="font-family: Roboto; font-size: 15px; white-space: normal;">Few months back, I conducted a 2-hour&nbsp;<a href="http://fifthelephant.in/2012/workshop-pig" target="_blank">workshop</a> on &#8220;Introduction to Pig&#8221; at <a href="http://fifthelephant.in/" target="_blank">Fifth Elephant</a>, Bangalore, India on 26th July, 2012. This is a community-powered conference on the Big Data ecosystem.<br /><br />As part of this workshop, I have touched a bit on Hadoop, MapReduce and Hive. But as the title says, the focus was on Apache Pig. I have also demoed few usecases of execution of Java MapReduce, Hive and Pig. And also a brief overview and demo of Twitter&#8217;s <a href="https://github.com/twitter/ambrose" target="_blank">Ambrose</a> UI for visualizing Pig MapReduce jobs.<!--more--><br /><br />Here are the slides of my presentation. This presentation gives a basic understanding of<br /><ol><li>Big Data</li><li>Basics of Hadoop and MapReduce</li><li>Landscape of Hadoop ecosystem</li><li>Introduction to Apache Pig</li><li>Basics of Pig and Pig Latin</li><li>Pig vs. Hadoop MR</li><li>Pig vs. SQL and Pig vs. Hive</li><li>Twitter Ambrose for visualizing Pig MR Jobs</li></ol><br /><div style="text-align: center;"><br /><iframe src="http://www.slideshare.net/slideshow/embed_code/16190473" width="615px" height="486px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""> </iframe> <div style="margin-bottom:5px"><strong> <a href="http://www.slideshare.net/prashanthvvbabu/the-fifthelephant-2012handsonintrotopig" title="Introduction to Pig" target="_blank">Introduction to Pig</a> </strong> from <strong><a href="http://www.slideshare.net/prashanthvvbabu" target="_blank">Prashanth Babu</a></strong> </div><div style="text-align: left;"><br /></div><div style="text-align: left;">I have also posted the same slides on&nbsp;<a href="https://speakerdeck.com/p7h/introduction-to-pig" target="_blank">Speaker Deck</a>.<br />Code developed for the demos in this workshop can be found on <a href="https://github.com/P7h/IntroToPig" target="_blank">Github</a>.</div><div></div></div></div></div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tips for aspiring Data Scientists]]></title>
-    <link href="http://p7h.org/blog/2012/07/15/for-aspiring-data-scientists_16/"/>
-    <updated>2012-07-15T00:00:00+01:00</updated>
-    <id>http://p7h.org/blog/2012/07/15/for-aspiring-data-scientists_16</id>
-    <content type="html"><![CDATA[<div class="post">
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;"><a href="https://twitter.com/peteskomoroch" target="_blank">Peter Skomoroch</a>, Principal Data Scientist at LinkedIn has a very good advice for the aspiring Data Scientists.</div><blockquote class="tr_bq"><div style="text-align: justify;">&#8221;<i>Learn Git, Python, Java, Hadoop, Pig. Really just immerse yourself in good software development practices and engineering rigor</i>&#8221;</div></blockquote><div style="text-align: justify;"><span style="background-color: white;">And also</span></div><blockquote class="tr_bq"><div style="text-align: justify;">&nbsp;&#8221;<i>&#8230; they need to learn a bit of statistics and machine learning as well</i>&#8221;</div></blockquote><div style="text-align: justify;"><span style="background-color: white;">Head over to </span><a href="http://metamarkets.com/pete-skomoroch-data-science/" style="background-color: white;">Metamarkets</a><span style="background-color: white;"> for the complete interview.</span></div></div></div>
 ]]></content>
   </entry>
   
