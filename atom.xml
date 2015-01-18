@@ -4,7 +4,7 @@
   <title><![CDATA[Prashanth Babu]]></title>
   <link href="http://p7h.org/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-18T23:37:33+00:00</updated>
+  <updated>2015-01-18T23:48:40+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -30,7 +30,7 @@ And today I completed migrating all my <a href="http://P7h.blogspot.com">Blogger
     <ul>
       <li>Go to Blogger Settings -&gt; Other -&gt; Blog Tools -&gt; Click on “Export blog” link.<br /></li>
       <li>This screenshot might be helpful for reaching this section in Blogger maze.<br />
-  <img src="http://p7h.org/assets/Blogger_Settings.png" alt="" /></li>
+  <img src="http://p7h.org/assets/images/Blogger_Settings.png" alt="" /></li>
       <li>This downloads an xml file [in the format blog-<em>month</em>-<em>date</em>-<em>year</em>.xml] with all the content from your blogs. In my case, it turned out to be “blog-01-18-2015.xml”.<br /></li>
     </ul>
   </li>
