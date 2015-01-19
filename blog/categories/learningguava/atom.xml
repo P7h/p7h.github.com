@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learningguava | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/learningguava/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-19T03:10:17+00:00</updated>
+  <updated>2015-01-19T03:17:42+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -71,7 +71,6 @@ public final class StopwatchExample {
     <id>http://p7h.org/blog/2014/01/26/load-properties-file-using-guava</id>
     <content type="html"><![CDATA[<p>Guava code snippet for loading a properties file from classpath.<br />
 <!--more-->
-<script src="https://gist.github.com/P7h/8635204.js?t=2"></script>
 <div><script src='https://gist.github.com/8635204.js'></script>
 <noscript><pre><code>import java.io.IOException;
 import java.io.InputStream;
