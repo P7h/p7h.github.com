@@ -4,7 +4,7 @@
   <title><![CDATA[Category: misc | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/misc/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-19T03:17:42+00:00</updated>
+  <updated>2015-01-19T03:21:47+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -29,7 +29,7 @@ I have listed below the required steps for migration, just in case if someone ne
     <ul>
       <li>Go to Blogger Settings -&gt; Other -&gt; Blog Tools -&gt; Click on “Export blog” link.<br /></li>
       <li>This screenshot might be helpful for reaching this section in Blogger maze.<br />
-  <img src="/assets/images/Blogger_Settings.png" alt="" /></li>
+  <img src="/assets/images/Blogger_Export_Posts.png" alt="" /></li>
       <li>This downloads an xml file [in the format blog-<em>month</em>-<em>date</em>-<em>year</em>.xml] with all the content from your blogs. In my case, it turned out to be “blog-01-18-2015.xml”.<br /></li>
     </ul>
   </li>
@@ -156,9 +156,9 @@ rake new_post["new post"]
   
   <entry>
     <title type="html"><![CDATA[A new blog]]></title>
-    <link href="http://p7h.org/blog/2015/01/12/first-blogpost-with-octopress/"/>
+    <link href="http://p7h.org/blog/2015/01/12/a-new-blog/"/>
     <updated>2015-01-12T00:12:46+00:00</updated>
-    <id>http://p7h.org/blog/2015/01/12/first-blogpost-with-octopress</id>
+    <id>http://p7h.org/blog/2015/01/12/a-new-blog</id>
     <content type="html"><![CDATA[<p>This is my first blogpost using Octopress and GitHub.</p>
 
 <p>Previously, I had my blogs hosted on <a href="http://P7h.blogspot.com">Blogger</a>.
