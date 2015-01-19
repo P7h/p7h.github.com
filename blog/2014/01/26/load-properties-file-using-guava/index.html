@@ -9,8 +9,10 @@
   <meta name="author" content="Prashanth Babu">
 
   
-  <meta name="description" content="Guava code snippet for loading a properties file from classpath. For more info, please check Resources class of Guava.
-">
+  <meta name="description" content="Guava code snippet for loading a properties file from classpath. import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,8 +85,46 @@
 
 <div class="entry-content"><p>Guava code snippet for loading a properties file from classpath.<br />
 <!--more-->
-<script src="https://gist.github.com/P7h/8635204.js"></script> <br />
-For more info, please check <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/io/Resources.html" target="_blank">Resources</a> class of Guava.</p>
+<script src="https://gist.github.com/P7h/8635204.js?t=2"></script></p>
+<div><script src="https://gist.github.com/8635204.js"></script>
+<noscript><pre><code>import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.util.Properties;
+
+import com.google.common.io.ByteSource;
+import com.google.common.io.Resources;
+
+/**
+ * Reads a properties file and print all the key value pairs to the console.
+ * Note: Writing to console is just for convenience here.
+ */
+public final class ReadPropertiesWithGuava {
+
+	public final static void main(final String[] args) {
+		final URL url = Resources.getResource(&quot;spring-config.properties&quot;);
+		final ByteSource byteSource = Resources.asByteSource(url);
+		final Properties properties = new Properties();
+		InputStream inputStream = null;
+		try {
+			inputStream = byteSource.openBufferedStream();
+			properties.load(inputStream);
+			properties.list(System.out);
+		} catch (final IOException ioException) {
+			ioException.printStackTrace();
+		} finally {
+			if (inputStream != null) {
+				try {
+					inputStream.close();
+				} catch (final IOException ioException) {
+					ioException.printStackTrace();
+				}
+			}
+		}
+	}
+}</code></pre></noscript></div>
+
+<p>For more info, please check <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/io/Resources.html" target="_blank">Resources</a> class of Guava.</p>
 </div>
 
 
@@ -139,14 +179,14 @@ For more info, please check <a href="http://docs.guava-libraries.googlecode.com/
     <img src="/images/P7h.jpg" alt="P7h">
   </span>
   <span class="about-desc">
-    <span>Hey, I am Prashanth Babu.<br/>I am a Big Data developer. More about me <a href="/about">here</a>.</span>
+    <span>Hey, I am Prashanth.<br/>I am a Big Data developer. More about me <a href="/about">here</a>.</span>
     <br/>
     <hr>
     <a href="https://twitter.com/P7h" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @P7h</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <hr> 
   </span>
-</div> <section>
+</div><section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: big data | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/big-data/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-18T23:48:40+00:00</updated>
+  <updated>2015-01-19T03:10:17+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -19,6 +19,9 @@
     <updated>2013-07-15T00:00:00+01:00</updated>
     <id>http://p7h.org/blog/2013/07/15/presented-storm-at-fifth-elephant-2013</id>
     <content type="html"><![CDATA[<p>On 11th July, 2013 I hosted a workshop on “Big Data, Real-time Processing and Storm” at <a href="http://fifthelephant.in/2013/workshops" target="_blank"><strong>The Fifth Elephant, 2013</strong></a> in Bangalore.<br />
+The source code I used in this workshop can be found on my <strong><a href="http://github.com/P7h" target="_blank">GitHub</a></strong> account.<br />
+I have also started curating a <a href="http://j.mp/YrDgcs" target="_blank"><strong>Bit.ly bundle</strong></a> for Storm and Big Data.<br />
+I have shared the slides of this session both on Slideshare and SpeakerDeck.
 <!--more--></p>
 
 <iframe frameborder="0" width="650px" height="486" marginheight="0" marginwidth="0" scrolling="no" src="http://www.slideshare.net/slideshow/embed_code/24202814" style="border-width: 1px 1px 0; border: 1px solid #CCC; margin-bottom: 5px;" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>
@@ -26,9 +29,7 @@
 <br /></strong></p>
 
 <p>If you prefer SpeakerDeck, please find the slides of the presentation deck at <strong><a href="https://speakerdeck.com/p7h/big-data-real-time-processing-and-storm" target="_blank">SpeakerDeck</a></strong>.
-<script async="" class="speakerdeck-embed" data-id="d65c1130cdfc01304c5c5a08bad3805a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-The source code I used in this workshop can be found on my <strong><a href="http://github.com/P7h" target="_blank">GitHub</a></strong> account.<br />
-I have also started curating a <a href="http://j.mp/YrDgcs" target="_blank"><strong>Bit.ly bundle</strong></a> for Storm and Big Data.<br /></p>
+<script async="" class="speakerdeck-embed" data-id="d65c1130cdfc01304c5c5a08bad3805a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
 ]]></content>
   </entry>
   

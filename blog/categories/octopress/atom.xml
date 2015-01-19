@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-18T23:48:40+00:00</updated>
+  <updated>2015-01-19T03:10:17+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -23,8 +23,9 @@
 <h3 id="step-1-install-ruby-v193">Step 1: Install Ruby v1.9.3</h3>
 
 <p>Download and install Ruby v1.9.3 from <a href="http://rubyinstaller.org/downloads/">here</a>. <code>ruby --version</code> should give something on the lines of <code>ruby 1.9.3p551 (2014-11-13) [i386-mingw32]</code>.
-<!--more-->
-### Step 2: Install RubyDevKit</p>
+<!--more--></p>
+
+<h3 id="step-2-install-rubydevkit">Step 2: Install RubyDevKit</h3>
 
 <p>Download and install Ruby Dev Kit from <a href="https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe">here</a></p>
 
@@ -71,7 +72,7 @@ rake generate
 rake deploy
 </code></pre>
 
-<p>Or generate and deploy both together:</p>
+<p>Or generate and deploy both together with a single command:</p>
 
 <pre><code>cd p7h.github.com
 rake gen_deploy

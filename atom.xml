@@ -4,7 +4,7 @@
   <title><![CDATA[Prashanth Babu]]></title>
   <link href="http://p7h.org/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-18T23:48:40+00:00</updated>
+  <updated>2015-01-19T03:10:17+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -18,12 +18,11 @@
     <link href="http://p7h.org/blog/2015/01/18/migration-blogger-to-octopress/"/>
     <updated>2015-01-18T16:31:01+00:00</updated>
     <id>http://p7h.org/blog/2015/01/18/migration-blogger-to-octopress</id>
-    <content type="html"><![CDATA[<p>So like many others in the blogging world, I too shifted from Blogger to statically generated Octopress hosted on GitHub last week.<br />
-And today I completed migrating all my <a href="http://P7h.blogspot.com">Blogger</a> posts to <a href="http://P7h.org">Octopress</a> and got them hosted here. Henceforth will leave Blogger as-is and will try to make this as my active blog.<br /></p>
+    <content type="html"><![CDATA[<p>So like many others in the blogging world, I too shifted from Blogger to statically generated Octopress hosted on GitHub last week.And today I completed migrating all my <a href="http://P7h.blogspot.com">Blogger</a> posts to <a href="http://P7h.org">Octopress</a> and got them hosted here. Henceforth will leave Blogger as-is and will try to make this as my active blog.<br /></p>
 
-<p>Initially I was kinda apprehensive that I might have to put in significant effort to migrate my posts from Blogger to Octopress. But it turned out to be very simple actually. In fact, it was as simple as running just a single Ruby script.</p>
-
-<p>I have listed down below the required steps for migration, just in case if someone needs a ready reference.</p>
+<p>Initially I was kinda apprehensive that I might have to put in significant effort to migrate my posts from Blogger to Octopress. But it turned out to be very simple actually. In fact, it was as simple as running just a single Ruby script.
+<!--more-->
+I have listed below the required steps for migration, just in case if someone needs a ready reference.</p>
 
 <ul>
   <li>Export your content from Blogger:<br />
@@ -77,8 +76,9 @@ And today I completed migrating all my <a href="http://P7h.blogspot.com">Blogger
 <h3 id="step-1-install-ruby-v193">Step 1: Install Ruby v1.9.3</h3>
 
 <p>Download and install Ruby v1.9.3 from <a href="http://rubyinstaller.org/downloads/">here</a>. <code>ruby --version</code> should give something on the lines of <code>ruby 1.9.3p551 (2014-11-13) [i386-mingw32]</code>.
-<!--more-->
-### Step 2: Install RubyDevKit</p>
+<!--more--></p>
+
+<h3 id="step-2-install-rubydevkit">Step 2: Install RubyDevKit</h3>
 
 <p>Download and install Ruby Dev Kit from <a href="https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe">here</a></p>
 
@@ -125,7 +125,7 @@ rake generate
 rake deploy
 </code></pre>
 
-<p>Or generate and deploy both together:</p>
+<p>Or generate and deploy both together with a single command:</p>
 
 <pre><code>cd p7h.github.com
 rake gen_deploy
@@ -165,8 +165,10 @@ rake new_post["new post"]
 So, here are 3 very simple steps for installation of Oracle JDK on a Ubuntu machine.</p>
 
 <!--more-->
-<p>#### Initial setup command
-    sudo apt-get install python-software-properties</p>
+
+<h4 id="initial-setup-command">Initial setup command</h4>
+<pre><code>sudo apt-get install python-software-properties
+</code></pre>
 
 <h4 id="add-ppa-to-software-sources">Add ppa to software sources</h4>
 <pre><code>sudo add-apt-repository ppa:webupd8team/java
@@ -264,7 +266,8 @@ Work on your final project and we cover additional questions and topics brought 
 
 <p>Most of my work happens on EC2 and on Linux as our Hadoop env is on EC2. I absolutely adore Linux and shell. And first and foremost thing I have to do - being a Java developer - is download Oracle JDK onto the Linux machines on EC2. And downloading Oracle JDK from Oracle website is difficult due to Oracle’s mandatory license check, which you need to accept before downloading the JDK. With my Linux env being server-only-machines [i.e. without a desktop or GUI], there is no way I could download the JDK directly from Oracle website. So, I came up with this small shell script [extending an <a href="http://stackoverflow.com/a/10959815" target="_blank">answer</a> from Stackoverflow] to download JDK from Oracle website from command prompt.<!--more--><br /></p>
 
-<p>Depending on the OS and platform of the JDK version you intend to download, just modify the array on line#20 in the following script and you can trigger the download on the shell directly.&lt;div&gt;<script src="https://gist.github.com/9741922.js?file=jdk_download.sh"></script></p>
+<p>Depending on the OS and platform of the JDK version you intend to download, just modify the array on line#20 in the following script and you can trigger the download on the shell directly.</p>
+<div><script src="https://gist.github.com/9741922.js?file=jdk_download.sh"></script>
 <noscript><pre><code>### Shell script to download Oracle JDK / JRE / Java binaries from Oracle website using terminal / command / shell prompt using wget.
 ### You can download all the binaries one-shot by just giving the BASE_URL.
 ### Script might be useful if you need Oracle JDK on Amazon EC2 env.
@@ -304,11 +307,9 @@ do
     wget -c -O &quot;$JDK_VERSION$platform&quot; --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; &quot;${BASE_URL}${platform}&quot;
 done
 
-##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####</code></pre></noscript>
-<p>&lt;/div&gt;</p>
+##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####</code></pre></noscript></div>
 
-<p><br />
-Hope this script will be helpful for all those who live on and love command prompt.</p>
+<p>Hope this script will be helpful for all those who live on and love command prompt.</p>
 ]]></content>
   </entry>
   
@@ -369,8 +370,46 @@ public final class StopwatchExample {
     <id>http://p7h.org/blog/2014/01/26/load-properties-file-using-guava</id>
     <content type="html"><![CDATA[<p>Guava code snippet for loading a properties file from classpath.<br />
 <!--more-->
-<script src="https://gist.github.com/P7h/8635204.js"></script> <br />
-For more info, please check <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/io/Resources.html" target="_blank">Resources</a> class of Guava.</p>
+<script src="https://gist.github.com/P7h/8635204.js?t=2"></script></p>
+<div><script src="https://gist.github.com/8635204.js"></script>
+<noscript><pre><code>import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.util.Properties;
+
+import com.google.common.io.ByteSource;
+import com.google.common.io.Resources;
+
+/**
+ * Reads a properties file and print all the key value pairs to the console.
+ * Note: Writing to console is just for convenience here.
+ */
+public final class ReadPropertiesWithGuava {
+
+	public final static void main(final String[] args) {
+		final URL url = Resources.getResource(&quot;spring-config.properties&quot;);
+		final ByteSource byteSource = Resources.asByteSource(url);
+		final Properties properties = new Properties();
+		InputStream inputStream = null;
+		try {
+			inputStream = byteSource.openBufferedStream();
+			properties.load(inputStream);
+			properties.list(System.out);
+		} catch (final IOException ioException) {
+			ioException.printStackTrace();
+		} finally {
+			if (inputStream != null) {
+				try {
+					inputStream.close();
+				} catch (final IOException ioException) {
+					ioException.printStackTrace();
+				}
+			}
+		}
+	}
+}</code></pre></noscript></div>
+
+<p>For more info, please check <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/io/Resources.html" target="_blank">Resources</a> class of Guava.</p>
 ]]></content>
   </entry>
   
@@ -407,6 +446,9 @@ There are many such examples where Guava wins by a margin compared to normal Jav
     <updated>2013-07-15T00:00:00+01:00</updated>
     <id>http://p7h.org/blog/2013/07/15/presented-storm-at-fifth-elephant-2013</id>
     <content type="html"><![CDATA[<p>On 11th July, 2013 I hosted a workshop on “Big Data, Real-time Processing and Storm” at <a href="http://fifthelephant.in/2013/workshops" target="_blank"><strong>The Fifth Elephant, 2013</strong></a> in Bangalore.<br />
+The source code I used in this workshop can be found on my <strong><a href="http://github.com/P7h" target="_blank">GitHub</a></strong> account.<br />
+I have also started curating a <a href="http://j.mp/YrDgcs" target="_blank"><strong>Bit.ly bundle</strong></a> for Storm and Big Data.<br />
+I have shared the slides of this session both on Slideshare and SpeakerDeck.
 <!--more--></p>
 
 <iframe frameborder="0" width="650px" height="486" marginheight="0" marginwidth="0" scrolling="no" src="http://www.slideshare.net/slideshow/embed_code/24202814" style="border-width: 1px 1px 0; border: 1px solid #CCC; margin-bottom: 5px;" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>
@@ -414,9 +456,7 @@ There are many such examples where Guava wins by a margin compared to normal Jav
 <br /></strong></p>
 
 <p>If you prefer SpeakerDeck, please find the slides of the presentation deck at <strong><a href="https://speakerdeck.com/p7h/big-data-real-time-processing-and-storm" target="_blank">SpeakerDeck</a></strong>.
-<script async="" class="speakerdeck-embed" data-id="d65c1130cdfc01304c5c5a08bad3805a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-The source code I used in this workshop can be found on my <strong><a href="http://github.com/P7h" target="_blank">GitHub</a></strong> account.<br />
-I have also started curating a <a href="http://j.mp/YrDgcs" target="_blank"><strong>Bit.ly bundle</strong></a> for Storm and Big Data.<br /></p>
+<script async="" class="speakerdeck-embed" data-id="d65c1130cdfc01304c5c5a08bad3805a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
 ]]></content>
   </entry>
   

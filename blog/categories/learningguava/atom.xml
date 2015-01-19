@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learningguava | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/learningguava/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-18T23:48:40+00:00</updated>
+  <updated>2015-01-19T03:10:17+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -71,8 +71,47 @@ public final class StopwatchExample {
     <id>http://p7h.org/blog/2014/01/26/load-properties-file-using-guava</id>
     <content type="html"><![CDATA[<p>Guava code snippet for loading a properties file from classpath.<br />
 <!--more-->
-<script src="https://gist.github.com/P7h/8635204.js"></script> <br />
-For more info, please check <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/io/Resources.html" target="_blank">Resources</a> class of Guava.</p>
+<script src="https://gist.github.com/P7h/8635204.js?t=2"></script>
+<div><script src='https://gist.github.com/8635204.js'></script>
+<noscript><pre><code>import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.util.Properties;
+
+import com.google.common.io.ByteSource;
+import com.google.common.io.Resources;
+
+/**
+ * Reads a properties file and print all the key value pairs to the console.
+ * Note: Writing to console is just for convenience here.
+ */
+public final class ReadPropertiesWithGuava {
+
+	public final static void main(final String[] args) {
+		final URL url = Resources.getResource(&quot;spring-config.properties&quot;);
+		final ByteSource byteSource = Resources.asByteSource(url);
+		final Properties properties = new Properties();
+		InputStream inputStream = null;
+		try {
+			inputStream = byteSource.openBufferedStream();
+			properties.load(inputStream);
+			properties.list(System.out);
+		} catch (final IOException ioException) {
+			ioException.printStackTrace();
+		} finally {
+			if (inputStream != null) {
+				try {
+					inputStream.close();
+				} catch (final IOException ioException) {
+					ioException.printStackTrace();
+				}
+			}
+		}
+	}
+}</code></pre></noscript></div>
+</p>
+
+<p>For more info, please check <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/io/Resources.html" target="_blank">Resources</a> class of Guava.</p>
 ]]></content>
   </entry>
   

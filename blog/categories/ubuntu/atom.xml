@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ubuntu | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-18T23:48:40+00:00</updated>
+  <updated>2015-01-19T03:10:17+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -24,8 +24,10 @@
 So, here are 3 very simple steps for installation of Oracle JDK on a Ubuntu machine.</p>
 
 <!--more-->
-<p>#### Initial setup command
-    sudo apt-get install python-software-properties</p>
+
+<h4 id="initial-setup-command">Initial setup command</h4>
+<pre><code>sudo apt-get install python-software-properties
+</code></pre>
 
 <h4 id="add-ppa-to-software-sources">Add ppa to software sources</h4>
 <pre><code>sudo add-apt-repository ppa:webupd8team/java

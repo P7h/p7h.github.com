@@ -84,7 +84,8 @@
 
 <p>Most of my work happens on EC2 and on Linux as our Hadoop env is on EC2. I absolutely adore Linux and shell. And first and foremost thing I have to do - being a Java developer - is download Oracle JDK onto the Linux machines on EC2. And downloading Oracle JDK from Oracle website is difficult due to Oracle’s mandatory license check, which you need to accept before downloading the JDK. With my Linux env being server-only-machines [i.e. without a desktop or GUI], there is no way I could download the JDK directly from Oracle website. So, I came up with this small shell script [extending an <a href="http://stackoverflow.com/a/10959815" target="_blank">answer</a> from Stackoverflow] to download JDK from Oracle website from command prompt.<!--more--><br /></p>
 
-<p>Depending on the OS and platform of the JDK version you intend to download, just modify the array on line#20 in the following script and you can trigger the download on the shell directly.&lt;div&gt;<script src="https://gist.github.com/9741922.js?file=jdk_download.sh"></script></p>
+<p>Depending on the OS and platform of the JDK version you intend to download, just modify the array on line#20 in the following script and you can trigger the download on the shell directly.</p>
+<div><script src="https://gist.github.com/9741922.js?file=jdk_download.sh"></script>
 <noscript><pre><code>### Shell script to download Oracle JDK / JRE / Java binaries from Oracle website using terminal / command / shell prompt using wget.
 ### You can download all the binaries one-shot by just giving the BASE_URL.
 ### Script might be useful if you need Oracle JDK on Amazon EC2 env.
@@ -124,11 +125,9 @@ do
     wget -c -O &quot;$JDK_VERSION$platform&quot; --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; &quot;${BASE_URL}${platform}&quot;
 done
 
-##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####</code></pre></noscript>
-<p>&lt;/div&gt;</p>
+##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####</code></pre></noscript></div>
 
-<p><br />
-Hope this script will be helpful for all those who live on and love command prompt.</p>
+<p>Hope this script will be helpful for all those who live on and love command prompt.</p>
 </div>
 
 
@@ -183,14 +182,14 @@ Hope this script will be helpful for all those who live on and love command prom
     <img src="/images/P7h.jpg" alt="P7h">
   </span>
   <span class="about-desc">
-    <span>Hey, I am Prashanth Babu.<br/>I am a Big Data developer. More about me <a href="/about">here</a>.</span>
+    <span>Hey, I am Prashanth.<br/>I am a Big Data developer. More about me <a href="/about">here</a>.</span>
     <br/>
     <hr>
     <a href="https://twitter.com/P7h" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @P7h</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <hr> 
   </span>
-</div> <section>
+</div><section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
