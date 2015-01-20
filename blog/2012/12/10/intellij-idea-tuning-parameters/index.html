@@ -9,7 +9,7 @@
   <meta name="author" content="Prashanth Babu">
 
   
-  <meta name="description" content="IntelliJ IDEA is my favorite IDE for my day-to-day work.I do moonlight with Eclipse as well from time-to-time, but the sheer speed and power of &hellip;">
+  <meta name="description" content="IntelliJ IDEA is my favorite IDE for all Java development related work. I do moonlight with Eclipse as well from time-to-time, but it is very less &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,8 +80,43 @@
   </header>
 
 
-<div class="entry-content"><div class='post'>
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;"><a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> is my favorite IDE for my day-to-day work.</div><div style="text-align: justify;">I do moonlight with Eclipse as well from time-to-time, but the sheer speed and power of IntelliJ pulls me back to IDEA every time.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">I have found the following tuning parameters to be very useful for fast loading, caching, etc for IDE to function smoothly:</div></div><!--more--><div style="text-align: justify;"><script src="https://gist.github.com/4388881.js"></script><br /></div><div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">If you are using Windows 64-bit, please add the above config in <i>idea64.exe.vmoptions</i> file and if its 32-bit, please add these tuning parms to <i>idea.exe.vmoptions</i> present in &lt;&lt;IDEA_INSTALLED_LOCATION&gt;&gt;/bin folder.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Also, just in case if you are not aware, on a 64 bit machine, if you want to launch IntelliJ IDEA in 64 bit mode, you need to launch <i>idea64.exe</i> and not <i>idea.exe</i>. For this, ensure you have <i>IDEA_JDK</i> and <i>IDEA_JDK_64</i> environment variables pointing to your 64 bit Java Installation folder.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Finally, the above IDEA Tuning parameters can also be used for an IntelliJ IDEA installed on a Linux machine as well.</div></div></div>
+<div class="entry-content"><p><a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> is my favorite IDE for all Java development related work. I do moonlight with Eclipse as well from time-to-time, but it is very less and also the sheer speed and power of IDEA pulls me back every time.</p>
+
+<p>I have found the following tuning parameters to be effective for my day-to-day work for fast loading, caching, etc and for the IDE to function smoothly:
+<!--more--></p>
+
+<div><script src="https://gist.github.com/4388881.js"></script>
+<noscript><pre><code>-server
+-Xms2048m
+-Xmx2048m
+-XX:NewSize=512m
+-XX:MaxNewSize=512m
+-XX:PermSize=512m
+-XX:MaxPermSize=512m
+-XX:+UseParNewGC
+-XX:ParallelGCThreads=4
+-XX:MaxTenuringThreshold=1
+-XX:SurvivorRatio=8
+-XX:+UseCodeCacheFlushing
+-XX:+UseConcMarkSweepGC
+-XX:+AggressiveOpts
+-XX:+CMSClassUnloadingEnabled
+-XX:+CMSIncrementalMode
+-XX:+CMSIncrementalPacing
+-XX:+CMSParallelRemarkEnabled
+-XX:CMSInitiatingOccupancyFraction=65
+-XX:+CMSScavengeBeforeRemark
+-XX:+UseCMSInitiatingOccupancyOnly
+-XX:ReservedCodeCacheSize=64m
+-XX:-TraceClassUnloading
+-ea
+-Dsun.io.useCanonCaches=false</code></pre></noscript></div>
+
+<p>If you are on 64-bit Windows OS, please add the above config in <em>idea64.exe.vmoptions</em> file and if 32-bit, please add these tuning parms to <em>idea.exe.vmoptions</em> present in IDEA_LOCATION/bin folder.<br /></p>
+
+<p>Also just in case if you are not aware, on a 64-bit machine, if you want to launch IntelliJ IDEA in 64-bit mode, you need to launch <em>idea64.exe</em> and not <em>idea.exe</em>. For this, ensure you have <code>IDEA_JDK</code> and <code>IDEA_JDK_64</code> environment variables pointing to your 64-bit Java install folder.<br /></p>
+
+<p>Finally, the above IntelliJ IDEA tuning parameters hold good for IntelliJ IDEA installed on a Linux machine as well.</p>
 </div>
 
 
@@ -102,7 +137,7 @@
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/eclipse/'>eclipse</a>, <a class='category' href='/blog/categories/ide/'>ide</a>, <a class='category' href='/blog/categories/idea/'>idea</a>, <a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/tuning/'>tuning</a>
+    <a class='category' href='/blog/categories/ide/'>ide</a>, <a class='category' href='/blog/categories/idea/'>idea</a>, <a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/tuning/'>tuning</a>
   
 </span>
 

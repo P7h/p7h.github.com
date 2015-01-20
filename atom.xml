@@ -4,7 +4,7 @@
   <title><![CDATA[Prashanth Babu]]></title>
   <link href="http://p7h.org/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-19T04:01:11+00:00</updated>
+  <updated>2015-01-20T00:24:31+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -21,8 +21,9 @@
     <content type="html"><![CDATA[<p>So like many others in the blogging world, I too shifted from Blogger to statically generated Octopress hosted on GitHub last week.And today I completed migrating all my <a href="http://P7h.blogspot.com">Blogger</a> posts to <a href="http://P7h.org">Octopress</a> and got them hosted here. Henceforth will leave Blogger as-is and will try to make this as my active blog.<br /></p>
 
 <p>Initially I was kinda apprehensive that I might have to put in significant effort to migrate my posts from Blogger to Octopress. But it turned out to be very simple actually. In fact, it was as simple as running just a single Ruby script.
-<!--more-->
-I have listed below the required steps for migration, just in case if someone needs a ready reference.</p>
+<!--more--></p>
+
+<p>I have listed below the required steps for migration, just in case if someone needs a ready reference.</p>
 
 <ul>
   <li>Export your content from Blogger:<br />
@@ -57,12 +58,12 @@ I have listed below the required steps for migration, just in case if someone ne
   <li>Few caveats:<br />
     <ul>
       <li>Please note that all the files usually crated by rake tasks are .md i.e. markdown files while the migrated scripts will be plain html files.<br /></li>
-      <li>Also please note that post the migration, all the migrated posts will retain the correct date, but time gets defaulted to 12:00 AM. I could not debug the issue there though.<br /></li>
+      <li>Also please note that post the migration, all the migrated posts will retain the correct date, but time gets defaulted to 12:00 AM. I could not find time to debug the issue though.<br /></li>
     </ul>
   </li>
 </ul>
 
-<p>Hope these steps were useful to you. Enjoy the new blog setup!</p>
+<p>Hope these steps were useful to you. Enjoy the new blog and glory!</p>
 ]]></content>
   </entry>
   
