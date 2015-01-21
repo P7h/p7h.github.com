@@ -4,7 +4,7 @@
   <title><![CDATA[Category: misc | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/misc/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-20T00:27:24+00:00</updated>
+  <updated>2015-01-21T23:07:25+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -42,7 +42,7 @@
   </li>
   <li>Execution of Ruby script:<br />
     <ul>
-      <li>Run this Ruby script on the xml file you downloaded above. Command for execution is: <code>import.rb blog-01-18-2015.xml</code>.<br /></li>
+      <li>Run this Ruby script on the xml file you downloaded above. Command for execution is: <code>ruby import.rb blog-01-18-2015.xml</code>.<br /></li>
       <li>This generates the content of your blog in html files.<br /></li>
       <li>During the migration, this script tries to retain the exact same path you would have used in the Blogger script and also tries to get the date [but not time] of the post and categories, etc you would have listed for each of your posts in Blogger. Very neat I would say.<br /></li>
     </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-20T00:27:24+00:00</updated>
+  <updated>2015-01-21T23:07:25+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -39,8 +39,12 @@
 
 ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
-## JDK version: JDK8u25
-BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25
+## Current latest JDK version: JDK8u31
+BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31
+
+## Previous versions: 8u25
+#BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25
+
 JDK_VERSION=${BASE_URL: -8}
 
 declare -a PLATFORMS=(&quot;-windows-x64.exe&quot; &quot;-windows-i586.exe&quot; &quot;-linux-x64.tar.gz&quot; &quot;-linux-i586.tar.gz&quot; &quot;-docs-all.zip&quot;)
@@ -52,8 +56,12 @@ done
 
 ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
-## JDK version: JDK7u71
-BASE_URL=http://download.oracle.com/otn-pub/java/jdk/7u71-b14/jdk-7u71
+## Current latest JDK version: JDK7u75
+BASE_URL=http://download.oracle.com/otn-pub/java/jdk/7u75-b13/jdk-7u75
+
+## Previous versions: v7u71
+#BASE_URL=http://download.oracle.com/otn-pub/java/jdk/7u71-b14/jdk-7u71
+
 JDK_VERSION=${BASE_URL: -8}
 
 declare -a PLATFORMS=(&quot;-windows-x64.exe&quot; &quot;-windows-i586.exe&quot; &quot;-linux-x64.tar.gz&quot; &quot;-linux-i586.tar.gz&quot; &quot;-docs-all.zip&quot;)
