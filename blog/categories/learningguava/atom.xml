@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learningguava | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/learningguava/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-21T23:07:25+00:00</updated>
+  <updated>2015-01-21T23:30:05+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -57,10 +57,9 @@ public final class StopwatchExample {
 }</code></pre></noscript></div>
 </p>
 
-<p>Few caveats for using <code>Stopwatch</code> are you should not start an already started <code>Stopwatch</code>. One has to check if the <code>Stopwatch</code> is already running by invoking <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Stopwatch.html#isRunning()" target="_blank"><code>isRunning()</code></a> method. <code>Stopwatch</code> documentation says the following on the same:<br /></p>
-
-<blockquote class="tr_bq" style="background-color: white; box-sizing: border-box; color: #303030; font-size: 14px; line-height: 24px; margin-bottom: 15px;">Stopwatch methods are not idempotent; it is an error to start or stop a stopwatch that is already in the desired state.</blockquote>
-<p>Also, once I got burned down by <a href="http://commons.apache.org/proper/commons-lang/javadocs/api-3.2.1/org/apache/commons/lang3/time/StopWatch.html" target="_blank"><code>StopWatch</code></a> class of Apache Commons Lang. As I was working in an IDE on a Maven project, I could not quickly relate to the difference between <code>Stopwatch</code> of Guava and <code>StopWatch</code> of Apache Commons Lang, as the class got auto imported into the code and then spent some good 20 minutes trying to check my classpath, IDE setup, etc. Yes very silly mistake. So, please be careful in choosing the correct class.</p>
+<p>Few caveats for using <code>Stopwatch</code> are you should not start an already started <code>Stopwatch</code>. One has to check if the <code>Stopwatch</code> is already running by invoking <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Stopwatch.html#isRunning()" target="_blank"><code>isRunning()</code></a> method. <code>Stopwatch</code> documentation says the following on the same:<br />
+&lt;blockquote class=&#8221;tr_bq&#8221; style=&#8221;background-color: white; box-sizing: border-box; color: #303030; font-size: 14px; line-height: 24px; margin-bottom: 15px;&#8221;&gt;Stopwatch methods are not idempotent; it is an error to start or stop a stopwatch that is already in the desired state.&lt;/blockquote&gt;
+Also, once I got burned down by <a href="http://commons.apache.org/proper/commons-lang/javadocs/api-3.2.1/org/apache/commons/lang3/time/StopWatch.html" target="_blank"><code>StopWatch</code></a> class of Apache Commons Lang. As I was working in an IDE on a Maven project, I could not quickly relate to the difference between <code>Stopwatch</code> of Guava and <code>StopWatch</code> of Apache Commons Lang, as the class got auto imported into the code and then spent some good 20 minutes trying to check my classpath, IDE setup, etc. Yes very silly mistake. So, please be careful in choosing the correct class.</p>
 ]]></content>
   </entry>
   
@@ -124,7 +123,7 @@ public final class ReadPropertiesWithGuava {
 <p>Guava follows almost all the excellent patterns and practices mentioned in <a href="http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683" target="_blank">Effective Java book</a> written by <a href="https://plus.google.com/113200173329286634669/about" target="_blank">Joshua Bloch</a>, who has designed the impeccable Java Collections API while he was at Sun. Later he joined Google. Under his mentor-ship, Google Guava got wings and became a very well designed and effective API, useful for many situations and scenarios with an ever-growing feature list. I ensure I add Guava dependency as the first thing to my Gradle or Maven build script. Guava makes <code>Java</code> code a lot more readable, clean, simple and elegant. It utilises the Java generics very well.<!--more--><br />
 <br />
 Consider the following example which I tweeted few months back.<br />
-<a href="https://twitter.com/P7h/status/195895898146996224" imageanchor="1" style="margin-left: 1em; margin-right: 1em;" target="_blank"><img alt="Google Guava sample code" border="0" src="http://3.bp.blogspot.com/-aCDnApHuz44/UpZBg-vLbII/AAAAAAAACag/wxy58EaJXMw/s1600/Guava_Sample.png" height="185" title="Google Guava sample code" width="640" /></a></p>
+<a href="https://twitter.com/P7h/status/195895898146996224" imageanchor="1" style="margin-left: 1em; margin-right: 1em;" target="_blank"><img src="/assets/images/Guava_Sample.png" alt="" /></a></p>
 
 <p>Which of the above versions looks fine? Obviously the second option, aint it?
 There are many such examples where Guava wins by a margin compared to normal Java code and or other libraries like commons, etc.</p>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: plugins | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/plugins/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-21T23:07:25+00:00</updated>
+  <updated>2015-01-21T23:30:05+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -28,8 +28,45 @@
     <link href="http://p7h.org/blog/2012/12/11/packages-in-sublime-text/"/>
     <updated>2012-12-11T00:00:00+00:00</updated>
     <id>http://p7h.org/blog/2012/12/11/packages-in-sublime-text</id>
-    <content type="html"><![CDATA[<div class="post">
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">If I am not working on Eclipse or IntelliJ IDEA, I will be grokking on <a href="http://www.sublimetext.com/" target="_blank">Sublime Text 2</a>. Its a wonderful text editor and in fact it&#8217;s more than a text editor. Unlimited trial period, multiple cursors, easy customization, etc are its main USPs.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">There are a number of blogposts which explain why / how Sublime Text is good. Two of them are from NetTuts. Follow them and see how simple and easy it is to configure and personalize Sublime as per your requirements:</div><ul><li style="text-align: justify;"><a href="http://net.tutsplus.com/tutorials/tools-and-tips/sublime-text-2-tips-and-tricks/" target="_blank">Sublime Text 2 Tips and Tricks</a></li><li style="text-align: justify;"><a href="https://tutsplus.com/course/improve-workflow-in-sublime-text-2/" target="_blank">Perfect Workflow in Sublime Text 2</a></li></ul><!--more--><div style="text-align: justify;">If you have followed the above articles, you would know that the first thing you do after installing Sublime Text is, install <a href="http://wbond.net/sublime_packages/package_control" target="_blank">Package Control</a>&nbsp;and its all simple from there to install other packages.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Following is the list of packages I have right now which are very useful for my work.</div><div style="text-align: justify;">First install Package Control and then search for the required packages in Package Control for installation, that&#8217;s all you have to do.</div><div style="text-align: justify;"><script src="https://gist.github.com/4388830.js"></script>In a future post, I will add <a href="http://p7h.blogspot.com/2012/12/my-user-settings-of-sublime-text.html" target="_blank">my User Settings of Sublime Text</a>.</div></div></div>
+    <content type="html"><![CDATA[<p>If I am not working on Eclipse or IntelliJ IDEA, I will be grokking on <a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a>. Its a wonderful text editor and in fact it’s more than a text editor. Unlimited trial period, multiple cursors, easy customization are its main USPs.<br /></p>
+
+<p>There are a number of blogposts which explain why / how Sublime Text is good. Two of them are from NetTuts. Follow them and see how simple and easy it is to configure and personalize Sublime as per your requirements:
+<!--more--></p>
+
+<ul>
+  <li><a href="http://net.tutsplus.com/tutorials/tools-and-tips/sublime-text-2-tips-and-tricks/" target="_blank">Sublime Text 2 Tips and Tricks</a></li>
+  <li><a href="https://tutsplus.com/course/improve-workflow-in-sublime-text-2/" target="_blank">Perfect Workflow in Sublime Text 2</a></li>
+</ul>
+
+<p>If you have followed the above articles, you would know that the first thing you do after installing Sublime Text is, install <a href="http://wbond.net/sublime_packages/package_control" target="_blank">Package Control</a> and its all simple from there to install other packages.<br /></p>
+
+<p>Following list has all the packages I have right now which are very useful for my work. First install Package Control and then search for the required packages [with the name listed here] in Package Control for installation, that’s all you have to do.
+<div><script src='https://gist.github.com/4388830.js'></script>
+<noscript><pre><code>Anaconda -- Turns ST3 into a full featured Python IDE.
+Case Conversion -- Case conversion plugin (pascal, camel, snake) for ST3.
+ColorPicker -- Color Picker plugin.
+Highlight -- For exporting highlighted code as RTF or HTML.
+Javatar -- Java Completions for ST3.
+Package Control -- A comprehensive Package Manager for ST3.
+Schemr -- To quickly change ST3 color scheme.
+SideBarEnhancements -- Enhancements to ST3 Sidebar for files and folders.
+SublimeREPL -- Run an interpreter inside ST3 (useful for Clojure, CoffeeScript, F#, Groovy, Haskell, Lua, MozRepl, NodeJS, Python, R, Ruby, Scala, shell, etc).
+Terminal -- Launch terminals from the current file or the root project folder in ST3.
+Theme - Flatland -- Minimal theme for ST3 [built on top of Theme - Soda].
+Theme - Soda -- Dark and light custom UI Themes for ST3.
+Theme - Soda SolarizedDark -- Dark and light custom UI Themes for ST3 [forked from Theme - Soda].
+Themr -- To quickly change ST3 UI theme.
+
+Misc:
+Dayle Rees Color Schemes -- ST3 Themes by Dayle Rees.
+Theme - Acqua -- ST3 theme to match the native OS X App Kit and ProKit themes.
+Theme - Refined -- ST3 theme forked from the Acqua Theme.
+Tomorrow Color Schemes -- Tomorrow Color Schemes for ST3.</code></pre></noscript></div>
+</p>
+
+<p>In a future post, I will add User Settings of Sublime Text.<br /></p>
+
+<p><em>EDIT</em>: I added another post on detailing <a href="http://p7h.blogspot.com/2012/12/my-user-settings-of-sublime-text.html" target="_blank">my User Settings of Sublime Text</a>.</p>
 ]]></content>
   </entry>
   
