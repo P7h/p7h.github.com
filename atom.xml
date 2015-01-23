@@ -4,7 +4,7 @@
   <title><![CDATA[Prashanth Babu]]></title>
   <link href="http://p7h.org/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-22T00:06:25+00:00</updated>
+  <updated>2015-01-23T23:57:26+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -572,8 +572,163 @@ Also, if you are interested in IntelliJ IDEA plugins, please check my <a href="h
     <link href="http://p7h.org/blog/2012/12/21/my-user-settings-of-sublime-text/"/>
     <updated>2012-12-21T00:00:00+00:00</updated>
     <id>http://p7h.org/blog/2012/12/21/my-user-settings-of-sublime-text</id>
-    <content type="html"><![CDATA[<div class='post'>
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;"><div style="text-align: justify;">In an earlier <a href="http://p7h.blogspot.com/2012/12/packages-in-sublime-text.html" target="_blank">post</a>, I have listed all the plugins I use in my Sublime Text Editor.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Whenever you edit your Settings in Sublime Text, ensure you update <i>Settings - User</i> under <i>Preferences</i> and not any other file since once you install an update to Sublime Text, the installer does not fiddle with <i>Settings - User</i> and hence you can retain all your settings even in the updated version. Donot update <i>Settings - Default</i>, since it will be erased with the latest version&#8217;s Settings file.</div><div style="text-align: justify;"><br /></div><!--more--><div style="text-align: justify;">I played around my Settings and currently I have configured my Sublime Text as per my requirement. Here are my User Settings:</div><div style="text-align: justify;"><script src="https://gist.github.com/4388796.js"></script>Use these settings as the base and try to create your own flair for your work as per your taste. I am sure it will help you in increased efficiency and productivity in your work. All the best!</div></div></div>
+    <content type="html"><![CDATA[<p>This is in continuation to my earlier post listing all my favorite <a href="http://p7h.blogspot.com/2012/12/packages-in-sublime-text.html" target="_blank">plugins in Sublime Text</a>. In this post I talk about Settings configured on my Sublime Text.<br /></p>
+
+<p>Whenever you edit your Settings in Sublime Text, ensure you update <i>Settings - User</i> under <i>Preferences</i> and not any other file since once you install an update to Sublime Text, the installer does not fiddle with <i>Settings - User</i> and hence you can retain all your settings even in the updated version. Donot update <i>Settings - Default</i>, since it will be erased with the latest version’s Settings file.<br />
+<!--more--></p>
+
+<p>I played around my Settings and I have configured my Sublime Text as per my requirements. Here are my User Settings:</p>
+<div><script src="https://gist.github.com/4388796.js"></script>
+<noscript><pre><code>{
+	&quot;always_show_minimap_viewport&quot;: true,
+	&quot;auto_complete&quot;: true,
+	&quot;auto_complete_commit_on_tab&quot;: true,
+	&quot;auto_complete_delay&quot;: 10,
+	&quot;auto_complete_selector&quot;: &quot;source - comment&quot;,
+	&quot;auto_complete_size_limit&quot;: 4194304,
+	&quot;auto_complete_triggers&quot;:
+	[
+		{
+			&quot;characters&quot;: &quot;&lt;&quot;,
+			&quot;selector&quot;: &quot;text.html&quot;
+		}
+	],
+	&quot;auto_complete_with_fields&quot;: true,
+	&quot;auto_indent&quot;: true,
+	&quot;auto_match_enabled&quot;: true,
+	&quot;binary_file_patterns&quot;:
+	[
+		&quot;*.jpg&quot;,
+		&quot;*.jpeg&quot;,
+		&quot;*.png&quot;,
+		&quot;*.gif&quot;,
+		&quot;*.ttf&quot;,
+		&quot;*.tga&quot;,
+		&quot;*.dds&quot;,
+		&quot;*.ico&quot;,
+		&quot;*.eot&quot;,
+		&quot;*.pdf&quot;,
+		&quot;*.swf&quot;,
+		&quot;*.jar&quot;,
+		&quot;*.zip&quot;
+	],
+	&quot;bold_folder_labels&quot;: true,
+	&quot;caret_extra_width&quot;: 2,
+	&quot;caret_style&quot;: &quot;phase&quot;,
+	&quot;close_windows_when_empty&quot;: false,
+	&quot;color_scheme&quot;: &quot;Packages/Theme - Flatland/Flatland Dark.tmTheme&quot;,
+	&quot;copy_with_empty_selection&quot;: false,
+	&quot;create_window_at_startup&quot;: true,
+	&quot;default_encoding&quot;: &quot;UTF-8&quot;,
+	&quot;default_line_ending&quot;: &quot;system&quot;,
+	&quot;detect_indentation&quot;: true,
+	&quot;drag_text&quot;: true,
+	&quot;draw_centered&quot;: false,
+	&quot;draw_indent_guides&quot;: true,
+	&quot;draw_minimap_border&quot;: true,
+	&quot;draw_white_space&quot;: &quot;selection&quot;,
+	&quot;enable_hexadecimal_encoding&quot;: true,
+	&quot;enable_tab_scrolling&quot;: false,
+	&quot;ensure_newline_at_eof_on_save&quot;: false,
+	&quot;fade_fold_buttons&quot;: true,
+	&quot;fallback_encoding&quot;: &quot;Western (Windows 1252)&quot;,
+	&quot;file_exclude_patterns&quot;:
+	[
+		&quot;*.pyc&quot;,
+		&quot;*.pyo&quot;,
+		&quot;*.exe&quot;,
+		&quot;*.dll&quot;,
+		&quot;*.obj&quot;,
+		&quot;*.o&quot;,
+		&quot;*.a&quot;,
+		&quot;*.lib&quot;,
+		&quot;*.so&quot;,
+		&quot;*.dylib&quot;,
+		&quot;*.ncb&quot;,
+		&quot;*.sdf&quot;,
+		&quot;*.suo&quot;,
+		&quot;*.pdb&quot;,
+		&quot;*.idb&quot;,
+		&quot;.DS_Store&quot;,
+		&quot;*.class&quot;,
+		&quot;*.psd&quot;,
+		&quot;*.db&quot;
+	],
+	&quot;find_selected_text&quot;: true,
+	&quot;fold_buttons&quot;: true,
+	&quot;folder_exclude_patterns&quot;:
+	[
+		&quot;.svn&quot;,
+		&quot;.git&quot;,
+		&quot;.hg&quot;,
+		&quot;CVS&quot;
+	],
+	&quot;font_face&quot;: &quot;Source Code Pro&quot;,
+	&quot;font_options&quot;:
+	[
+		&quot;no_round&quot;,
+		&quot;subpixel_antialias&quot;
+	],
+	&quot;font_size&quot;: 12.2,
+	&quot;gutter&quot;: true,
+	&quot;highlight_line&quot;: true,
+	&quot;highlight_modified_tabs&quot;: true,
+	&quot;hot_exit&quot;: true,
+	&quot;ignored_packages&quot;:
+	[
+		&quot;Vintage&quot;
+	],
+	&quot;indent_guide_options&quot;:
+	[
+		&quot;draw_normal&quot;
+	],
+	&quot;indent_subsequent_lines&quot;: true,
+	&quot;indent_to_bracket&quot;: true,
+	&quot;line_numbers&quot;: true,
+	&quot;line_padding_bottom&quot;: 1,
+	&quot;line_padding_top&quot;: 1,
+	&quot;margin&quot;: 4,
+	&quot;match_brackets&quot;: true,
+	&quot;match_brackets_angle&quot;: true,
+	&quot;match_brackets_braces&quot;: true,
+	&quot;match_brackets_content&quot;: true,
+	&quot;match_brackets_square&quot;: true,
+	&quot;match_selection&quot;: true,
+	&quot;match_tags&quot;: true,
+	&quot;move_to_limit_on_up_down&quot;: false,
+	&quot;open_files_in_new_window&quot;: true,
+	&quot;overlay_scroll_bars&quot;: &quot;system&quot;,
+	&quot;preview_on_click&quot;: true,
+	&quot;remember_open_files&quot;: true,
+	&quot;rulers&quot;:
+	[
+	],
+	&quot;save_on_focus_lost&quot;: false,
+	&quot;scroll_past_end&quot;: false,
+	&quot;scroll_speed&quot;: 1,
+	&quot;shift_tab_unindent&quot;: true,
+	&quot;show_full_path&quot;: true,
+	&quot;show_panel_on_build&quot;: true,
+	&quot;show_tab_close_buttons&quot;: false,
+	&quot;smart_indent&quot;: true,
+	&quot;soda_classic_tabs&quot;: true,
+	&quot;soda_folder_icons&quot;: true,
+	&quot;spell_check&quot;: false,
+	&quot;tab_completion&quot;: true,
+	&quot;tab_size&quot;: 4,
+	&quot;theme&quot;: &quot;Soda Dark 3.sublime-theme&quot;,
+	&quot;translate_tabs_to_spaces&quot;: true,
+	&quot;tree_animation_enabled&quot;: true,
+	&quot;trim_automatic_white_space&quot;: true,
+	&quot;trim_trailing_white_space_on_save&quot;: false,
+	&quot;use_simple_full_screen&quot;: false,
+	&quot;use_tab_stops&quot;: true,
+	&quot;word_separators&quot;: &quot;./\\()\&quot;'-:,.;&lt;&gt;~!@#$%^&amp;*|+=[]{}`~?&quot;,
+	&quot;word_wrap&quot;: &quot;true&quot;,
+	&quot;wrap_width&quot;: 120
+}</code></pre></noscript></div>
+
+<p>Use these settings as the base and try to create your own flair for your work as per your taste. I am sure it will help you in increased efficiency and productivity in your work. All the best!</p>
 ]]></content>
   </entry>
   
