@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tuning | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/tuning/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-23T23:57:26+00:00</updated>
+  <updated>2015-01-24T00:07:35+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -18,8 +18,50 @@
     <link href="http://p7h.org/blog/2012/12/29/eclipse-startup-options-or-jvm-settings/"/>
     <updated>2012-12-29T00:00:00+00:00</updated>
     <id>http://p7h.org/blog/2012/12/29/eclipse-startup-options-or-jvm-settings</id>
-    <content type="html"><![CDATA[<div class="post">
-<div style="font-size: 15px; white-space: normal;"><div style="text-align: justify;"><span style="font-family: Roboto;">In continuation to my </span><a href="http://p7h.blogspot.com/2012/12/intellij-idea-tuning-parameters.html" style="font-family: Roboto;" target="_blank">other post</a><span style="font-family: Roboto;"> on </span><a href="http://www.eclipse.org/" style="font-family: Roboto;" target="_blank">Eclipse</a><span style="font-family: Roboto;">, in this post I am detailing the startup options [which are also called JVM Settings] on Eclipse IDE. Eclipse startup is controlled by the options in </span><span style="font-family: Courier New, Courier, monospace;">eclipse.ini</span><span style="font-family: Roboto;"> file present under Eclipse installation folder [i.e. $ECLIPSE_HOME]. By default, Eclipse comes with a set of values in this file. But those values are not optimized and might cause issues and / or hangs in large projects which might have huge codebase. These can be tuned further for better performance.</span></div><br /><div style="font-family: Roboto;"><div style="text-align: justify;">My startup options in my current version of Eclipse Juno i.e. v4.2.1 are below:</div><!--more--><span style="font-family: Roboto;"><script src="https://gist.github.com/4392224.js"></script><br />Please use these options as a reference and update </span><span style="font-family: Courier New, Courier, monospace;">eclipse.ini</span><span style="font-family: Roboto;"> file [please do take a backup of this file prior to updating it]. Also, one more important point to note is, use the latest <a href="http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html" target="_blank">Sun / Oracle JDK</a> for starting Eclipse. This also has a profound effect on the Eclipse startup time as well as the IDE functionality with a decent sized codebase.</span></div><br /><div style="text-align: justify;"><span style="font-family: Roboto;">Finally, in case you were looking for tuning the startup options of IntelliJ IDEA, please refer my <a href="http://p7h.blogspot.com/2012/12/intellij-idea-tuning-parameters.html" target="_blank">earlier post</a> which details the parameters for IDEA.</span></div></div></div>
+    <content type="html"><![CDATA[<p>In continuation to my other post on <a href="http://p7h.blogspot.com/2012/12/intellij-idea-tuning-parameters.html" target="_blank">tuning IntelliJ IDEA</a>, in this post I am detailing the startup options [which are also called JVM Settings] for Eclipse IDE. Eclipse startup is controlled by the options in <code>eclipse.ini</code> file present directly under Eclipse installation folder [i.e. $ECLIPSE_HOME]. By default, Eclipse comes with a set of values in this file. But those values are not optimized and might cause issues and / or hangs in large projects which might have considerably bigger codebase. These can be tuned further for better performance.<br /></p>
+
+<p>My startup options in my current version of Eclipse Juno i.e. v4.2.1 are listed below.
+<!--more--></p>
+
+<p><div><script src='https://gist.github.com/4392224.js'></script>
+<noscript><pre><code>-startup
+plugins/org.eclipse.equinox.launcher_1.3.0.v20120522-1813.jar
+--launcher.library
+plugins/org.eclipse.equinox.launcher.win32.win32.x86_64_1.1.200.v20120522-1813
+-vm
+C:/Warez/Java/JDK7.0_10/jre/bin/server/jvm.dll
+-showsplash
+org.eclipse.platform
+--launcher.XXMaxPermSize
+256m
+--launcher.defaultAction
+openFile
+-product
+org.eclipse.epp.package.jee.product
+--launcher.defaultAction
+openFile
+--launcher.XXMaxPermSize
+256M
+-vmargs
+-server
+-Declipse.p2.unsignedPolicy=allow
+-Xms1024m
+-Xmx1024m
+-Xmn128m
+-Xss4m
+-XX:PermSize=256m
+-XX:MaxPermSize=256m
+-XX:+UseG1GC
+-XX:+UseParallelGC
+-Xverify:none
+-XX:+UseFastAccessorMethods
+-Dosgi.requiredJavaVersion=1.5
+-Dhelp.lucene.tokenizer=standard</code></pre></noscript></div>
+</p>
+
+<p>Please use these options as a reference and update <code>eclipse.ini</code> file [please do take a backup of this file prior to updating it]. Also, one more important point to note is, use the latest <a href="http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html" target="_blank">Sun / Oracle JDK</a> for starting Eclipse. This also has a profound effect on the Eclipse startup time as well as the IDE functionality with a decent sized codebase.<br /></p>
+
+<p>Finally, in case you were looking for tuning the startup options of IntelliJ IDEA, please refer my earlier post on tuning <a href="http://p7h.org/2012/12/intellij-idea-tuning-parameters.html" target="_blank">startup parameters for IDEA</a>.</p>
 ]]></content>
   </entry>
   
