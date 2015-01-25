@@ -92,8 +92,42 @@
   </header>
 
 
-<div class="entry-content"><div class='post'>
-<div><div style="font-size: 15px; white-space: normal;"><div style="text-align: justify;"><span style="font-family: Roboto;"><a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> comes bundled with </span><span style="font-family: Courier New, Courier, monospace;">toString()</span><span style="font-family: Roboto;"> plugin. If you check the plugins in Settings, you should find </span><span style="font-family: Courier New, Courier, monospace;">GenerateToString</span><span style="font-family: Roboto;"> plugin, which generates </span><span style="font-family: Courier New, Courier, monospace;">toString()</span><span style="font-family: Roboto;"> method with options for String concat, StringBuffer, StringBuilder and ToStringBuilder (of Apache Commons) for generating this method.</span></div></div><div style="text-align: justify;"><br /></div><div style="font-size: 15px; white-space: normal;"><div style="text-align: justify;"><span style="font-family: Roboto;"><a href="http://code.google.com/p/guava-libraries/" target="_blank">Google Guava</a> has even better helper method for generating </span><span style="font-family: Courier New, Courier, monospace;">toString()</span><span style="font-family: Roboto;"> method&nbsp;for a JavaBean or POJO,&nbsp;which is both clutter free and has a very consistent format; in the form of </span><span style="font-family: Courier New, Courier, monospace;"><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html#toStringHelper(java.lang.Class)" target="_blank">Objects.toStringHelper(this)</a></span><span style="font-family: Roboto;">. It looks more elegant than any of the above solutions, actually. Also, as I make it a point to use Google Guava in all my projects, I have defined the following template in my </span><span style="font-family: Courier New, Courier, monospace;">toString()</span><span style="font-family: Roboto;"> method generator settings in IntelliJ IDEA.</span></div></div><!--more--><script src="https://gist.github.com/4388630.js"></script><br /><div style="font-size: 15px; white-space: normal;"><div style="text-align: justify;"><span style="font-family: Roboto; font-size: 15px;">Follow the steps mentioned below for adding this template to your IntelliJ IDEA [picked up from <a href="http://stackoverflow.com/a/9445402" target="_blank">SO</a>]:<br /></span></div><ul><li style="text-align: justify;"><span style="font-family: Roboto; font-size: 15px;">Go inside a Java Class in an editor in IntelliJ IDEA</span></li><span style="font-family: Roboto; font-size: 15px;"><li style="text-align: justify;">Hit Alt + Insert to popup the &#8220;Generate&#8221; menu</li><li style="text-align: justify;">Choose toString()</li><li style="text-align: justify;">Click the &#8220;Settings&#8221; button</li><li style="text-align: justify;">Go to the &#8220;Templates&#8221; tab</li><li style="text-align: justify;">Create a new template named &#8220;Guava toString gen&#8221; (or any name you prefer)</li><li style="text-align: justify;">Add the above code to the template</li></span></ul></div><div style="text-align: justify;"><span style="font-family: Roboto; font-size: 15px;">Yes, its that simple!!&nbsp; After configuring the above template, whenever you want to generate a </span><span style="font-family: Courier New, Courier, monospace; font-size: 15px;">toString()</span><span style="font-family: Roboto; font-size: 15px;"> method for a Class, IntelliJ IDEA generates </span><span style="font-family: Courier New, Courier, monospace; font-size: 15px;">toString()</span><span style="font-family: Roboto; font-size: 15px;"> using Guava template you have added just now.</span></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><span style="font-family: Roboto; font-size: 15px;">Now, go ahead and give this a try and also check the other method </span><span style="font-family: Courier New, Courier, monospace;"><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.ToStringHelper.html#omitNullValues()" target="_blank">omitNullValues()</a></span><span style="font-family: Roboto; font-size: 15px;"> which might be useful in some scenarios.</span></div><div style="text-align: justify;"><span style="font-family: Roboto; font-size: 15px;"><br /></span></div><span style="font-family: Roboto; font-size: 15px;"><div style="text-align: justify;"><span style="font-family: Roboto;">Also, as a bonus tip, Guava&#8217;s <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html" target="_blank">Objects</a> class also has 2 awesome helper methods which aide in writing readable&nbsp;</span><span style="font-family: Courier New, Courier, monospace;"><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html#equal(java.lang.Object, java.lang.Object)" target="_blank">equals()</a></span><span style="font-family: Roboto;"> and </span><span style="font-family: Courier New, Courier, monospace;"><a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html#hashCode(java.lang.Object...)" target="_blank">hashcode()</a></span><span style="font-family: Roboto;"> methods. You should try them too.</span></div></span></div></div>
+<div class="entry-content"><p><a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> comes bundled with <code>toString()</code> plugin. If you check the plugins in Settings, you should find GenerateToString plugin, which generates <code>toString()</code> method with options for String concat, StringBuffer, StringBuilder and ToStringBuilder (of Apache Commons) for generating this method.</p>
+
+<p><a href="http://code.google.com/p/guava-libraries/" target="_blank">Google Guava</a> has even better helper method for generating <code>toString()</code> method for a JavaBean or POJO, which is both clutter free and has a very consistent format; in the form of <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html#toStringHelper(java.lang.Class)" target="_blank">Objects.toStringHelper(this)</a>. It looks more elegant than any of the above solutions, actually. Also, as I make it a point to use Google Guava in all my projects, I have defined the following template in my <code>toString()</code> method generator settings in IntelliJ IDEA.
+<!--more--></p>
+
+<div><script src="https://gist.github.com/4388630.js"></script>
+<noscript><pre><code>/**
+ * Guava API toString() method generator for a JavaBean / POJO.
+ * @return String representation of all the attributes of the bean.
+ */
+public String toString() {
+    #set ($autoImportPackages = &quot;com.google.common.base.Objects&quot;)
+    return Objects.toStringHelper(this)
+    #foreach ($member in $members)
+        .add(&quot;$member.name&quot;, $member.accessor)
+    #end
+        .toString();
+}</code></pre></noscript></div>
+
+<p>Follow the steps mentioned below for adding this template to your IntelliJ IDEA [picked up from <a href="http://stackoverflow.com/a/9445402" target="_blank">SO</a>]:</p>
+
+<ol>
+  <li>Go inside a Java Class in an editor in IntelliJ IDEA.</li>
+  <li>Hit Alt + Insert to popup the “Generate” menu.</li>
+  <li>Choose <code>toString()</code>.</li>
+  <li>Click the “Settings” button.</li>
+  <li>Go to the “Templates” tab.</li>
+  <li>Create a new template named “Guava toString gen” (or any name you prefer).</li>
+  <li>Add the above code to the template.</li>
+</ol>
+
+<p>Yes, its that simple!!  After configuring the above template, whenever you want to generate a <code>toString()</code> method for a Class, IntelliJ IDEA generates <code>toString()</code> using Guava template you have added just now.</p>
+
+<p>Now, go ahead and give this a try and also check the other method <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.ToStringHelper.html#omitNullValues()" target="_blank">omitNullValues()</a> which might be useful in some scenarios.</p>
+
+<p>Also, as a bonus tip, Guava’s <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html" target="_blank">Objects</a> class also has 2 awesome helper methods which aide in writing readable <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html#equal(java.lang.Object, java.lang.Object)" target="_blank">equals()</a> and <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html#hashCode(java.lang.Object...)" target="_blank">hashcode()</a> methods. You should try them too.</p>
 </div>
 
 
