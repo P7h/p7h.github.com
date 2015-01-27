@@ -4,7 +4,7 @@
   <title><![CDATA[Category: data science | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/data-science/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-26T23:16:41+00:00</updated>
+  <updated>2015-01-27T23:02:14+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -51,7 +51,9 @@ Work on your final project and we cover additional questions and topics brought 
 
 <p>If you are interested in or your work includes solving real-time Big Data use cases, you might want to checkout this course: <a href="https://www.udacity.com/course/ud381" target="_blank">https://www.udacity.com/course/ud381</a>.<br /></p>
 
-<p>Happy learning! And all the very best too.</p>
+<p>Happy learning! And all the very best too.<br /></p>
+
+<p><em>Updated on 20th January, 2015</em>: I have uploaded my code and solutions for the exercises, while working on this course to <a href="https://github.com/P7h/Real-Time_Analytics_with_Apache_Storm__Udacity_Course" title="Real-Time Analytics with Apache Storm">GitHub</a>. Please check it, you may find it useful.</p>
 ]]></content>
   </entry>
   

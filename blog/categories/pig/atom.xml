@@ -4,7 +4,7 @@
   <title><![CDATA[Category: pig | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/pig/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-26T23:16:41+00:00</updated>
+  <updated>2015-01-27T23:02:14+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -18,8 +18,36 @@
     <link href="http://p7h.org/blog/2013/01/26/intro-to-pig/"/>
     <updated>2013-01-26T00:00:00+00:00</updated>
     <id>http://p7h.org/blog/2013/01/26/intro-to-pig</id>
-    <content type="html"><![CDATA[<div class="post">
-<div style="font-family: Roboto; font-size: 15px; white-space: normal;">Few months back, I conducted a 2-hour&nbsp;<a href="http://fifthelephant.in/2012/workshop-pig" target="_blank">workshop</a> on &#8220;Introduction to Pig&#8221; at <a href="http://fifthelephant.in/" target="_blank">Fifth Elephant</a>, Bangalore, India on 26th July, 2012. This is a community-powered conference on the Big Data ecosystem.<br /><br />As part of this workshop, I have touched a bit on Hadoop, MapReduce and Hive. But as the title says, the focus was on Apache Pig. I have also demoed few usecases of execution of Java MapReduce, Hive and Pig. And also a brief overview and demo of Twitter&#8217;s <a href="https://github.com/twitter/ambrose" target="_blank">Ambrose</a> UI for visualizing Pig MapReduce jobs.<!--more--><br /><br />Here are the slides of my presentation. This presentation gives a basic understanding of<br /><ol><li>Big Data</li><li>Basics of Hadoop and MapReduce</li><li>Landscape of Hadoop ecosystem</li><li>Introduction to Apache Pig</li><li>Basics of Pig and Pig Latin</li><li>Pig vs. Hadoop MR</li><li>Pig vs. SQL and Pig vs. Hive</li><li>Twitter Ambrose for visualizing Pig MR Jobs</li></ol><br /><div style="text-align: center;"><br /><iframe src="http://www.slideshare.net/slideshow/embed_code/16190473" width="615px" height="486px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""> </iframe> <div style="margin-bottom:5px"><strong> <a href="http://www.slideshare.net/prashanthvvbabu/the-fifthelephant-2012handsonintrotopig" title="Introduction to Pig" target="_blank">Introduction to Pig</a> </strong> from <strong><a href="http://www.slideshare.net/prashanthvvbabu" target="_blank">Prashanth Babu</a></strong> </div><div style="text-align: left;"><br /></div><div style="text-align: left;">I have also posted the same slides on&nbsp;<a href="https://speakerdeck.com/p7h/introduction-to-pig" target="_blank">Speaker Deck</a>.<br />Code developed for the demos in this workshop can be found on <a href="https://github.com/P7h/IntroToPig" target="_blank">Github</a>.</div><div></div></div></div></div>
+    <content type="html"><![CDATA[<p>I conducted a 2-hour <a href="http://fifthelephant.in/2012/workshop-pig" target="_blank">workshop</a> on “Introduction to Pig” at <a href="http://fifthelephant.in/" target="_blank">The Fifth Elephant</a> - a community-powered conference on Big Data and ecosystem - at Bangalore, India on 26th July, 2012.<br /></p>
+
+<p>As part of this workshop, I have touched a bit on Hadoop, MapReduce and Hive. But as the title says, the focus was on Apache Pig. I also demoed few usecases of execution of Java MapReduce, Hive and Pig. And also a brief overview and demo of Twitter’s <a href="https://github.com/twitter/ambrose" target="_blank">Ambrose</a> UI for visualizing Pig MapReduce jobs.
+<!--more--></p>
+
+<p>This presentation gives a basic understanding of:</p>
+
+<ul>
+  <li>Big Data</li>
+  <li>Basics of Hadoop and MapReduce</li>
+  <li>Landscape of Hadoop ecosystem</li>
+  <li>Introduction to Apache Pig</li>
+  <li>Basics of Pig and Pig Latin</li>
+  <li>Pig vs. Hadoop MR</li>
+  <li>Pig vs. SQL and Pig vs. Hive</li>
+  <li>Twitter Ambrose for visualizing Pig MR Jobs</li>
+</ul>
+
+<p>Here are the slides of my presentation.
+<br /></p>
+
+<iframe src="http://www.slideshare.net/slideshow/embed_code/16190473" width="615px" height="486px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""> </iframe>
+<div style="margin-bottom:5px"><strong> <a href="http://www.slideshare.net/prashanthvvbabu/the-fifthelephant-2012handsonintrotopig" title="Introduction to Pig" target="_blank">Introduction to Pig</a> </strong> from <strong><a href="http://www.slideshare.net/prashanthvvbabu" target="_blank">Prashanth Babu</a></strong>
+
+<br />
+If you prefer SpeakerDeck, please find the slides of the presentation deck at <strong><a href="https://speakerdeck.com/p7h/introduction-to-pig" target="_blank">SpeakerDeck</a></strong>.<br />
+<script async="" class="speakerdeck-embed" data-id="b49b034049e90130e7cf22000a1f8082" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+Code used in the demos during this workshop can be found on [GitHub](https://github.com/P7h/IntroToPig &#8220;Introduction to Pig&#8221;).
+</div>
 ]]></content>
   </entry>
   
