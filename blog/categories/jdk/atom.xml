@@ -4,7 +4,7 @@
   <title><![CDATA[Category: jdk | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/jdk/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-28T23:15:03+00:00</updated>
+  <updated>2015-03-28T00:05:28+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -68,6 +68,7 @@ sudo apt-get update
 <noscript><pre><code>### Shell script to download Oracle JDK / JRE / Java binaries from Oracle website using terminal / command / shell prompt using wget.
 ### You can download all the binaries one-shot by just giving the BASE_URL.
 ### Script might be useful if you need Oracle JDK on Amazon EC2 env.
+### Script will be updated for every JDK release.
 
 ## Features:-
 # 1. Resumes a broken / interrupted [previous] download, if any.
@@ -80,10 +81,12 @@ sudo apt-get update
 
 ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
-## Current latest JDK version: JDK8u31
-BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31
+## Current latest JDK version: JDK8u40
+BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40
 
-## Previous versions: 8u25
+## Previous version: 8u31
+#BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31
+## Earlier version: 8u25
 #BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25
 
 JDK_VERSION=${BASE_URL: -8}

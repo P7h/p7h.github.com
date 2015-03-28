@@ -4,7 +4,7 @@
   <title><![CDATA[Prashanth Babu]]></title>
   <link href="http://p7h.org/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-01-28T23:15:03+00:00</updated>
+  <updated>2015-03-28T00:05:28+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -12,6 +12,105 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[DataStax Cassandra Online Courses]]></title>
+    <link href="http://p7h.org/blog/2015/03/27/datastax-cassandra-online-courses/"/>
+    <updated>2015-03-27T23:54:40+00:00</updated>
+    <id>http://p7h.org/blog/2015/03/27/datastax-cassandra-online-courses</id>
+    <content type="html"><![CDATA[<p>I recently attended few online courses of DataStax around Cassandra. This post is about my experiences and review of these courses.</p>
+
+<p>Late in February, I came across <a href="https://twitter.com/tlberglund/status/570002948056621056" title="DataStax Courses">this tweet</a> in my timeline.</p>
+
+<blockquote>
+  <p>Tim Berglund ‏<a href="https://twitter.com/tlberglund/status/570002948056621056">@tlberglund</a>: When I first started at @datastax, I never dreamed we’d get here. But we did! All online training is now free: <a href="http://datastax.com/training">http://datastax.com/training</a></p>
+</blockquote>
+
+<!--more-->
+<p>Out of curiosity I checked the link and was kinda shocked to see so many wonderful courses being offered online for free. I was just starting to work on Cassandra then and this was a great chance for me to learn more and hone Cassandra for my regular Big Data work and also for overall understanding of one of the best NoSQL databases.</p>
+
+<p>As I am a Big Data and Hadoop Ecosystem guy, I am more interested in getting to know how to go around Cassandra, use Cassandra for data pipelines and of course installation, tuning and tweaking of Cassandra for throughput. So, I enrolled myself for the following 3 courses:</p>
+
+<ol>
+  <li>DS201: Cassandra Core Concepts Skills and Tools.</li>
+  <li>DS210: DataStax Enterprise Operations and Performance.</li>
+  <li>DS320: DataStax Enterprise Analytics: Spark and Cassandra.</li>
+</ol>
+
+<p>Below is a quick review of the objectives and my experiences of these courses I attended and a bit of feedback to DataStax Training team.</p>
+
+<p>All the courses were online and were on WebEx, which really helps people to attend from anywhere without using any custom software or tools except for browser.</p>
+
+<h4 id="ds201-cassandra-core-concepts-skills-and-tools">DS201: Cassandra Core Concepts Skills and Tools</h4>
+
+<ul>
+  <li>Course details: <a href="http://www.datastax.com/what-we-offer/products-services/training/apache-cassandra-core-concepts-skills-and-tools">DataStax course page</a>.</li>
+  <li>Instructor: Ron Cohen.</li>
+  <li>Date: 02<sup>nd</sup> March to 05<sup>th</sup> March, 2015.</li>
+  <li>Duration: 3 hours per day.</li>
+  <li>Time: 10:00 AM to 01:00 PM GMT. </li>
+</ul>
+
+<p>This course, as the name indicates is more for basics and concepts of Cassandra. The course material and the way Ron went about building the course was really great. </p>
+
+<p>Training team sent the participants a link for the CassandraVM 2 days before the class. We were also provided a download link for the slides and workbooks of the course before the start of the course. Slides are the handouts of the course; while workbooks are the exercises which you need to do at the end of the day at your convenience on the CassandraVM.</p>
+
+<p>This course rightly set the tone for the rest of the courses I wanted to attend. And the exercises helped me too.</p>
+
+<p>Ron was very understanding and he spent quite a good amount of time clarifying a number of questions during the course.</p>
+
+<h4 id="ds210-datastax-enterprise-operations-and-performance">DS210: DataStax Enterprise Operations and Performance.</h4>
+
+<ul>
+  <li>Course details: <a href="http://www.datastax.com/what-we-offer/products-services/training/apache-cassandra-operations-and-performance-tuning">DataStax course page</a>.</li>
+  <li>Instructor: Kiyu Gabriel.</li>
+  <li>Date: 16<sup>th</sup> March to 19<sup>th</sup> March, 2015.</li>
+  <li>Duration: 3 hours per day for 4 days.</li>
+  <li>Time: 05:00 PM to 08:00 PM GMT.</li>
+</ul>
+
+<p>Course details and objectives can be found  for this course.</p>
+
+<p>This course goes a bit in depth and talks a lot about tuning and tweaking the Cassandra installation for better performance. Talks extensively about how to tweak, what to tweak in Cassandra, replication factor and a lot more. Most fascinating topic was on the last day on “Understanding Performance Tuning”.
+The day before the training, I received the course decks and exercises related link. </p>
+
+<p>Its unfortunate that I missed few of the sessions due to work conflicts and neither I could do the exercises. So, I am planning to attend this course again in the near future to cover the missed out sessions.</p>
+
+<h4 id="ds320-datastax-enterprise-analytics-spark-and-cassandra">DS320: DataStax Enterprise Analytics: Spark and Cassandra</h4>
+
+<ul>
+  <li>Course details: <a href="http://www.datastax.com/what-we-offer/products-services/training/datastax-enterprise-analytics-spark-and-cassandra">DataStax course page</a>.</li>
+  <li>Instructor: Artem Chebotko.</li>
+  <li>Date: 23<sup>rd</sup> March to 26<sup>th</sup> March, 2015.</li>
+  <li>Duration: 3 hours per day for 4 days.</li>
+  <li>Time: 03:00 PM to 06:00 PM GMT.</li>
+</ul>
+
+<p>We received the course decks and the exercises, few hours before the course started. And from then on, it was really a ride.
+The way the course is structured and the way Artem took the participants was really wonderful. This is, by far, probably the best online course I have ever attended.</p>
+
+<p>At the end of first day, each course participant also received access to a decently configured 3-node DataStax Enterprise Cluster hosted on AWS EC2 for which DataStax would have paid a lot of money to Amazon. This was really a great thing since this cluser has DataStax Cassandra and <em>also</em> Spark installed and configured on it for our usage. And this was all for us for 4 days. Config of each of the machines was: 4 GB RAM, 30 GB HDD and 14.04 Ubuntu 64-bit Server Edition, which was very decent enough for all our data pipelines. These machines also came with a folder for the exercises and source code for the data generators and data on it.</p>
+
+<p>Needless to say I tried all the course code content and also exercises for each of the days. I played quite a bit with the code snippets from the class. But I have had issues in getting my code right for exercises of Spark PairRDDs, Spark Streaming and Spark SQL. I somehow managed, as-in I tried following the solutions of these exercises and tried understanding the code. But I would have liked to spend more time to develop my own code for these exercises. Someday once understand how these work, I would like to revisit these exercises with a fresh pair of eyes.</p>
+
+<h5 id="feedback-to-datastax-training-team">Feedback to DataStax training team</h5>
+
+<p>After each of the courses, DataStax sends all the participants a survey from SurveyMonkey for their feedback loop and betterment of the courses.</p>
+
+<p>Though all the courses were really good, there are few areas to improve upon for these courses to become perfect courses and for the participants to get more value from the courses and effort and money spent by DataStax.</p>
+
+<p>First and foremost, I thought a lot of content is being crammed into 4 days of training [with 3 hours per day], which is not only difficult to cover; but also tough to digest. Adding to that, the participants usually have a lot of questions. So that too consumes a lot of time. I would think they might have to extend the course by a day and also make it 3.5 or 4 hours per day. That way instructor gets a bit more time to cover topics in depth instead of just skimming. After all, these courses are 3 days in person; effectively ~24 hours. So going by that metrics, probably extending the current 12 hour sessions to at least 15 or 20 hours for online would be really helpful.</p>
+
+<p>My other gripe was about the course slide decks. The content is absolutely brilliant. But DataStax shares only the handouts, which do not help much since there are not many notes in the slides and also the content gets so small that it cant be read without zooming-in a lot. And even more bigger issue is, handouts do not allow copy + pasting the code contents for practicing either, considering the contents in the handouts gets saved as images and not as text. So in all the post-course surveys, I have given this feedback. Hopefully they will soon start sharing the complete PDFs of the course slide decks instead of just the handouts.</p>
+
+<p>Also the sessions are not recorded. I missed out attending few of the days. As such there was no way for me to check back on the day. So it would have been helpful if we had access to the recorded sessions. I also feel it would be really great to refer to the course videos from time to time even otherwise, by going thru the recorded sessions.</p>
+
+<p>That said, it was a great effort by the DataStax Training team and I absolutely loved all the courses and so too the course content, which I will be referring to, henceforth for all my Cassandra related work.</p>
+
+<p>Thank you DataStax Training team!
+You guys are doing an amazing job.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Migrating from Blogger to Octopress]]></title>
@@ -274,6 +373,7 @@ Work on your final project and we cover additional questions and topics brought 
 <noscript><pre><code>### Shell script to download Oracle JDK / JRE / Java binaries from Oracle website using terminal / command / shell prompt using wget.
 ### You can download all the binaries one-shot by just giving the BASE_URL.
 ### Script might be useful if you need Oracle JDK on Amazon EC2 env.
+### Script will be updated for every JDK release.
 
 ## Features:-
 # 1. Resumes a broken / interrupted [previous] download, if any.
@@ -286,10 +386,12 @@ Work on your final project and we cover additional questions and topics brought 
 
 ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
-## Current latest JDK version: JDK8u31
-BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31
+## Current latest JDK version: JDK8u40
+BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40
 
-## Previous versions: 8u25
+## Previous version: 8u31
+#BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31
+## Earlier version: 8u25
 #BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25
 
 JDK_VERSION=${BASE_URL: -8}
@@ -889,22 +991,6 @@ public String toString() {
 }</code></pre></noscript></div>
 
 <p>Use these settings as the base and try to create your own flair for your work as per your taste. I am sure it will help you in increased efficiency and productivity in your work. All the best!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[JetBrains Mayan Doomsday Special Offers ]]></title>
-    <link href="http://p7h.org/blog/2012/12/20/jetbrains-mayan-doomsday-special-offers/"/>
-    <updated>2012-12-20T00:00:00+00:00</updated>
-    <id>http://p7h.org/blog/2012/12/20/jetbrains-mayan-doomsday-special-offers</id>
-    <content type="html"><![CDATA[<p>JetBrains has an amazing set of IDEs right from Java to Python to Ruby and so on. They are a bit expensive though. For example, IntelliJ IDEA personal license can be bought for $199. But today, JetBrains is offering a steep discount of 75% on all their products which include <a href="http://www.jetbrains.com/idea" target="_blank">IntelliJ IDEA</a>, <a href="http://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a> and a host of <a href="http://www.jetbrains.com/products.html" target="_blank">other awesome IDEs</a>.<br />
-<a href="http://www.jetbrains.com/specials/index.jsp" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img src="http://p7h.org/assets/images/JetBrains_MayanDoomsday_Offer.png" alt="" /></a><br /></p>
-
-<p>It is a limited period offer and to be precise its an offer only for 24 hours on 20<sup>th</sup> December, 2012. So, what are you waiting for? Head over to their website and NOW!!<br /></p>
-
-<p><a href="http://www.jetbrains.com/specials/index.jsp" target="_blank">JetBrains Special Offer</a></p>
-
-<p><em>EDIT: This offer expired on 21st December, 2012.</em></p>
 ]]></content>
   </entry>
   
