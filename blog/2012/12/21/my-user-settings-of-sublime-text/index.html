@@ -100,7 +100,7 @@
 <p>I played around my Settings and I have configured my Sublime Text as per my requirements. Here are my User Settings:</p>
 <div><script src="https://gist.github.com/4388796.js"></script>
 <noscript><pre><code>{
-	&quot;always_show_minimap_viewport&quot;: true,
+	&quot;always_show_minimap_viewport&quot;: false,
 	&quot;auto_complete&quot;: true,
 	&quot;auto_complete_commit_on_tab&quot;: true,
 	&quot;auto_complete_delay&quot;: 10,
@@ -133,10 +133,12 @@
 		&quot;*.zip&quot;
 	],
 	&quot;bold_folder_labels&quot;: true,
+	&quot;caret_extra_bottom&quot;: 3,
+	&quot;caret_extra_top&quot;: 3,
 	&quot;caret_extra_width&quot;: 2,
 	&quot;caret_style&quot;: &quot;phase&quot;,
 	&quot;close_windows_when_empty&quot;: false,
-	&quot;color_scheme&quot;: &quot;Packages/Theme - Flatland/Flatland Dark.tmTheme&quot;,
+	&quot;color_scheme&quot;: &quot;Packages/User/Monokai Soda.tmTheme&quot;,
 	&quot;copy_with_empty_selection&quot;: false,
 	&quot;create_window_at_startup&quot;: true,
 	&quot;default_encoding&quot;: &quot;UTF-8&quot;,
@@ -183,30 +185,32 @@
 		&quot;.hg&quot;,
 		&quot;CVS&quot;
 	],
-	&quot;font_face&quot;: &quot;Source Code Pro&quot;,
+	&quot;font_face&quot;: &quot;FiraCode-regular&quot;,
 	&quot;font_options&quot;:
 	[
 		&quot;no_round&quot;,
 		&quot;subpixel_antialias&quot;
 	],
-	&quot;font_size&quot;: 12.2,
+	&quot;font_size&quot;: 12,
 	&quot;gutter&quot;: true,
 	&quot;highlight_line&quot;: true,
 	&quot;highlight_modified_tabs&quot;: true,
 	&quot;hot_exit&quot;: true,
 	&quot;ignored_packages&quot;:
 	[
-		&quot;Vintage&quot;
+		&quot;Vintage&quot;,
+		&quot;Anaconda&quot;
 	],
 	&quot;indent_guide_options&quot;:
 	[
-		&quot;draw_normal&quot;
+		&quot;draw_normal&quot;,
+		&quot;draw_active&quot;
 	],
 	&quot;indent_subsequent_lines&quot;: true,
 	&quot;indent_to_bracket&quot;: true,
 	&quot;line_numbers&quot;: true,
-	&quot;line_padding_bottom&quot;: 1,
-	&quot;line_padding_top&quot;: 1,
+	&quot;line_padding_bottom&quot;: 2,
+	&quot;line_padding_top&quot;: 2,
 	&quot;margin&quot;: 4,
 	&quot;match_brackets&quot;: true,
 	&quot;match_brackets_angle&quot;: true,
@@ -236,13 +240,17 @@
 	&quot;spell_check&quot;: false,
 	&quot;tab_completion&quot;: true,
 	&quot;tab_size&quot;: 4,
+	&quot;tabs_padding_small&quot;: true,
+	&quot;tabs_small&quot;: true,
+	&quot;text-rendering&quot;: &quot;optimizeLegibility&quot;,
 	&quot;theme&quot;: &quot;Soda Dark 3.sublime-theme&quot;,
-	&quot;translate_tabs_to_spaces&quot;: true,
+	&quot;translate_tabs_to_spaces&quot;: false,
 	&quot;tree_animation_enabled&quot;: true,
 	&quot;trim_automatic_white_space&quot;: true,
 	&quot;trim_trailing_white_space_on_save&quot;: false,
 	&quot;use_simple_full_screen&quot;: false,
 	&quot;use_tab_stops&quot;: true,
+	&quot;wide_caret&quot;: true,
 	&quot;word_separators&quot;: &quot;./\\()\&quot;'-:,.;&lt;&gt;~!@#$%^&amp;*|+=[]{}`~?&quot;,
 	&quot;word_wrap&quot;: &quot;true&quot;,
 	&quot;wrap_width&quot;: 120
@@ -314,6 +322,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2016/01/22/generating-random-numbers-in-a-range/">Generating Random numbers in a Range in Java</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/27/datastax-cassandra-online-courses/">DataStax Cassandra Online Courses</a>
       </li>
     
@@ -327,10 +339,6 @@
     
       <li class="post">
         <a href="/blog/2015/01/14/jdk-installation-ubuntu-ppa/">JDK installation from ppa on Ubuntu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/01/12/a-new-blog/">A new blog</a>
       </li>
     
   </ul>
@@ -374,7 +382,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - Prashanth Babu -
+  Copyright &copy; 2016 - Prashanth Babu -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

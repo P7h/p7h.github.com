@@ -9,7 +9,8 @@
   <meta name="author" content="Prashanth Babu">
 
   
-  <meta name="description" content="I recently attended few online courses of DataStax around Cassandra. This post is about my experiences and review of these courses. Late in February &hellip;">
+  <meta name="description" content="Generating random numbers is usually a pain.
+And more so when you have generate random numbers in a given range in Java. You have to consider a lot &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -73,6 +74,53 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/01/22/generating-random-numbers-in-a-range/">Generating Random numbers in a Range in Java</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-01-22T01:22:05+00:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>1:22 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Generating random numbers is usually a pain.<br />
+And more so when you have generate random numbers in a given range in Java. You have to consider a lot of parameters.</p>
+
+<h3 id="java--v8">Java (&lt; v8)</h3>
+<p>I would write something quick and dirty like the following.<br />
+For brevity, programming language syntax chosen is Scala, but you get the point.</p>
+
+<pre><code>val random = new java.util.Random
+val (size, min, max) = (10, 20, 50)
+for(i &lt;- 0 until size) yield (min + random.nextDouble() * (max-min)).toInt
+
+// Output of the above code in Scala REPL
+res1: scala.collection.immutable.IndexedSeq[Int] = Vector(46, 38, 22, 21, 43, 35, 49, 47, 23, 41)
+</code></pre>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2016/01/22/generating-random-numbers-in-a-range/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -223,42 +271,6 @@ So, here are 3 very simple steps for installation of Oracle JDK on a Ubuntu mach
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/01/12/a-new-blog/">A new blog</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-01-12T00:12:46+00:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:12 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is my first blogpost using Octopress and GitHub.</p>
-
-<p>Previously, I had my blogs hosted on <a href="http://P7h.blogspot.com">Blogger</a>.
-Though Blogger engine is good, I could never spend time to create a template on my own to make my blogpage look good and on top of that the default templates and layouting always made go crazy since its too tedious to spend time on fine-tuning and make the page look zazzy. 
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2015/01/12/a-new-blog/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/2">&larr; Older</a>
@@ -285,6 +297,10 @@ Though Blogger engine is good, I could never spend time to create a template on 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2016/01/22/generating-random-numbers-in-a-range/">Generating Random numbers in a Range in Java</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/27/datastax-cassandra-online-courses/">DataStax Cassandra Online Courses</a>
       </li>
     
@@ -298,10 +314,6 @@ Though Blogger engine is good, I could never spend time to create a template on 
     
       <li class="post">
         <a href="/blog/2015/01/14/jdk-installation-ubuntu-ppa/">JDK installation from ppa on Ubuntu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/01/12/a-new-blog/">A new blog</a>
       </li>
     
   </ul>
@@ -344,7 +356,7 @@ Though Blogger engine is good, I could never spend time to create a template on 
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - Prashanth Babu -
+  Copyright &copy; 2016 - Prashanth Babu -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

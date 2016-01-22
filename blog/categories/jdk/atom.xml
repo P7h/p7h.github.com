@@ -4,7 +4,7 @@
   <title><![CDATA[Category: jdk | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/jdk/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-03-28T00:05:28+00:00</updated>
+  <updated>2016-01-22T01:29:15+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -65,12 +65,14 @@ sudo apt-get update
 
 <p>Depending on the OS and platform of the JDK version you intend to download, just modify the array on line#20 in the following script and you can trigger the download on the shell directly.
 <div><script src='https://gist.github.com/9741922.js?file=jdk_download.sh'></script>
-<noscript><pre><code>### Shell script to download Oracle JDK / JRE / Java binaries from Oracle website using terminal / command / shell prompt using wget.
+<noscript><pre><code>#####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####
+
+### Shell script to download Oracle JDK / JRE / Java binaries from Oracle website using terminal / command / shell prompt using wget.
 ### You can download all the binaries one-shot by just giving the BASE_URL.
 ### Script might be useful if you need Oracle JDK on Amazon EC2 env.
-### Script will be updated for every JDK release.
+### Script is updated for every JDK release.
 
-## Features:-
+### Features:-
 # 1. Resumes a broken / interrupted [previous] download, if any.
 # 2. Renames the file to a proper name with including platform info.
 # 3. Downloads the following from Oracle Website with one shell invocation.
@@ -78,44 +80,34 @@ sudo apt-get update
 #    b. Linux 64 and 32 bit;
 #    c. API Docs;
 #    d. You can add more to the list of downloads are per your requirement.
+### Another option: 
+###### curl -L -O -H &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; -k &quot;http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz&quot;
 
-##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+#####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####
 
-## Current latest JDK version: JDK8u40
-BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40
+## Latest JDK8 version released on 19th January, 2016: JDK8u71
+BASE_URL_8=http://download.oracle.com/otn-pub/java/jdk/8u71-b15/jdk-8u71
 
-## Previous version: 8u31
-#BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31
-## Earlier version: 8u25
-#BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25
+## Earlier versions:
+## v8u65 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u65-b17/jdk-8u65
+## v8u60 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60
+## v8u51 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51
+## v8u45 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45
+## v8u40 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40
+## v8u31 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31
+## v8u25 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25
 
-JDK_VERSION=${BASE_URL: -8}
+JDK_VERSION=${BASE_URL_8: -8}
 
-declare -a PLATFORMS=(&quot;-windows-x64.exe&quot; &quot;-windows-i586.exe&quot; &quot;-linux-x64.tar.gz&quot; &quot;-linux-i586.tar.gz&quot; &quot;-docs-all.zip&quot;)
-
-for platform in &quot;${PLATFORMS[@]}&quot;
-do
-    wget -c -O &quot;$JDK_VERSION$platform&quot; --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; &quot;${BASE_URL}${platform}&quot;
-done
-
-##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
-
-## Current latest JDK version: JDK7u75
-BASE_URL=http://download.oracle.com/otn-pub/java/jdk/7u75-b13/jdk-7u75
-
-## Previous versions: v7u71
-#BASE_URL=http://download.oracle.com/otn-pub/java/jdk/7u71-b14/jdk-7u71
-
-JDK_VERSION=${BASE_URL: -8}
-
-declare -a PLATFORMS=(&quot;-windows-x64.exe&quot; &quot;-windows-i586.exe&quot; &quot;-linux-x64.tar.gz&quot; &quot;-linux-i586.tar.gz&quot; &quot;-docs-all.zip&quot;)
+declare -a PLATFORMS=(&quot;-windows-x64.exe&quot; &quot;-linux-x64.tar.gz&quot; &quot;-docs-all.zip&quot; &quot;-windows-i586.exe&quot; &quot;-linux-i586.tar.gz&quot;)
 
 for platform in &quot;${PLATFORMS[@]}&quot;
 do
-    wget -c -O &quot;$JDK_VERSION$platform&quot; --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; &quot;${BASE_URL}${platform}&quot;
+    wget -c -O &quot;$JDK_VERSION$platform&quot; --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; &quot;${BASE_URL_8}${platform}&quot;
+    ### curl -L -O -H &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; -k &quot;${BASE_URL_8}${platform}&quot;
 done
 
-##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####</code></pre></noscript></div>
+#####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####</code></pre></noscript></div>
 </p>
 
 <p>Hope this script will be helpful for all those who live on and love command prompt.</p>

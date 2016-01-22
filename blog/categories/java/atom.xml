@@ -4,7 +4,7 @@
   <title><![CDATA[Category: java | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2015-03-28T00:05:28+00:00</updated>
+  <updated>2016-01-22T01:29:15+00:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -12,6 +12,80 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Generating Random numbers in a Range in Java]]></title>
+    <link href="http://p7h.org/blog/2016/01/22/generating-random-numbers-in-a-range/"/>
+    <updated>2016-01-22T01:22:05+00:00</updated>
+    <id>http://p7h.org/blog/2016/01/22/generating-random-numbers-in-a-range</id>
+    <content type="html"><![CDATA[<p>Generating random numbers is usually a pain.<br />
+And more so when you have generate random numbers in a given range in Java. You have to consider a lot of parameters.</p>
+
+<h3 id="java--v8">Java (&lt; v8)</h3>
+<p>I would write something quick and dirty like the following.<br />
+For brevity, programming language syntax chosen is Scala, but you get the point.</p>
+
+<pre><code>val random = new java.util.Random
+val (size, min, max) = (10, 20, 50)
+for(i &lt;- 0 until size) yield (min + random.nextDouble() * (max-min)).toInt
+
+// Output of the above code in Scala REPL
+res1: scala.collection.immutable.IndexedSeq[Int] = Vector(46, 38, 22, 21, 43, 35, 49, 47, 23, 41)
+</code></pre>
+
+<!--more-->
+
+<h3 id="python">Python</h3>
+<p>Python has core library support for this feature. So, we can do the following:</p>
+
+<pre><code>from random import randint
+[randint(10, 50) for p in range(10)]
+
+## Output of the above code in Python REPL
+[43, 33, 37, 20, 41, 11, 18, 25, 12, 26]
+</code></pre>
+
+<p>But wont it be cool if we had such an utility in the JDK itself as in Python to generate random numbers? So, this is where JDK v8 comes to help.</p>
+
+<h3 id="java-v8x-new-methods">Java v8.x new methods</h3>
+<p>JDK v8 added the following nifty methods to <code>java.util.Random</code> class which help us in accomplishing this.</p>
+
+<ol>
+  <li>Generate an unlimited number of random values »» <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html#ints--">public IntStream ints()</a></li>
+  <li>Generate an unlimited number of random values within a range »» <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html#ints-int-int-">public IntStream ints (int randomNumberOrigin, int randomNumberBound)</a></li>
+  <li>Generate ‘n’ random integers »» <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html#ints-long-">public IntStream ints(long streamSize)</a></li>
+  <li>Generate ‘n’ random integers in a given range »» <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html#ints-long-int-int-">public IntStream ints(long streamSize, int randomNumberOrigin, int randomNumberBound)</a></li>
+</ol>
+
+<p>Also, similar utility methods are present for <code>long</code> and <code>double</code> datatypes respectively.<br /></p>
+
+<p>Please take a note that each of these methods are actually returning an <code>java.util.stream.IntStream</code> and not an <code>Array</code>.<br />
+And another point to note here is: <code>[randomNumberOrigin, randomNumberBound)</code> i.e. random numbers generated will be <code>randomNumberOrigin ≤ x &lt; randomNumberBound</code>.</p>
+
+<h3 id="code-with-java-v8">Code with Java v8</h3>
+<p>So, with this background we can modify our initial code to utilize the new(ish) Java API directly:</p>
+
+<pre><code>val random = new java.util.Random
+val (size, min, max) = (10, 20, 50)
+random.ints(size, min, max).toArray  
+
+// Output of the above code in Scala REPL
+res2: Array[Int] = Array(21, 43, 48, 33, 32, 48, 27, 25, 46, 32)
+</code></pre>
+
+<p>And similarly we can check the other methods as well.</p>
+
+<pre><code>random.longs(size, min, max).toArray
+res3: Array[Long] = Array(32, 44, 24, 34, 40, 29, 45, 24, 43, 30)
+
+random.doubles(3, min, max).toArray
+res4: Array[Double] = Array(38.10858166740068, 22.464983440394192, 43.64737980712431)
+</code></pre>
+
+<p>Fairly simple and no need to reinvent the wheel.<br />
+Happy learning!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[JDK installation from ppa on Ubuntu]]></title>
@@ -65,12 +139,14 @@ sudo apt-get update
 
 <p>Depending on the OS and platform of the JDK version you intend to download, just modify the array on line#20 in the following script and you can trigger the download on the shell directly.
 <div><script src='https://gist.github.com/9741922.js?file=jdk_download.sh'></script>
-<noscript><pre><code>### Shell script to download Oracle JDK / JRE / Java binaries from Oracle website using terminal / command / shell prompt using wget.
+<noscript><pre><code>#####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####
+
+### Shell script to download Oracle JDK / JRE / Java binaries from Oracle website using terminal / command / shell prompt using wget.
 ### You can download all the binaries one-shot by just giving the BASE_URL.
 ### Script might be useful if you need Oracle JDK on Amazon EC2 env.
-### Script will be updated for every JDK release.
+### Script is updated for every JDK release.
 
-## Features:-
+### Features:-
 # 1. Resumes a broken / interrupted [previous] download, if any.
 # 2. Renames the file to a proper name with including platform info.
 # 3. Downloads the following from Oracle Website with one shell invocation.
@@ -78,44 +154,34 @@ sudo apt-get update
 #    b. Linux 64 and 32 bit;
 #    c. API Docs;
 #    d. You can add more to the list of downloads are per your requirement.
+### Another option: 
+###### curl -L -O -H &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; -k &quot;http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz&quot;
 
-##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+#####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####
 
-## Current latest JDK version: JDK8u40
-BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40
+## Latest JDK8 version released on 19th January, 2016: JDK8u71
+BASE_URL_8=http://download.oracle.com/otn-pub/java/jdk/8u71-b15/jdk-8u71
 
-## Previous version: 8u31
-#BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31
-## Earlier version: 8u25
-#BASE_URL=http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25
+## Earlier versions:
+## v8u65 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u65-b17/jdk-8u65
+## v8u60 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60
+## v8u51 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51
+## v8u45 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45
+## v8u40 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40
+## v8u31 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31
+## v8u25 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25
 
-JDK_VERSION=${BASE_URL: -8}
+JDK_VERSION=${BASE_URL_8: -8}
 
-declare -a PLATFORMS=(&quot;-windows-x64.exe&quot; &quot;-windows-i586.exe&quot; &quot;-linux-x64.tar.gz&quot; &quot;-linux-i586.tar.gz&quot; &quot;-docs-all.zip&quot;)
-
-for platform in &quot;${PLATFORMS[@]}&quot;
-do
-    wget -c -O &quot;$JDK_VERSION$platform&quot; --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; &quot;${BASE_URL}${platform}&quot;
-done
-
-##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
-
-## Current latest JDK version: JDK7u75
-BASE_URL=http://download.oracle.com/otn-pub/java/jdk/7u75-b13/jdk-7u75
-
-## Previous versions: v7u71
-#BASE_URL=http://download.oracle.com/otn-pub/java/jdk/7u71-b14/jdk-7u71
-
-JDK_VERSION=${BASE_URL: -8}
-
-declare -a PLATFORMS=(&quot;-windows-x64.exe&quot; &quot;-windows-i586.exe&quot; &quot;-linux-x64.tar.gz&quot; &quot;-linux-i586.tar.gz&quot; &quot;-docs-all.zip&quot;)
+declare -a PLATFORMS=(&quot;-windows-x64.exe&quot; &quot;-linux-x64.tar.gz&quot; &quot;-docs-all.zip&quot; &quot;-windows-i586.exe&quot; &quot;-linux-i586.tar.gz&quot;)
 
 for platform in &quot;${PLATFORMS[@]}&quot;
 do
-    wget -c -O &quot;$JDK_VERSION$platform&quot; --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; &quot;${BASE_URL}${platform}&quot;
+    wget -c -O &quot;$JDK_VERSION$platform&quot; --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; &quot;${BASE_URL_8}${platform}&quot;
+    ### curl -L -O -H &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; -k &quot;${BASE_URL_8}${platform}&quot;
 done
 
-##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####</code></pre></noscript></div>
+#####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####</code></pre></noscript></div>
 </p>
 
 <p>Hope this script will be helpful for all those who live on and love command prompt.</p>
@@ -219,33 +285,6 @@ public final class ReadPropertiesWithGuava {
 </p>
 
 <p>For more info, please check <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/io/Resources.html" target="_blank">Resources</a> class of Guava.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learning Guava -- Google Guava blog series]]></title>
-    <link href="http://p7h.org/blog/2013/11/27/google-guava-posts/"/>
-    <updated>2013-11-27T00:00:00+00:00</updated>
-    <id>http://p7h.org/blog/2013/11/27/google-guava-posts</id>
-    <content type="html"><![CDATA[<p>​I have been a huge fan of <a href="https://code.google.com/p/guava-libraries/" style="font-family: Roboto; font-size: 15px;" target="_blank">Google Guava</a> from the time I came across it 3 years back.<br />For starters, Guava is a project which contains many Google’s core libraries like collections, caching, math, primitives, concurrency, networking, common annotations, string processing, I/O, reflection and many others. It is very well designed API. Guava is designed, implemented and maintained by Google Engineers like <a href="https://plus.google.com/113026104107031516488/about" target="_blank">Kevin Bourrillion</a> and <a href="https://plus.google.com/+KurtAlfredKluever/about" target="_blank">Kurt Alfred Kluever</a>, etc.<br /></p>
-
-<p>Guava follows almost all the excellent patterns and practices mentioned in <a href="http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683" target="_blank">Effective Java book</a> written by <a href="https://plus.google.com/113200173329286634669/about" target="_blank">Joshua Bloch</a>, who has designed the impeccable Java Collections API while he was at Sun. Later he joined Google. Under his mentor-ship, Google Guava got wings and became a very well designed and effective API, useful for many situations and scenarios with an ever-growing feature list. I ensure I add Guava dependency as the first thing to my Gradle or Maven build script. Guava makes <code>Java</code> code a lot more readable, clean, simple and elegant. It utilises the Java generics very well.<!--more--><br />
-<br />
-Consider the following example which I tweeted few months back.<br />
-<a href="https://twitter.com/P7h/status/195895898146996224" imageanchor="1" style="margin-left: 1em; margin-right: 1em;" target="_blank"><img src="/assets/images/Guava_Sample.png" alt="" /></a></p>
-
-<p>Which of the above versions looks fine? Obviously the second option, aint it?
-There are many such examples where Guava wins by a margin compared to normal Java code and or other libraries like commons, etc.</p>
-
-<p>Guava also helps for [in a way] functional programming too. There are few options which are really helpful there as well. Having said that, Guava creators <a href="https://code.google.com/p/guava-libraries/wiki/FunctionalExplained" target="_blank">implore the developers</a> not to litter code with too much functional programming which might lead to unreadable code.</p>
-
-<p>I will start with writing few posts on Google Guava with the tag, “LearningGuava”. I have been using Guava extensively in almost every project of mine since few years. This will not only help some one else looking for info or starting on Google Guava, but as well as for me also so that I will remember in future if I need any quick snippet on something specific with Guava usage. That being the motivation, I hope it will be of good experience for you and me as well.</p>
-
-<p>This post will list all the posts written for Google Guava. This post kinda serves as an Index and quick reference of my Google Guava posts.</p>
-
-<p><a href="http://p7h.org/blog/categories/learningguava/" target="_blank">Learning Guava Series</a>:<br />
-<a href="http://p7h.org/blog/2014/01/26/load-properties-file-using-guava/" target="_blank">Load properties file using Guava</a><br />
-<a href="http://p7h.org/blog/2014/01/29/guava-stopwatch/" target="_blank">Calibrating time using Stopwatch</a></p>
 ]]></content>
   </entry>
   
