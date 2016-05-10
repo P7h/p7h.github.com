@@ -4,7 +4,7 @@
   <title><![CDATA[Category: java | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2016-01-22T01:29:15+00:00</updated>
+  <updated>2016-05-10T13:42:57+01:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -12,6 +12,104 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Java8 Date and Time parsing and formatting]]></title>
+    <link href="http://p7h.org/blog/2016/05/09/java-date-time-parse-format/"/>
+    <updated>2016-05-09T23:26:10+01:00</updated>
+    <id>http://p7h.org/blog/2016/05/09/java-date-time-parse-format</id>
+    <content type="html"><![CDATA[<p>With Java v8, we have new API for Date and Time, which looks pretty elegant and also is immutable and thread-safe. The new API is part of <code>java.time</code> package. </p>
+
+<p>This API is based on / inspired by the wonderful <a href="http://www.joda.org/joda-time/">Joda-Time</a>, which was the de facto standard date and time library for Java prior to Java SE 8. </p>
+
+<p>In this blogpost, we will discuss how to parse and format Dates with this new API.
+At a new very high-level, there are 4 classes related to Date in <code>java.time</code> package. Please check <a href="https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html"><code>java.time</code></a> package summary for detail info of the below classes.</p>
+
+<ul>
+  <li>
+    <p><code>LocalDate</code> holds just the Date and  does not store or represent either time or time-zone.</p>
+
+    <blockquote>
+      <p><code>2016-05-09</code></p>
+    </blockquote>
+  </li>
+  <li>
+    <p><code>LocalTime</code> holds just the Date and  does not store or represent either date or time-zone..</p>
+
+    <blockquote>
+      <p><code>22:04:43.658</code></p>
+    </blockquote>
+  </li>
+  <li>
+    <p><code>LocalDateTime</code> is a combination of both <code>LocalDate</code> and <code>LocalTime</code> which holds the Date and Time but <em>does not</em> hold the time-zone information.</p>
+
+    <blockquote>
+      <p><code>2016-05-09T22:06:25.599</code></p>
+    </blockquote>
+  </li>
+  <li>
+    <p><code>ZonedDateTime</code> is like <code>LocalDateTime</code>, but with the addition of time-zone information.</p>
+
+    <blockquote>
+      <p><code>2016-05-09T22:09:34.711+01:00[Europe/London]</code></p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>And for formatting, we use <a href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html"><code>DateTimeFormatter</code></a>. Please refer the API docs for more info on this class. There are a number of predefined formatters which are needed for parsing and formatting.</p>
+
+<p><em>For brevity, programming language syntax chosen for examples is <code>Scala</code></em>.</p>
+
+<p>If you have a Date in the format of <code>Mon May 09 22:20:58 +0100 2016</code> and you would like to parse this and make it a Java object, you can do the following.</p>
+
+<p>&#8220;` scala Parse a Date String to a Java Object
+	import java.time._
+	import java.time.format.DateTimeFormatter</p>
+
+<pre><code>val date = "Mon May 09 22:20:58 +0100 2016"
+
+val formatter = DateTimeFormatter.ofPattern("EE MMM dd HH:mm:ss ZZ yyyy")
+val parseDate = LocalDateTime.parse(date, formatter)
+  // parseDate: java.time.LocalDateTime = 2016-05-09T22:20:58
+val parseDateTZ = ZonedDateTime.parse(date, formatter)
+  // parseDateTZ:  java.time.ZonedDateTime = 2016-05-09T22:20:58+01:00 ```
+</code></pre>
+
+<p>And when you have a Java Date object and would like to format it to a String, you can do the following:
+Also, please note that if the time-zone is present in the format string, we cant use <code>LocalDateTime</code> and should instead use <code>ZonedDateTime</code>.</p>
+
+<p>&#8220;` scala Parse a Date with TZ to a String
+	import java.time._
+	import java.time.format.DateTimeFormatter</p>
+
+<pre><code>val formatter = DateTimeFormatter.ofPattern("EE MMM dd HH:mm:ss.SSS ZZ yyyy")
+val now = ZonedDateTime.now()
+  // now: java.time.ZonedDateTime = 2016-05-09T22:38:38.289+01:00[Europe/London]
+val formattedDate1 = formatter.format(now)
+  // formattedDate1: String = Mon May 09 22:38:38.289 +0100 2016
+val formattedDate2 = now.format(formatter)
+  // formattedDate2: String = Mon May 09 22:38:38.289 +0100 2016 ```
+</code></pre>
+
+<p>And in case if we want to format the date without time-zone specific information:</p>
+
+<p>&#8220;` scala Parse a Date without TZ to a String
+	import java.time._
+	import java.time.format.DateTimeFormatter</p>
+
+<pre><code>val formatter = DateTimeFormatter.ofPattern("EE MMM dd HH:mm:ss.SSS yyyy")
+val now = LocalDateTime.now()
+  // now: java.time.LocalDateTime = 2016-05-09T22:42:15.125
+val formattedDate1 = formatter.format(now)
+  // formattedDate1: String = Mon May 09 22:42:15.125 2016
+val formattedDate2 = now.format(formatter)
+  // formattedDate2: String = Mon May 09 22:42:15.125 2016 ```
+</code></pre>
+
+<p>Hope this post helped you to start on Java8 Date and Time parsing and formatting.
+Happy learning!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Generating Random numbers in a Range in Java]]></title>
@@ -154,24 +252,14 @@ sudo apt-get update
 #    b. Linux 64 and 32 bit;
 #    c. API Docs;
 #    d. You can add more to the list of downloads are per your requirement.
-### Another option: 
-###### curl -L -O -H &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; -k &quot;http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz&quot;
 
 #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####
 
-## Latest JDK8 version released on 19th January, 2016: JDK8u71
-BASE_URL_8=http://download.oracle.com/otn-pub/java/jdk/8u71-b15/jdk-8u71
+## Latest JDK8 version released on 19th April, 2016: JDK8u91
+BASE_URL_8=http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91
 
-## Earlier versions:
-## v8u65 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u65-b17/jdk-8u65
-## v8u60 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60
-## v8u51 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51
-## v8u45 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45
-## v8u40 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40
-## v8u31 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31
-## v8u25 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25
-
-JDK_VERSION=${BASE_URL_8: -8}
+## JDK_VERSION=${BASE_URL_8: -8}
+JDK_VERSION=`echo $BASE_URL_8 | rev | cut -d &quot;/&quot; -f1 | rev`
 
 declare -a PLATFORMS=(&quot;-windows-x64.exe&quot; &quot;-linux-x64.tar.gz&quot; &quot;-docs-all.zip&quot; &quot;-windows-i586.exe&quot; &quot;-linux-i586.tar.gz&quot;)
 
@@ -181,7 +269,20 @@ do
     ### curl -L -O -H &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; -k &quot;${BASE_URL_8}${platform}&quot;
 done
 
-#####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####</code></pre></noscript></div>
+#####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####
+
+## Earlier versions:
+## v8u77 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u77-b03/jdk-8u77
+## v8u73 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u73-b02/jdk-8u73
+## v8u71 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u71-b15/jdk-8u71
+## v8u65 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u65-b17/jdk-8u65
+## v8u60 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60
+## v8u51 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51
+## v8u45 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45
+## v8u40 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40
+## v8u31 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31
+## v8u25 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25
+</code></pre></noscript></div>
 </p>
 
 <p>Hope this script will be helpful for all those who live on and love command prompt.</p>
@@ -235,56 +336,6 @@ public final class StopwatchExample {
 <p>Few caveats for using <code>Stopwatch</code> are you should not start an already started <code>Stopwatch</code>. One has to check if the <code>Stopwatch</code> is already running by invoking <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Stopwatch.html#isRunning()" target="_blank"><code>isRunning()</code></a> method. <code>Stopwatch</code> documentation says the following on the same:<br />
 &lt;blockquote class=&#8221;tr_bq&#8221; style=&#8221;background-color: white; box-sizing: border-box; color: #303030; font-size: 14px; line-height: 24px; margin-bottom: 15px;&#8221;&gt;Stopwatch methods are not idempotent; it is an error to start or stop a stopwatch that is already in the desired state.&lt;/blockquote&gt;
 Also, once I got burned down by <a href="http://commons.apache.org/proper/commons-lang/javadocs/api-3.2.1/org/apache/commons/lang3/time/StopWatch.html" target="_blank"><code>StopWatch</code></a> class of Apache Commons Lang. As I was working in an IDE on a Maven project, I could not quickly relate to the difference between <code>Stopwatch</code> of Guava and <code>StopWatch</code> of Apache Commons Lang, as the class got auto imported into the code and then spent some good 20 minutes trying to check my classpath, IDE setup, etc. Yes very silly mistake. So, please be careful in choosing the correct class.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learning Guava -- Load properties file using Guava]]></title>
-    <link href="http://p7h.org/blog/2014/01/26/load-properties-file-using-guava/"/>
-    <updated>2014-01-26T00:00:00+00:00</updated>
-    <id>http://p7h.org/blog/2014/01/26/load-properties-file-using-guava</id>
-    <content type="html"><![CDATA[<p>Guava code snippet for loading a properties file from classpath.<br />
-<!--more-->
-<div><script src='https://gist.github.com/8635204.js'></script>
-<noscript><pre><code>import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.util.Properties;
-
-import com.google.common.io.ByteSource;
-import com.google.common.io.Resources;
-
-/**
- * Reads a properties file and print all the key value pairs to the console.
- * Note: Writing to console is just for convenience here.
- */
-public final class ReadPropertiesWithGuava {
-
-	public final static void main(final String[] args) {
-		final URL url = Resources.getResource(&quot;spring-config.properties&quot;);
-		final ByteSource byteSource = Resources.asByteSource(url);
-		final Properties properties = new Properties();
-		InputStream inputStream = null;
-		try {
-			inputStream = byteSource.openBufferedStream();
-			properties.load(inputStream);
-			properties.list(System.out);
-		} catch (final IOException ioException) {
-			ioException.printStackTrace();
-		} finally {
-			if (inputStream != null) {
-				try {
-					inputStream.close();
-				} catch (final IOException ioException) {
-					ioException.printStackTrace();
-				}
-			}
-		}
-	}
-}</code></pre></noscript></div>
-</p>
-
-<p>For more info, please check <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/io/Resources.html" target="_blank">Resources</a> class of Guava.</p>
 ]]></content>
   </entry>
   

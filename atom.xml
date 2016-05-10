@@ -4,7 +4,7 @@
   <title><![CDATA[Prashanth Babu]]></title>
   <link href="http://p7h.org/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2016-01-22T01:29:15+00:00</updated>
+  <updated>2016-05-10T13:42:57+01:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -12,6 +12,131 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Java8 Date and Time parsing and formatting]]></title>
+    <link href="http://p7h.org/blog/2016/05/09/java-date-time-parse-format/"/>
+    <updated>2016-05-09T23:26:10+01:00</updated>
+    <id>http://p7h.org/blog/2016/05/09/java-date-time-parse-format</id>
+    <content type="html"><![CDATA[<p>With Java v8, we have new API for Date and Time, which looks pretty elegant and also is immutable and thread-safe. The new API is part of <code>java.time</code> package. </p>
+
+<p>This API is based on / inspired by the wonderful <a href="http://www.joda.org/joda-time/">Joda-Time</a>, which was the de facto standard date and time library for Java prior to Java SE 8. </p>
+
+<p>In this blogpost, we will discuss how to parse and format Dates with this new API.
+At a new very high-level, there are 4 classes related to Date in <code>java.time</code> package. Please check <a href="https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html"><code>java.time</code></a> package summary for detail info of the below classes.</p>
+
+<ul>
+  <li>
+    <p><code>LocalDate</code> holds just the Date and  does not store or represent either time or time-zone.</p>
+
+    <blockquote>
+      <p><code>2016-05-09</code></p>
+    </blockquote>
+  </li>
+  <li>
+    <p><code>LocalTime</code> holds just the Date and  does not store or represent either date or time-zone..</p>
+
+    <blockquote>
+      <p><code>22:04:43.658</code></p>
+    </blockquote>
+  </li>
+  <li>
+    <p><code>LocalDateTime</code> is a combination of both <code>LocalDate</code> and <code>LocalTime</code> which holds the Date and Time but <em>does not</em> hold the time-zone information.</p>
+
+    <blockquote>
+      <p><code>2016-05-09T22:06:25.599</code></p>
+    </blockquote>
+  </li>
+  <li>
+    <p><code>ZonedDateTime</code> is like <code>LocalDateTime</code>, but with the addition of time-zone information.</p>
+
+    <blockquote>
+      <p><code>2016-05-09T22:09:34.711+01:00[Europe/London]</code></p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>And for formatting, we use <a href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html"><code>DateTimeFormatter</code></a>. Please refer the API docs for more info on this class. There are a number of predefined formatters which are needed for parsing and formatting.</p>
+
+<p><em>For brevity, programming language syntax chosen for examples is <code>Scala</code></em>.</p>
+
+<p>If you have a Date in the format of <code>Mon May 09 22:20:58 +0100 2016</code> and you would like to parse this and make it a Java object, you can do the following.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Parse a Date String to a Java Object</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+</pre></td><td class="code"><pre><code class="scala"><span class="line"><span class="k">import</span> <span class="nn">java.time._</span>
+</span><span class="line"><span class="k">import</span> <span class="nn">java.time.format.DateTimeFormatter</span>
+</span><span class="line">
+</span><span class="line"><span class="k">val</span> <span class="n">date</span> <span class="k">=</span> <span class="s">&quot;Mon May 09 22:20:58 +0100 2016&quot;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">val</span> <span class="n">formatter</span> <span class="k">=</span> <span class="nc">DateTimeFormatter</span><span class="o">.</span><span class="n">ofPattern</span><span class="o">(</span><span class="s">&quot;EE MMM dd HH:mm:ss ZZ yyyy&quot;</span><span class="o">)</span>
+</span><span class="line"><span class="k">val</span> <span class="n">parseDate</span> <span class="k">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="n">parse</span><span class="o">(</span><span class="n">date</span><span class="o">,</span> <span class="n">formatter</span><span class="o">)</span>
+</span><span class="line">  <span class="c1">// parseDate: java.time.LocalDateTime = 2016-05-09T22:20:58</span>
+</span><span class="line"><span class="k">val</span> <span class="n">parseDateTZ</span> <span class="k">=</span> <span class="nc">ZonedDateTime</span><span class="o">.</span><span class="n">parse</span><span class="o">(</span><span class="n">date</span><span class="o">,</span> <span class="n">formatter</span><span class="o">)</span>
+</span><span class="line">  <span class="c1">// parseDateTZ:  java.time.ZonedDateTime = 2016-05-09T22:20:58+01:00</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>And when you have a Java Date object and would like to format it to a String, you can do the following:
+Also, please note that if the time-zone is present in the format string, we cant use <code>LocalDateTime</code> and should instead use <code>ZonedDateTime</code>.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Parse a Date with TZ to a String</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+</pre></td><td class="code"><pre><code class="scala"><span class="line"><span class="k">import</span> <span class="nn">java.time._</span>
+</span><span class="line"><span class="k">import</span> <span class="nn">java.time.format.DateTimeFormatter</span>
+</span><span class="line">
+</span><span class="line"><span class="k">val</span> <span class="n">formatter</span> <span class="k">=</span> <span class="nc">DateTimeFormatter</span><span class="o">.</span><span class="n">ofPattern</span><span class="o">(</span><span class="s">&quot;EE MMM dd HH:mm:ss.SSS ZZ yyyy&quot;</span><span class="o">)</span>
+</span><span class="line"><span class="k">val</span> <span class="n">now</span> <span class="k">=</span> <span class="nc">ZonedDateTime</span><span class="o">.</span><span class="n">now</span><span class="o">()</span>
+</span><span class="line">  <span class="c1">// now: java.time.ZonedDateTime = 2016-05-09T22:38:38.289+01:00[Europe/London]</span>
+</span><span class="line"><span class="k">val</span> <span class="n">formattedDate1</span> <span class="k">=</span> <span class="n">formatter</span><span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="n">now</span><span class="o">)</span>
+</span><span class="line">  <span class="c1">// formattedDate1: String = Mon May 09 22:38:38.289 +0100 2016</span>
+</span><span class="line"><span class="k">val</span> <span class="n">formattedDate2</span> <span class="k">=</span> <span class="n">now</span><span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="n">formatter</span><span class="o">)</span>
+</span><span class="line">  <span class="c1">// formattedDate2: String = Mon May 09 22:38:38.289 +0100 2016</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>And in case if we want to format the date without time-zone specific information:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Parse a Date without TZ to a String</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+</pre></td><td class="code"><pre><code class="scala"><span class="line"><span class="k">import</span> <span class="nn">java.time._</span>
+</span><span class="line"><span class="k">import</span> <span class="nn">java.time.format.DateTimeFormatter</span>
+</span><span class="line">
+</span><span class="line"><span class="k">val</span> <span class="n">formatter</span> <span class="k">=</span> <span class="nc">DateTimeFormatter</span><span class="o">.</span><span class="n">ofPattern</span><span class="o">(</span><span class="s">&quot;EE MMM dd HH:mm:ss.SSS yyyy&quot;</span><span class="o">)</span>
+</span><span class="line"><span class="k">val</span> <span class="n">now</span> <span class="k">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="n">now</span><span class="o">()</span>
+</span><span class="line">  <span class="c1">// now: java.time.LocalDateTime = 2016-05-09T22:42:15.125</span>
+</span><span class="line"><span class="k">val</span> <span class="n">formattedDate1</span> <span class="k">=</span> <span class="n">formatter</span><span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="n">now</span><span class="o">)</span>
+</span><span class="line">  <span class="c1">// formattedDate1: String = Mon May 09 22:42:15.125 2016</span>
+</span><span class="line"><span class="k">val</span> <span class="n">formattedDate2</span> <span class="k">=</span> <span class="n">now</span><span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="n">formatter</span><span class="o">)</span>
+</span><span class="line">  <span class="c1">// formattedDate2: String = Mon May 09 22:42:15.125 2016</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Hope this post helped you to start on Java8 Date and Time parsing and formatting.
+Happy learning!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Generating Random numbers in a Range in Java]]></title>
@@ -459,24 +584,14 @@ Work on your final project and we cover additional questions and topics brought 
 #    b. Linux 64 and 32 bit;
 #    c. API Docs;
 #    d. You can add more to the list of downloads are per your requirement.
-### Another option: 
-###### curl -L -O -H &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; -k &quot;http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz&quot;
 
 #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####
 
-## Latest JDK8 version released on 19th January, 2016: JDK8u71
-BASE_URL_8=http://download.oracle.com/otn-pub/java/jdk/8u71-b15/jdk-8u71
+## Latest JDK8 version released on 19th April, 2016: JDK8u91
+BASE_URL_8=http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91
 
-## Earlier versions:
-## v8u65 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u65-b17/jdk-8u65
-## v8u60 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60
-## v8u51 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51
-## v8u45 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45
-## v8u40 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40
-## v8u31 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31
-## v8u25 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25
-
-JDK_VERSION=${BASE_URL_8: -8}
+## JDK_VERSION=${BASE_URL_8: -8}
+JDK_VERSION=`echo $BASE_URL_8 | rev | cut -d &quot;/&quot; -f1 | rev`
 
 declare -a PLATFORMS=(&quot;-windows-x64.exe&quot; &quot;-linux-x64.tar.gz&quot; &quot;-docs-all.zip&quot; &quot;-windows-i586.exe&quot; &quot;-linux-i586.tar.gz&quot;)
 
@@ -486,7 +601,20 @@ do
     ### curl -L -O -H &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; -k &quot;${BASE_URL_8}${platform}&quot;
 done
 
-#####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####</code></pre></noscript></div>
+#####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####
+
+## Earlier versions:
+## v8u77 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u77-b03/jdk-8u77
+## v8u73 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u73-b02/jdk-8u73
+## v8u71 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u71-b15/jdk-8u71
+## v8u65 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u65-b17/jdk-8u65
+## v8u60 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60
+## v8u51 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51
+## v8u45 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45
+## v8u40 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40
+## v8u31 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31
+## v8u25 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25
+</code></pre></noscript></div>
 
 <p>Hope this script will be helpful for all those who live on and love command prompt.</p>
 ]]></content>
@@ -848,50 +976,6 @@ SnipMatch: Code snippet search tool for Eclipse -- http://languageinterfaces.com
 
 <p>Hope this was of some help to you.<br />
 Also, if you are interested in IntelliJ IDEA plugins, please check my <a href="http://p7h.blogspot.com/2012/12/intellij-ide-plugins.html" target="_blank">earlier post</a> which lists all the IntelliJ IDEA plugins I use.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Guava toString() method generator for IntelliJ IDEA]]></title>
-    <link href="http://p7h.org/blog/2012/12/22/guava-tostring-method-gen-for-intellij-idea/"/>
-    <updated>2012-12-22T00:00:00+00:00</updated>
-    <id>http://p7h.org/blog/2012/12/22/guava-tostring-method-gen-for-intellij-idea</id>
-    <content type="html"><![CDATA[<p><a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> comes bundled with <code>toString()</code> plugin. If you check the plugins in Settings, you should find GenerateToString plugin, which generates <code>toString()</code> method with options for String concat, StringBuffer, StringBuilder and ToStringBuilder (of Apache Commons) for generating this method.</p>
-
-<p><a href="http://code.google.com/p/guava-libraries/" target="_blank">Google Guava</a> has even better helper method for generating <code>toString()</code> method for a JavaBean or POJO, which is both clutter free and has a very consistent format; in the form of <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html#toStringHelper(java.lang.Class)" target="_blank">Objects.toStringHelper(this)</a>. It looks more elegant than any of the above solutions, actually. Also, as I make it a point to use Google Guava in all my projects, I have defined the following template in my <code>toString()</code> method generator settings in IntelliJ IDEA.
-<!--more--></p>
-
-<div><script src="https://gist.github.com/4388630.js"></script>
-<noscript><pre><code>/**
- * Guava API toString() method generator for a JavaBean / POJO.
- * @return String representation of all the attributes of the bean.
- */
-public String toString() {
-    #set ($autoImportPackages = &quot;com.google.common.base.Objects&quot;)
-    return Objects.toStringHelper(this)
-    #foreach ($member in $members)
-        .add(&quot;$member.name&quot;, $member.accessor)
-    #end
-        .toString();
-}</code></pre></noscript></div>
-
-<p>Follow the steps mentioned below for adding this template to your IntelliJ IDEA [picked up from <a href="http://stackoverflow.com/a/9445402" target="_blank">SO</a>]:</p>
-
-<ol>
-  <li>Go inside a Java Class in an editor in IntelliJ IDEA.</li>
-  <li>Hit Alt + Insert to popup the “Generate” menu.</li>
-  <li>Choose <code>toString()</code>.</li>
-  <li>Click the “Settings” button.</li>
-  <li>Go to the “Templates” tab.</li>
-  <li>Create a new template named “Guava toString gen” (or any name you prefer).</li>
-  <li>Add the above code to the template.</li>
-</ol>
-
-<p>Yes, its that simple!!  After configuring the above template, whenever you want to generate a <code>toString()</code> method for a Class, IntelliJ IDEA generates <code>toString()</code> using Guava template you have added just now.</p>
-
-<p>Now, go ahead and give this a try and also check the other method <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.ToStringHelper.html#omitNullValues()" target="_blank">omitNullValues()</a> which might be useful in some scenarios.</p>
-
-<p>Also, as a bonus tip, Guava’s <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html" target="_blank">Objects</a> class also has 2 awesome helper methods which aide in writing readable <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html#equal(java.lang.Object, java.lang.Object)" target="_blank">equals()</a> and <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/base/Objects.html#hashCode(java.lang.Object...)" target="_blank">hashcode()</a> methods. You should try them too.</p>
 ]]></content>
   </entry>
   

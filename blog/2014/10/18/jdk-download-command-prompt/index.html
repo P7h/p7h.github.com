@@ -113,24 +113,14 @@
 #    b. Linux 64 and 32 bit;
 #    c. API Docs;
 #    d. You can add more to the list of downloads are per your requirement.
-### Another option: 
-###### curl -L -O -H &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; -k &quot;http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz&quot;
 
 #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####
 
-## Latest JDK8 version released on 19th January, 2016: JDK8u71
-BASE_URL_8=http://download.oracle.com/otn-pub/java/jdk/8u71-b15/jdk-8u71
+## Latest JDK8 version released on 19th April, 2016: JDK8u91
+BASE_URL_8=http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91
 
-## Earlier versions:
-## v8u65 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u65-b17/jdk-8u65
-## v8u60 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60
-## v8u51 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51
-## v8u45 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45
-## v8u40 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40
-## v8u31 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31
-## v8u25 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25
-
-JDK_VERSION=${BASE_URL_8: -8}
+## JDK_VERSION=${BASE_URL_8: -8}
+JDK_VERSION=`echo $BASE_URL_8 | rev | cut -d &quot;/&quot; -f1 | rev`
 
 declare -a PLATFORMS=(&quot;-windows-x64.exe&quot; &quot;-linux-x64.tar.gz&quot; &quot;-docs-all.zip&quot; &quot;-windows-i586.exe&quot; &quot;-linux-i586.tar.gz&quot;)
 
@@ -140,7 +130,20 @@ do
     ### curl -L -O -H &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; -k &quot;${BASE_URL_8}${platform}&quot;
 done
 
-#####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####</code></pre></noscript></div>
+#####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####   #####
+
+## Earlier versions:
+## v8u77 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u77-b03/jdk-8u77
+## v8u73 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u73-b02/jdk-8u73
+## v8u71 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u71-b15/jdk-8u71
+## v8u65 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u65-b17/jdk-8u65
+## v8u60 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60
+## v8u51 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51
+## v8u45 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45
+## v8u40 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40
+## v8u31 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31
+## v8u25 =&gt; http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25
+</code></pre></noscript></div>
 
 <p>Hope this script will be helpful for all those who live on and love command prompt.</p>
 </div>
@@ -208,6 +211,10 @@ done
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2016/05/09/java-date-time-parse-format/">Java8 Date and Time parsing and formatting</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2016/01/22/generating-random-numbers-in-a-range/">Generating Random numbers in a Range in Java</a>
       </li>
     
@@ -221,10 +228,6 @@ done
     
       <li class="post">
         <a href="/blog/2015/01/16/octopress-setup-windows/">Octopress blogging setup on a new machine</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/01/14/jdk-installation-ubuntu-ppa/">JDK installation from ppa on Ubuntu</a>
       </li>
     
   </ul>

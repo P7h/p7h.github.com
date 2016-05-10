@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sublime text | Prashanth Babu]]></title>
   <link href="http://p7h.org/blog/categories/sublime-text/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2016-01-22T01:29:15+00:00</updated>
+  <updated>2016-05-10T13:42:57+01:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -206,26 +206,37 @@
 
 <p>Following list has all the packages I have right now which are very useful for my work. First install Package Control and then search for the required packages [with the name listed here] in Package Control for installation, that’s all you have to do.
 <div><script src='https://gist.github.com/4388830.js'></script>
-<noscript><pre><code>Anaconda -- Turns ST3 into a full featured Python IDE.
-Case Conversion -- Case conversion plugin (pascal, camel, snake) for ST3.
+<noscript><pre><code>Anaconda -- Turns ST into a full featured Python IDE.
+Case Conversion -- Case conversion plugin (pascal, camel, snake).
 ColorPicker -- Color Picker plugin.
-Highlight -- For exporting highlighted code as RTF or HTML.
-Javatar -- Java Completions for ST3.
-Package Control -- A comprehensive Package Manager for ST3.
-Schemr -- To quickly change ST3 color scheme.
-SideBarEnhancements -- Enhancements to ST3 Sidebar for files and folders.
-SublimeREPL -- Run an interpreter inside ST3 (useful for Clojure, CoffeeScript, F#, Groovy, Haskell, Lua, MozRepl, NodeJS, Python, R, Ruby, Scala, shell, etc).
-Terminal -- Launch terminals from the current file or the root project folder in ST3.
-Theme - Flatland -- Minimal theme for ST3 [built on top of Theme - Soda].
-Theme - Soda -- Dark and light custom UI Themes for ST3.
-Theme - Soda SolarizedDark -- Dark and light custom UI Themes for ST3 [forked from Theme - Soda].
-Themr -- To quickly change ST3 UI theme.
+DocBlockr -- Simplifies writing DocBlock comments in various languages.
+Golang Build -- Official Sublime Text package for Go build system integration.
+GoSublime -- Golang plugin collection.
+Javatar -- Java Completions.
+Markdown Preview -- Markdown Preview.
+Package Control -- A comprehensive Package Manager.
+PlainTasks -- ToDo list plugin.
+Pretty JSON -- Prettify JSON.
+Revert All Files -- To revert all unsaved files to their last saved state.
+Scala Syntax -- Syntax file for Scala.
+ScalaFormat -- Scala code formatter.
+ScalaWorksheet -- Worksheet functionality for Scala.
+Schemr -- To quickly change color scheme.
+SideBarEnhancements -- Enhancements to Sidebar for files and folders.
+SublimeHighlight -- For exporting highlighted code as RTF or HTML.
+SublimeREPL -- Run an interpreter inside ST (useful for Clojure, CoffeeScript, F#, Groovy, Haskell, Lua, MozRepl, NodeJS, Python, R, Ruby, Scala, shell, etc).
+Tabright -- To create new tabs on the right.
+Terminal -- Launch terminals from the current file or the root project folder in ST.
+Theme - Flatland -- Minimal theme for ST [built on top of Theme - Soda].
+Theme - Soda -- Dark and light custom UI Themes for ST.
+Theme - Soda SolarizedDark -- Dark and light custom UI Themes for ST [forked from Theme - Soda].
+Themr -- To quickly change ST UI theme.
 
 Misc:
-Dayle Rees Color Schemes -- ST3 Themes by Dayle Rees.
-Theme - Acqua -- ST3 theme to match the native OS X App Kit and ProKit themes.
-Theme - Refined -- ST3 theme forked from the Acqua Theme.
-Tomorrow Color Schemes -- Tomorrow Color Schemes for ST3.</code></pre></noscript></div>
+Dayle Rees Color Schemes -- ST Themes by Dayle Rees.
+Theme - Acqua -- ST theme to match the native OS X App Kit and ProKit themes.
+Theme - Refined -- ST theme forked from the Acqua Theme.
+Tomorrow Color Schemes -- Tomorrow Color Schemes for ST.</code></pre></noscript></div>
 </p>
 
 <p>In a future post, I will add User Settings of Sublime Text.<br /></p>
