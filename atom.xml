@@ -4,7 +4,7 @@
   <title><![CDATA[Prashanth Babu]]></title>
   <link href="http://p7h.org/atom.xml" rel="self"/>
   <link href="http://p7h.org/"/>
-  <updated>2016-05-10T13:44:41+01:00</updated>
+  <updated>2016-05-10T14:12:10+01:00</updated>
   <id>http://p7h.org/</id>
   <author>
     <name><![CDATA[Prashanth Babu]]></name>
@@ -23,7 +23,7 @@
 <p>This API is based on / inspired by the wonderful <a href="http://www.joda.org/joda-time/">Joda-Time</a>, which was the de facto standard date and time library for Java prior to Java SE 8. </p>
 
 <p>In this blogpost, we will discuss how to parse and format Dates with this new API.
-At a new very high-level, there are 4 classes related to Date in <code>java.time</code> package. Please check <a href="https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html"><code>java.time</code></a> package summary for detail info of the below classes.</p>
+At a new very high-level, there are 4 classes related to Date in <code>java.time</code> package. Please check <a href="https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html"><code>java.time</code></a> package summary for detailed info of the below classes.</p>
 
 <ul>
   <li>
