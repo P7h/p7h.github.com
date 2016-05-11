@@ -9,7 +9,7 @@
   <meta name="author" content="Prashanth Babu">
 
   
-  <meta name="description" content="With Java v8, we have new API for Date and Time, which looks pretty elegant and also is immutable and thread-safe. The new API is part of java.time &hellip;">
+  <meta name="description" content="With Java v8, we have new API for Date and Time, which looks pretty elegant and also is immutable and hence thread-safe. Please check java.time &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,7 +79,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2016/05/09/java-date-time-parse-format/">Java8 Date and Time parsing and formatting</a></h1>
+      <h1 class="entry-title"><a href="/blog/2016/05/09/java-date-time-parse-format/">Java8 Date and Time: Parsing and formatting</a></h1>
     
     
       <p class="meta">
@@ -95,125 +95,19 @@
   </header>
 
 
-  <div class="entry-content"><p>With Java v8, we have new API for Date and Time, which looks pretty elegant and also is immutable and thread-safe. The new API is part of <code>java.time</code> package. </p>
+  <div class="entry-content"><p>With Java v8, we have new API for Date and Time, which looks pretty elegant and also is immutable and hence thread-safe. </p>
+
+<p>Please check <code>java.time</code> <a href="https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html">package summary</a> added in Java v8 for detailed info of all the classes present in this package. Also checking official <a href="https://docs.oracle.com/javase/tutorial/datetime/TOC.html">Java Tutorial Trail for Data Time</a> really helps understand the API better.</p>
 
 <p>This API is based on / inspired by the wonderful <a href="http://www.joda.org/joda-time/">Joda-Time</a>, which was the de facto standard date and time library for Java prior to Java SE 8. </p>
 
-<p>In this blogpost, we will discuss how to parse and format Dates with this new API.
-At a new very high-level, there are 4 classes related to Date in <code>java.time</code> package. Please check <a href="https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html"><code>java.time</code></a> package summary for detailed info of the below classes.</p>
-
-<ul>
-  <li>
-    <p><code>LocalDate</code> holds just the Date and  does not store or represent either time or time-zone.</p>
-
-    <blockquote>
-      <p><code>2016-05-09</code></p>
-    </blockquote>
-  </li>
-  <li>
-    <p><code>LocalTime</code> holds just the Date and  does not store or represent either date or time-zone..</p>
-
-    <blockquote>
-      <p><code>22:04:43.658</code></p>
-    </blockquote>
-  </li>
-  <li>
-    <p><code>LocalDateTime</code> is a combination of both <code>LocalDate</code> and <code>LocalTime</code> which holds the Date and Time but <em>does not</em> hold the time-zone information.</p>
-
-    <blockquote>
-      <p><code>2016-05-09T22:06:25.599</code></p>
-    </blockquote>
-  </li>
-  <li>
-    <p><code>ZonedDateTime</code> is like <code>LocalDateTime</code>, but with the addition of time-zone information.</p>
-
-    <blockquote>
-      <p><code>2016-05-09T22:09:34.711+01:00[Europe/London]</code></p>
-    </blockquote>
-  </li>
-</ul>
-
-<p>And for formatting, we use <a href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html"><code>DateTimeFormatter</code></a>. Please refer the API docs for more info on this class. There are a number of predefined formatters which are needed for parsing and formatting.</p>
-
-<p><em>For brevity, programming language syntax chosen for examples is <code>Scala</code></em>.</p>
-
-<p>If you have a Date in the format of <code>Mon May 09 22:20:58 +0100 2016</code> and you would like to parse this and make it a Java object, you can do the following.</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Parse a Date String to a Java Object</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-</pre></td><td class="code"><pre><code class="scala"><span class="line"><span class="k">import</span> <span class="nn">java.time._</span>
-</span><span class="line"><span class="k">import</span> <span class="nn">java.time.format.DateTimeFormatter</span>
-</span><span class="line">
-</span><span class="line"><span class="k">val</span> <span class="n">date</span> <span class="k">=</span> <span class="s">&quot;Mon May 09 22:20:58 +0100 2016&quot;</span>
-</span><span class="line">
-</span><span class="line"><span class="k">val</span> <span class="n">formatter</span> <span class="k">=</span> <span class="nc">DateTimeFormatter</span><span class="o">.</span><span class="n">ofPattern</span><span class="o">(</span><span class="s">&quot;EE MMM dd HH:mm:ss ZZ yyyy&quot;</span><span class="o">)</span>
-</span><span class="line"><span class="k">val</span> <span class="n">parseDate</span> <span class="k">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="n">parse</span><span class="o">(</span><span class="n">date</span><span class="o">,</span> <span class="n">formatter</span><span class="o">)</span>
-</span><span class="line">  <span class="c1">// parseDate: java.time.LocalDateTime = 2016-05-09T22:20:58</span>
-</span><span class="line"><span class="k">val</span> <span class="n">parseDateTZ</span> <span class="k">=</span> <span class="nc">ZonedDateTime</span><span class="o">.</span><span class="n">parse</span><span class="o">(</span><span class="n">date</span><span class="o">,</span> <span class="n">formatter</span><span class="o">)</span>
-</span><span class="line">  <span class="c1">// parseDateTZ:  java.time.ZonedDateTime = 2016-05-09T22:20:58+01:00</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>And when you have a Java Date object and would like to format it to a String, you can do the following:
-Also, please note that if the time-zone is present in the format string, we cant use <code>LocalDateTime</code> and should instead use <code>ZonedDateTime</code>.</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Parse a Date with TZ to a String</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-</pre></td><td class="code"><pre><code class="scala"><span class="line"><span class="k">import</span> <span class="nn">java.time._</span>
-</span><span class="line"><span class="k">import</span> <span class="nn">java.time.format.DateTimeFormatter</span>
-</span><span class="line">
-</span><span class="line"><span class="k">val</span> <span class="n">formatter</span> <span class="k">=</span> <span class="nc">DateTimeFormatter</span><span class="o">.</span><span class="n">ofPattern</span><span class="o">(</span><span class="s">&quot;EE MMM dd HH:mm:ss.SSS ZZ yyyy&quot;</span><span class="o">)</span>
-</span><span class="line"><span class="k">val</span> <span class="n">now</span> <span class="k">=</span> <span class="nc">ZonedDateTime</span><span class="o">.</span><span class="n">now</span><span class="o">()</span>
-</span><span class="line">  <span class="c1">// now: java.time.ZonedDateTime = 2016-05-09T22:38:38.289+01:00[Europe/London]</span>
-</span><span class="line"><span class="k">val</span> <span class="n">formattedDate1</span> <span class="k">=</span> <span class="n">formatter</span><span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="n">now</span><span class="o">)</span>
-</span><span class="line">  <span class="c1">// formattedDate1: String = Mon May 09 22:38:38.289 +0100 2016</span>
-</span><span class="line"><span class="k">val</span> <span class="n">formattedDate2</span> <span class="k">=</span> <span class="n">now</span><span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="n">formatter</span><span class="o">)</span>
-</span><span class="line">  <span class="c1">// formattedDate2: String = Mon May 09 22:38:38.289 +0100 2016</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>And in case if we want to format the date without time-zone specific information:</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Parse a Date without TZ to a String</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-</pre></td><td class="code"><pre><code class="scala"><span class="line"><span class="k">import</span> <span class="nn">java.time._</span>
-</span><span class="line"><span class="k">import</span> <span class="nn">java.time.format.DateTimeFormatter</span>
-</span><span class="line">
-</span><span class="line"><span class="k">val</span> <span class="n">formatter</span> <span class="k">=</span> <span class="nc">DateTimeFormatter</span><span class="o">.</span><span class="n">ofPattern</span><span class="o">(</span><span class="s">&quot;EE MMM dd HH:mm:ss.SSS yyyy&quot;</span><span class="o">)</span>
-</span><span class="line"><span class="k">val</span> <span class="n">now</span> <span class="k">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="n">now</span><span class="o">()</span>
-</span><span class="line">  <span class="c1">// now: java.time.LocalDateTime = 2016-05-09T22:42:15.125</span>
-</span><span class="line"><span class="k">val</span> <span class="n">formattedDate1</span> <span class="k">=</span> <span class="n">formatter</span><span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="n">now</span><span class="o">)</span>
-</span><span class="line">  <span class="c1">// formattedDate1: String = Mon May 09 22:42:15.125 2016</span>
-</span><span class="line"><span class="k">val</span> <span class="n">formattedDate2</span> <span class="k">=</span> <span class="n">now</span><span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="n">formatter</span><span class="o">)</span>
-</span><span class="line">  <span class="c1">// formattedDate2: String = Mon May 09 22:42:15.125 2016</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>Hope this post helped you to start on Java8 Date and Time parsing and formatting.
-Happy learning!</p>
+<p>In this blogpost, we will discuss how to parse and format dates with this new API.
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2016/05/09/java-date-time-parse-format/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -404,7 +298,7 @@ res1: scala.collection.immutable.IndexedSeq[Int] = Vector(46, 38, 22, 21, 43, 35
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2016/05/09/java-date-time-parse-format/">Java8 Date and Time parsing and formatting</a>
+        <a href="/blog/2016/05/09/java-date-time-parse-format/">Java8 Date and Time: Parsing and formatting</a>
       </li>
     
       <li class="post">

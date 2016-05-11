@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Java8 Date and Time parsing and formatting - Prashanth Babu</title>
+  <title>Java8 Date and Time: Parsing and formatting - Prashanth Babu</title>
   <meta name="author" content="Prashanth Babu">
 
   
-  <meta name="description" content="With Java v8, we have new API for Date and Time, which looks pretty elegant and also is immutable and thread-safe. The new API is part of java.time &hellip;">
+  <meta name="description" content="With Java v8, we have new API for Date and Time, which looks pretty elegant and also is immutable and hence thread-safe. Please check java.time &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,7 +76,7 @@
   
   <header>
     
-      <h1 class="entry-title">Java8 Date and Time parsing and formatting</h1>
+      <h1 class="entry-title">Java8 Date and Time: Parsing and formatting</h1>
     
     
       <p class="meta">
@@ -92,51 +92,39 @@
   </header>
 
 
-<div class="entry-content"><p>With Java v8, we have new API for Date and Time, which looks pretty elegant and also is immutable and thread-safe. The new API is part of <code>java.time</code> package. </p>
+<div class="entry-content"><p>With Java v8, we have new API for Date and Time, which looks pretty elegant and also is immutable and hence thread-safe. </p>
+
+<p>Please check <code>java.time</code> <a href="https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html">package summary</a> added in Java v8 for detailed info of all the classes present in this package. Also checking official <a href="https://docs.oracle.com/javase/tutorial/datetime/TOC.html">Java Tutorial Trail for Data Time</a> really helps understand the API better.</p>
 
 <p>This API is based on / inspired by the wonderful <a href="http://www.joda.org/joda-time/">Joda-Time</a>, which was the de facto standard date and time library for Java prior to Java SE 8. </p>
 
-<p>In this blogpost, we will discuss how to parse and format Dates with this new API.
-At a new very high-level, there are 4 classes related to Date in <code>java.time</code> package. Please check <a href="https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html"><code>java.time</code></a> package summary for detailed info of the below classes.</p>
+<p>In this blogpost, we will discuss how to parse and format dates with this new API.
+<!--more-->
+At a new very high-level, there are 4 classes related to handling dates in <code>java.time</code> package.</p>
 
 <ul>
   <li>
-    <p><code>LocalDate</code> holds just the Date and  does not store or represent either time or time-zone.</p>
-
-    <blockquote>
-      <p><code>2016-05-09</code></p>
-    </blockquote>
+    <p><code>LocalDate</code> holds just the date and does not store or represent either time or time-zone. Example: <code>2016-05-09</code></p>
   </li>
   <li>
-    <p><code>LocalTime</code> holds just the Date and  does not store or represent either date or time-zone..</p>
-
-    <blockquote>
-      <p><code>22:04:43.658</code></p>
-    </blockquote>
+    <p><code>LocalTime</code> holds just the time and does not store or represent either date or time-zone. Example: <code>22:04:43.658</code></p>
   </li>
   <li>
-    <p><code>LocalDateTime</code> is a combination of both <code>LocalDate</code> and <code>LocalTime</code> which holds the Date and Time but <em>does not</em> hold the time-zone information.</p>
-
-    <blockquote>
-      <p><code>2016-05-09T22:06:25.599</code></p>
-    </blockquote>
+    <p><code>LocalDateTime</code> is a combination of both <code>LocalDate</code> and <code>LocalTime</code> which holds the date and time; but <em>does not</em> hold the time-zone information. Example: <code>2016-05-09T22:06:25.599</code></p>
   </li>
   <li>
-    <p><code>ZonedDateTime</code> is like <code>LocalDateTime</code>, but with the addition of time-zone information.</p>
-
-    <blockquote>
-      <p><code>2016-05-09T22:09:34.711+01:00[Europe/London]</code></p>
-    </blockquote>
+    <p><code>ZonedDateTime</code> is <code>LocalDateTime</code> and also includes the time-zone information too. Example: <code>2016-05-09T22:09:34.711+01:00[Europe/London]</code></p>
   </li>
 </ul>
 
-<p>And for formatting, we use <a href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html"><code>DateTimeFormatter</code></a>. Please refer the API docs for more info on this class. There are a number of predefined formatters which are needed for parsing and formatting.</p>
+<p>And for formatting, we will use <code>DateTimeFormatter</code> of <code>java.time.format</code> package. Please refer the <a href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html">Java API docs</a> for more info on this class. There are a number of predefined formatters which are needed for parsing and formatting.</p>
 
-<p><em>For brevity, programming language syntax chosen for examples is <code>Scala</code></em>.</p>
+<p><em>For brevity, programming language syntax chosen for examples here is <code>Scala</code></em>.</p>
 
-<p>If you have a Date in the format of <code>Mon May 09 22:20:58 +0100 2016</code> and you would like to parse this and make it a Java object, you can do the following.</p>
+<h3 id="parsing-a-date">Parsing a date</h3>
+<p>If we need to parse a date in the format: <code>Mon May 09 22:20:58 +0100 2016</code> and make it a Java object, we can do the following:</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Parse a Date String to a Java Object</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Parse a date String to a Java Object</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 <span class="line-number">4</span>
@@ -146,7 +134,7 @@ At a new very high-level, there are 4 classes related to Date in <code>java.time
 <span class="line-number">8</span>
 <span class="line-number">9</span>
 <span class="line-number">10</span>
-</pre></td><td class="code"><pre><code class="scala"><span class="line"><span class="k">import</span> <span class="nn">java.time._</span>
+</pre></td><td class="code"><pre><code class="scala"><span class="line"><span class="k">import</span> <span class="nn">java.time.</span><span class="o">{</span><span class="nc">LocalDateTime</span><span class="o">,</span> <span class="nc">ZonedDateTime</span><span class="o">}</span>
 </span><span class="line"><span class="k">import</span> <span class="nn">java.time.format.DateTimeFormatter</span>
 </span><span class="line">
 </span><span class="line"><span class="k">val</span> <span class="n">date</span> <span class="k">=</span> <span class="s">&quot;Mon May 09 22:20:58 +0100 2016&quot;</span>
@@ -158,10 +146,11 @@ At a new very high-level, there are 4 classes related to Date in <code>java.time
 </span><span class="line">  <span class="c1">// parseDateTZ:  java.time.ZonedDateTime = 2016-05-09T22:20:58+01:00</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<p>And when you have a Java Date object and would like to format it to a String, you can do the following:
-Also, please note that if the time-zone is present in the format string, we cant use <code>LocalDateTime</code> and should instead use <code>ZonedDateTime</code>.</p>
+<h3 id="formatting-a-date-with-time-zone-info">Formatting a date with time-zone info</h3>
+<p>If the time-zone is present in the format string, we can not use <code>LocalDateTime</code> and should instead use <code>ZonedDateTime</code>.
+And when we have a Java Date object and would like to format it to a String which includes time-zone specific info also, we can do the following:</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Parse a Date with TZ to a String</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Parse a date with TZ to a String</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 <span class="line-number">4</span>
@@ -171,7 +160,7 @@ Also, please note that if the time-zone is present in the format string, we cant
 <span class="line-number">8</span>
 <span class="line-number">9</span>
 <span class="line-number">10</span>
-</pre></td><td class="code"><pre><code class="scala"><span class="line"><span class="k">import</span> <span class="nn">java.time._</span>
+</pre></td><td class="code"><pre><code class="scala"><span class="line"><span class="k">import</span> <span class="nn">java.time.ZonedDateTime</span>
 </span><span class="line"><span class="k">import</span> <span class="nn">java.time.format.DateTimeFormatter</span>
 </span><span class="line">
 </span><span class="line"><span class="k">val</span> <span class="n">formatter</span> <span class="k">=</span> <span class="nc">DateTimeFormatter</span><span class="o">.</span><span class="n">ofPattern</span><span class="o">(</span><span class="s">&quot;EE MMM dd HH:mm:ss.SSS ZZ yyyy&quot;</span><span class="o">)</span>
@@ -183,9 +172,10 @@ Also, please note that if the time-zone is present in the format string, we cant
 </span><span class="line">  <span class="c1">// formattedDate2: String = Mon May 09 22:38:38.289 +0100 2016</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<p>And in case if we want to format the date without time-zone specific information:</p>
+<h3 id="formatting-a-date-without-time-zone-info">Formatting a date without time-zone info</h3>
+<p>If we don’t need time-zone specific information for formatting a date, we can use <code>LocalDateTime</code> class.</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Parse a Date without TZ to a String</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Parse a date without TZ to a String</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 <span class="line-number">4</span>
@@ -195,7 +185,7 @@ Also, please note that if the time-zone is present in the format string, we cant
 <span class="line-number">8</span>
 <span class="line-number">9</span>
 <span class="line-number">10</span>
-</pre></td><td class="code"><pre><code class="scala"><span class="line"><span class="k">import</span> <span class="nn">java.time._</span>
+</pre></td><td class="code"><pre><code class="scala"><span class="line"><span class="k">import</span> <span class="nn">java.time.LocalDateTime</span>
 </span><span class="line"><span class="k">import</span> <span class="nn">java.time.format.DateTimeFormatter</span>
 </span><span class="line">
 </span><span class="line"><span class="k">val</span> <span class="n">formatter</span> <span class="k">=</span> <span class="nc">DateTimeFormatter</span><span class="o">.</span><span class="n">ofPattern</span><span class="o">(</span><span class="s">&quot;EE MMM dd HH:mm:ss.SSS yyyy&quot;</span><span class="o">)</span>
@@ -207,7 +197,7 @@ Also, please note that if the time-zone is present in the format string, we cant
 </span><span class="line">  <span class="c1">// formattedDate2: String = Mon May 09 22:42:15.125 2016</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<p>Hope this post helped you to start on Java8 Date and Time parsing and formatting.
+<p>Hope this post gave a quick understanding of Java8 Date and Time parsing and formatting.
 Happy learning!</p>
 </div>
 
@@ -272,7 +262,7 @@ Happy learning!</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2016/05/09/java-date-time-parse-format/">Java8 Date and Time parsing and formatting</a>
+        <a href="/blog/2016/05/09/java-date-time-parse-format/">Java8 Date and Time: Parsing and formatting</a>
       </li>
     
       <li class="post">
